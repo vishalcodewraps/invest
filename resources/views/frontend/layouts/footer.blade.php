@@ -6,7 +6,7 @@
                     <div class="logo">
                         <a class="navbar-brand" href="#">
                             <div class="d-flex align-items-center gap-2">
-                                <img src="{{asset('main-frontend/img/logo.png')}}" alt="logo" class="img-fluid" style="height: 40px;">
+                                <img src="{{asset('main-frontend/img/logo.png')}}" alt="logo" class="img-fluid" style="height: 68px;">
                                 <div>
                                     <span class="logo-font text-white">Invest Connect <br> Marketplace</span>
                                 </div>
@@ -32,8 +32,9 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <p class="text-white">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply
-                        dummy text of the printing and typesetting industry.
+                    Partner with us to fuel innovation and drive meaningful impact. 
+                    Your investment supports groundbreaking solutions, sustainable growth, 
+                    and a vision for a brighter future.
                     </p>
                 </div>
 
@@ -137,15 +138,29 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.three-row-slider').slick({
+        $(document).ready(function () {
+            $('.slider-1').slick({
                 slidesToShow: 3, // Number of slides to show per row
                 rows: 3, // Number of rows
                 dots: true, // Enable dots for navigation
                 arrows: true, // Enable arrows for navigation
                 infinite: true, // Enable infinite scrolling
+                autoplay: true, // Enable autoplay
+                autoplaySpeed: 1000, // Autoplay speed in milliseconds
+            });
+
+            $('.slider-2').slick({
+                slidesToShow: 4, // Different settings for the second slider
+                rows: 2,
+                dots: false,
+                arrows: true,
+                infinite: true,
+                autoplay: true, // Enable autoplay
+                autoplaySpeed: 1000, // Autoplay speed in milliseconds
             });
         });
+
+
     </script>
 </body>
 

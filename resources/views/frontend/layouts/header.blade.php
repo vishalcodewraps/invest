@@ -34,7 +34,7 @@
                     <div class="col-md-4">
                         <a class="navbar-brand d-none d-md-block d-lg-block" href="#">
                             <div class="d-flex align-items-center gap-2">
-                                <img src="{{asset('main-frontend/img/logo.png')}}" alt="logo" class="img-fluid" style="height: 40px;">
+                                <img src="{{asset('main-frontend/img/logo.png')}}" alt="logo" class="img-fluid" style="height: 68px;">
                                 <div>
                                     <span class="logo-font">Invest Connect <br> Marketplace</span>
                                 </div>

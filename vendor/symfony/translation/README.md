@@ -20,7 +20,7 @@ $translator->addResource('array', [
     'Hello World!' => 'Bonjour !',
 ], 'fr_FR');
 
-echo $translator->trans('translate.Hello World!'); // outputs « Bonjour ! »
+echo $translator->trans('Hello World!'); // outputs « Bonjour ! »
 ```
 
 Sponsor
