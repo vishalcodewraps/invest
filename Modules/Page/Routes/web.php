@@ -15,7 +15,7 @@ use Modules\Page\App\Http\Controllers\FooterContrllerController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| routes are loaded by the RouteServiceProvider within a group which 
 | contains the "web" middleware group. Now create something great!
 |
 */
@@ -28,6 +28,8 @@ Route::group(['as'=> 'admin.', 'prefix' => 'admin', 'middleware' => ['auth:admin
     Route::put('update-privacy-policy', [PrivacyController::class, 'update'])->name('update-privacy-policy');
 
     Route::get('intro-section', [HomepageController::class, 'intro_section'])->name('intro-section');
+    Route::get('delete-intro-section', [HomepageController::class, 'delete_intro_section'])->name('delete-intro-section');
+    Route::post('add-intro-section', [HomepageController::class, 'add_intro_section'])->name('add-intro-section');
     Route::put('update-intro-section', [HomepageController::class, 'update_intro_section'])->name('update-intro-section');
 
     Route::get('intro2-section', [HomepageController::class, 'intro2_section'])->name('intro2-section');

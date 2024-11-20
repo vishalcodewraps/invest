@@ -8,6 +8,7 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Modules\Page\App\Models\Homepage;
+use Modules\Page\App\Models\Banner;
 use Modules\Page\App\Http\Requests\IntroRequest;
 use Modules\Page\App\Models\HomepageTranslation;
 use Modules\Page\App\Http\Requests\IntroRequest2;
@@ -23,12 +24,65 @@ class HomepageController extends Controller
      */
     public function intro_section(Request $request)
     {
-        $homepage = Homepage::first();
-        $translate = HomepageTranslation::where(['homepage_id' => $homepage->id, 'lang_code' => $request->lang_code])->first();
-
-        return view('page::section.intro', ['homepage' => $homepage, 'translate' => $translate]);
+        if(isset($request->id)){
+            $banner = Banner::where('id',$request->id)->first();
+        }else{
+            $banner = '';
+        }
+        
+        $banner_list = Banner::latest()->get();
+        return view('page::section.intro', ['banner' => $banner, 'banner_list' => $banner_list]);
     }
 
+
+    public function add_intro_section(IntroRequest $request)
+    {
+
+        if($request->id != ''){
+            $banner = Banner::find($request->id);
+            $notify_message = 'Updated Successfully';
+            $old_image = $banner->image;
+        }else{
+            $banner = new Banner;
+            $notify_message = 'Added Successfully';
+            $old_image = false;
+        }
+        if($request->intro_banner_one){
+            $image_name = 'intro-one-'.date('-Y-m-d-h-i-s-').rand(999,9999).'.webp';
+            $image_name ='uploads/custom-images/'.$image_name;
+            Image::make($request->intro_banner_one)
+            ->encode('webp', 80)
+            ->save(public_path().'/'.$image_name);
+            $banner->image = $image_name;
+            
+
+            if($old_image){
+                if(File::exists(public_path().'/'.$old_image))unlink(public_path().'/'.$old_image);
+            }
+        }
+        $banner->text = $request->intro_title;
+        $banner->save();
+
+   
+
+
+
+       
+        $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
+        if($request->id != ''){
+            return redirect('admin/intro-section')->with($notify_message);
+        }else{
+            return redirect()->back()->with($notify_message);
+        }
+
+    }
+
+    public function delete_intro_section(Request $request){
+        Banner::where('id', $request->id)->delete();
+
+        $notify_message = array('message' => 'Deleted Successfully', 'alert-type' => 'success');
+        return redirect()->back()->with($notify_message);
+    }
 
     public function update_intro_section(IntroRequest $request)
     {
