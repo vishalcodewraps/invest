@@ -99,7 +99,7 @@ class BlogController extends Controller
 
         $notify_message = trans('translate.Created successfully');
         $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
-        return redirect()->route('admin.teamedit', ['blog' => $blog->id, 'lang_code' => admin_lang()])->with($notify_message);
+        return redirect()->route('admin.team-list')->with($notify_message);
 
 
     }
@@ -170,10 +170,10 @@ class BlogController extends Controller
     public function teamEdit($id)
     {
         
-        echo $id; die;
+       
         $blog = Team::findOrFail($id);
 
-        $blog_translate = TeamTranslation::where(['blog_id' => $id, 'lang_code' => $request->lang_code])->first();
+        $blog_translate = TeamTranslation::where(['blog_id' => $id, 'lang_code' => 'en'])->first();
 
         $blog_categories = BlogCategory::with('translate')->get();
 
@@ -227,8 +227,10 @@ class BlogController extends Controller
 
 
 
-    public function teamUpdate(TeamRequest $request, $id)
+    public function teamUpdate(TeamRequest $request)
     {
+       
+        $id=$request->team_id;
         $blog = Team::findOrFail($id);
 
         if($request->image){
@@ -289,6 +291,27 @@ class BlogController extends Controller
         $notify_message = trans('translate.Deleted successfully');
         $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
         return redirect()->route('admin.blog.index')->with($notify_message);
+    }
+
+
+    public function team_delete($id)
+    {
+        
+        $blog = Team::findOrFail($id);
+
+        $old_image = $blog->image;
+        if($old_image){
+            if(File::exists(public_path().'/'.$old_image))unlink(public_path().'/'.$old_image);
+        }
+
+        // BlogComment::where('blog_id', $id)->delete();
+        TeamTranslation::where('blog_id', $id)->delete();
+
+        $blog->delete();
+
+        $notify_message = trans('translate.Deleted successfully');
+        $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
+        return redirect()->route('admin.team-list')->with($notify_message);
     }
 
     public function blog_list(){

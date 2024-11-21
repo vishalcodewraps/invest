@@ -4,8 +4,8 @@
 @endsection
 
 @section('body-header')
-    <h3 class="crancy-header__title m-0">{{ __('translate.Edit Blog') }}</h3>
-    <p class="crancy-header__text">{{ __('translate.Manage Blog') }} >> Team Edit</p>
+    <h3 class="crancy-header__title m-0">Edit Team</h3>
+    <p class="crancy-header__text">Manage Team >> Team Edit</p>
 @endsection
 
 @section('body-content')
@@ -21,25 +21,26 @@
                         <div class="crancy-dsinner">
                             <form action="{{ route('admin.editupdate',$blog->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @method('PUT')
+                                @method('POST')
 
                                 <input type="hidden" name="translate_id" value="{{ $blog_translate->id }}">
                                 <input type="hidden" name="lang_code" value="{{ $blog_translate->lang_code }}">
+                                <input type="hidden" name="team_id" value="{{ $blog->id }}">
 
                                 <div class="row">
                                     <div class="col-12">
                                         <!-- Product Card -->
                                         <div class="crancy-product-card">
                                             <div class="create_new_btn_inline_box">
-                                                <h4 class="crancy-product-card__title">{{ __('translate.Edit Blog') }}</h4>
+                                                <h4 class="crancy-product-card__title">Edit Team</h4>
 
-                                                <a href="{{ route('admin.blog.index') }}" class="crancy-btn "><i class="fa fa-list"></i> {{ __('translate.Blog List') }}</a>
+                                                <a href="{{ route('admin.team-list') }}" class="crancy-btn "><i class="fa fa-list"></i> Team List</a>
                                             </div>
 
 
                                             <div class="row">
 
-                                                @if (admin_lang() == request()->get('lang_code'))
+                                                
                                                 <div class="col-12">
                                                     <div class="row">
                                                         <div class="col-md-3">
@@ -58,7 +59,7 @@
 
                                                 </div>
 
-                                                @endif
+                                               
 
                                                 <div class="col-12">
                                                     <div class="crancy__item-form--group mg-top-form-20">
@@ -67,18 +68,7 @@
                                                     </div>
                                                 </div>
 
-                                                @if (admin_lang() == request()->get('lang_code'))
-
-                                                    <div class="col-12">
-                                                        <div class="crancy__item-form--group mg-top-form-20">
-                                                            <label class="crancy__item-label">{{ __('translate.Slug') }} * </label>
-                                                            <input class="crancy__item-input" type="text" name="slug" id="slug" value="{{ $blog->slug }}">
-                                                        </div>
-                                                    </div>
-
-                                                   
-
-                                                @endif
+                                               
 
                                                 <div class="col-12">
                                                     <div class="crancy__item-form--group mg-top-form-20">
@@ -89,7 +79,7 @@
                                                     </div>
                                                 </div>
 
-                                                @if (admin_lang() == request()->get('lang_code'))
+                                               
 
 
                                                     <div class="col-12">
@@ -104,29 +94,11 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-12">
-                                                        <div class="crancy__item-form--group mg-top-form-20">
-                                                            <label class="crancy__item-label">{{ __('translate.Tags') }} </label>
-                                                            <input class="crancy__item-input tags" type="text" name="tags" value="{{ $blog->tags }}">
-                                                        </div>
-                                                    </div>
+                                                    
 
-                                                @endif
+                                             
 
-                                                <div class="col-12">
-                                                    <div class="crancy__item-form--group mg-top-form-20">
-                                                        <label class="crancy__item-label">{{ __('translate.SEO Title') }} </label>
-                                                        <input class="crancy__item-input" type="text" name="seo_title" id="seo_title" value="{{ $blog_translate->seo_title }}">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <div class="crancy__item-form--group mg-top-form-20">
-                                                        <label class="crancy__item-label">{{ __('translate.SEO Description') }} </label>
-
-                                                        <textarea class="crancy__item-input crancy__item-textarea seo_description_box"  name="seo_description" id="seo_description">{{ $blog_translate->seo_description }}</textarea>
-                                                    </div>
-                                                </div>
+                                                
 
                                             </div>
 
