@@ -167,8 +167,10 @@ class BlogController extends Controller
     }
 
 
-    public function teamEdit(Request $request, $id)
+    public function teamEdit($id)
     {
+        
+        echo $id; die;
         $blog = Team::findOrFail($id);
 
         $blog_translate = TeamTranslation::where(['blog_id' => $id, 'lang_code' => $request->lang_code])->first();
