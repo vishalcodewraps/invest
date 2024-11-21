@@ -105,13 +105,13 @@
                             <a class="nav-link" href="#">Price</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Our Team</a>
+                            <a class="nav-link" href="{{url('our-team')}}">Our Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
+                            <a class="nav-link" href="{{url('blogs')}}">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="{{url('contact')}}">Contact</a>
                         </li>
 
                     </ul>
