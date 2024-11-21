@@ -71,7 +71,7 @@
 
             <div class="container">
 
-                <a class="navbar-brand d-sm-block d-md-none d-lg-none" href="#">
+                <a class="navbar-brand d-sm-block d-md-none d-lg-none" href="{{url('/')}}">
                     <div class="d-flex align-items-center gap-2">
                         <img src="{{asset('main-frontend/img/logo.png')}}" alt="logo" class="img-fluid" style="height: 40px;">
                         <div>
@@ -90,7 +90,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Investor</a>
