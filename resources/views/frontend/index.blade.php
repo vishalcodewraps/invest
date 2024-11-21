@@ -20,7 +20,7 @@
                                 <li><a class="dropdown-item" href="#">Our Marketplace</a></li>
                             </ul>
                         </div>
-                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid" style="height: 25px;">
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid" style="height: 50px;">
                     </div>
                 </div>
 
@@ -255,16 +255,21 @@
 
                         <div class="slider-container">
                             <div class="three-row-slider slider-1">
-                                <div><img src="{{asset('main-frontend/img/bbc.svg')}}" alt="Slide 1"></div>
-                                <div><img src="{{asset('main-frontend/img/bloomberg.svg')}}" alt="Slide 2"></div>
+                            <div><img src="{{asset('main-frontend/img/bloomberg.svg')}}" alt="Slide 2"></div>
                                 <div><img src="{{asset('main-frontend/img/business-insider.svg')}}" alt="Slide 3"></div>
                                 <div><img src="{{asset('main-frontend/img/entrepreneur.svg')}}" alt="Slide 4"></div>
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
                                 <div><img src="{{asset('main-frontend/img/financial-times.svg')}}" alt="Slide 5"></div>
                                 <div><img src="{{asset('main-frontend/img/forbes.svg')}}" alt="Slide 6"></div>
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
                                 <div><img src="{{asset('main-frontend/img/startups.svg')}}" alt="Slide 7"></div>
                                 <div><img src="{{asset('main-frontend/img/techcrunch.svg')}}" alt="Slide 8"></div>
                                 <div><img src="{{asset('main-frontend/img/the-guardian.svg')}}" alt="Slide 9"></div>
                                 <div><img src="{{asset('main-frontend/img/the-times.svg')}}" alt="Slide 10"></div>
+                              
+                              
                             </div>
                         </div>
 
@@ -305,7 +310,7 @@
                         </div>
 
                         <div class="salary"> <span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
-                                    style="height: 30px; width: 30px;"></span> £1,000 - £50,000</div>
+                                    style="height: 30px; width: 30px;"></span> &nbsp; £0-£100K</div>
                         <div class="description">
                         I worked in software for over 20 years, helping grow a startup from 2010-2023 and now exited.
                         </div>
@@ -324,18 +329,19 @@
                 <div class="col-lg-4 d-flex justify-content-center">
                     <div class="profile-card">
                         <div class="d-flex gap-3">
-                            <div><img src="{{asset('main-frontend/img/i11.jpg')}}" alt="Profile Picture"></div>
 
-
-                            <div class="location flex-column justify-content-start">
-                                <h2>Dan S.</h2>
-                                <i class="fa-solid fa-location-dot"></i> Norwich, United Kingdom
-
+                            <div>
+                                <img src="{{asset('main-frontend/img/i11.jpg')}}" alt="Profile Picture">
                             </div>
+                            <div class="location flex-column justify-content-start">
+                                <h2>James</h2>
+                                <i class="fa-solid fa-location-dot"></i> Norwich, United Kingdom
+                            </div>
+
                         </div>
 
                         <div class="salary"> <span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
-                                    style="height: 30px; width: 30px;"></span> £2,000 - £10,000</div>
+                                    style="height: 30px; width: 30px;"></span> &nbsp; £500K-£10m</div>
                         <div class="description">
                         Business Growth Manager, Business Owner, Startup Owner
                         </div>
@@ -363,7 +369,7 @@
                         </div>
 
                         <div class="salary"><span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
-                                    style="height: 30px; width: 30px;"></span> £0 - £100,000</div>
+                                    style="height: 30px; width: 30px;"></span> &nbsp; £200K-£500K</div>
                         <div class="description">
                         23 years in management positions across 4 industries and 4 continents with the last 12 years in the CEO position.
                         </div>
@@ -482,7 +488,7 @@
                                     aria-controls="panelsStayOpen-collapse1">
                                     <span><img src="{{asset('main-frontend/img/44.png')}}" alt=""
                                             style="height: 50px; width: 50px;"></span>
-                                    &nbsp; Investment & Funding Services
+                                    &nbsp; Legal Services
                                 </button>
                             </h2>
                             <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse show">
@@ -504,7 +510,7 @@
                                     aria-expanded="false" aria-controls="panelsStayOpen-collapse2">
                                     <span><img src="{{asset('main-frontend/img/55.png')}}" alt=""
                                             style="height: 50px; width: 50px;"></span>
-                                    &nbsp; Business Strategy & Management Consulting
+                                    &nbsp; Marketing & Branding
                                 </button>
                             </h2>
                             <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse">
@@ -531,7 +537,7 @@
                                     aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
                                     <span><img src="{{asset('main-frontend/img/66.png')}}" alt=""
                                             style="height: 50px; width: 50px;"></span>
-                                    &nbsp; Financial Services
+                                    &nbsp; Risk Management & Insurance
                                 </button>
                             </h2>
                             <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse">
@@ -569,33 +575,28 @@
                 <div class="col-md-12 red-section p-4" style="border-radius: 10px;">
                 <h2 class="heading3 text-white my-4  text-center">Testimonials</h2>
                     <div class="owl-carousel owl-theme">
+
                         <div class="item">
                             <div class="bg-white p-3" style="border-radius: 20px;">
-
                                 <h3>Great investor to work</h3>
                                 <p>Great investor to work with. Great energy. Thoughtful & considerate and asked great questions. Highly recommended!</p>
-
-                                <div class="d-flex gap-2">
-                                    <img src="{{asset('main-frontend/img/i22.jpg')}}" alt="" class="img-fluid rounded"
-                                        style="height: 50px; width: 100px;">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <img src="{{asset('main-frontend/img/a22.jpg')}}" alt="" class="img-fluid rounded"
+                                        style="height: 60px !important; width: 60px !important; border-radius: 50% !important;">
                                     <p>Indiana Gregg<br><span>wedo.ai</span></>
                                 </div>
-
                             </div>
                         </div>
 
                         <div class="item">
                             <div class="bg-white p-3" style="border-radius: 20px;">
-
                                 <h3>Igning up to AIN led</h3>
                                 <p>Signing up to AIN led to us connecting with one of our biggest investors that was instrumental to helping us close the round.</p>
-
-                                <div class="d-flex gap-2">
-                                    <img src="{{asset('main-frontend/img/i11.jpg')}}" alt="" class="img-fluid rounded"
-                                        style="height: 50px; width: 100px;">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <img src="{{asset('main-frontend/img/a1.jpg')}}" alt="" class="img-fluid rounded"
+                                        style="height: 60px !important; width: 60px !important; border-radius: 50% !important;">
                                     <p>Katie McCourt @ Pantee<br><span>pantee.co.uk</span></p>
                                 </div>
-
                             </div>
                         </div>
 
@@ -605,9 +606,9 @@
                                 <h3>AIN is an excellent</h3>
                                 <p>AIN is an excellent place to make contact with potential investors for different stages of financing. From small investors to large VC funds.</p>
 
-                                <div class="d-flex gap-2">
-                                    <img src="{{asset('main-frontend/img/admin.png')}}" alt="" class="img-fluid rounded"
-                                        style="height: 50px; width: 100px;">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <img src="{{asset('main-frontend/img/a33.jpg')}}" alt="" class="img-fluid rounded"
+                                        style="height: 60px !important; width: 60px !important; border-radius: 50% !important;">
                                     <p>Alexandros Christodoulakis <br><span>Wealthyhood</span></p>
                                 </div>
                             </div>
@@ -629,31 +630,14 @@
                     sectors to ensure the relationship is valuable to both parties.</p>
 
                     <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/111.png')}}" alt="Education Icon">
-                            <strong>Education & Edtech</strong>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/222.png')}}" alt="Media Icon">
-                            <strong>Media & Entertainment</strong>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Agriculture & Agtech</strong>
-                        </div>
-                    </div>
+                 
                     <div class="col-md-4">
                         <div class="industry-item">
                             <img src="{{asset('main-frontend/img/444.png')}}" alt="Technology Icon">
                             <strong>Technology</strong>
                         </div>
                     </div>
+
                     <div class="col-md-4">
                         <div class="industry-item">
                             <img src="{{asset('main-frontend/img/555.png')}}" alt="Real Estate Icon">
@@ -667,12 +651,120 @@
                             <strong>Education & Edtech</strong>
                         </div>
                     </div>
+
                     <div class="col-md-4">
                         <div class="industry-item">
                             <img src="{{asset('main-frontend/img/222.png')}}" alt="Media Icon">
                             <strong>Media & Entertainment</strong>
                         </div>
                     </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Fashion & Beauty</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Media</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Business Services</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Products & Inventions</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Manufacturing & Engineering</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Energy & Natural Resources</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Sales & Marketing</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Transportation</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Food & Beverage</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Retail</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Medical & Sciences</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Hospitality, Restaurants & Bars</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Software</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Technology</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <strong>Property</strong>
+                        </div>
+                    </div>
+
                     <div class="col-md-4">
                         <div class="industry-item">
                             <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
@@ -699,8 +791,7 @@
                 </div>
 
                 <div class="col-md-6 col-sm-12 text-center">
-                    <img src="{{asset('main-frontend/img/invest-img.png')}}" alt="" class="img-fluid">
-
+                    <img src="{{asset('main-frontend/img/invest-img.png')}}" alt="" class="img-fluid" style="height:450px;">
                 </div>
             </div>
         </div>

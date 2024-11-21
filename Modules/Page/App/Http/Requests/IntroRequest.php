@@ -13,8 +13,6 @@ class IntroRequest extends FormRequest
     {
         return [
             'intro_title' => 'required',
-            'total_rating' => 'required',
-            'total_customer' => 'required',
         ];
     }
 
@@ -22,9 +20,8 @@ class IntroRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'intro_banner_one.required' => 'Image is required',
             'intro_title.required' => trans('translate.Title is required'),
-            'total_rating.required' => trans('translate.Rating is required'),
-            'total_customer.required' => trans('translate.Customer is required')
         ];
     }
 

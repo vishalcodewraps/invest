@@ -10,63 +10,6 @@
 
 @section('body-content')
 
-    <!-- crancy Dashboard -->
-    <section class="crancy-adashboard crancy-show language_box">
-        <div class="container container__bscreen">
-            <div class="row">
-                <div class="col-12">
-                    <div class="crancy-body">
-                        <!-- Dashboard Inner -->
-                        <div class="crancy-dsinner">
-                            <div class="row">
-                                <div class="col-12 mg-top-30">
-                                    <!-- Product Card -->
-                                    <div class="crancy-product-card translation_main_box">
-
-                                        <div class="crancy-customer-filter">
-                                            <div class="crancy-customer-filter__single crancy-customer-filter__single--csearch">
-                                                <div class="crancy-header__form crancy-header__form--customer">
-                                                    <h4 class="crancy-product-card__title">{{ __('translate.Switch to language translation') }}</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="translation_box">
-                                            <ul >
-                                                @foreach ($language_list as $language)
-                                                <li><a href="{{ route('admin.intro2-section', ['lang_code' => $language->lang_code] ) }}">
-                                                    @if (request()->get('lang_code') == $language->lang_code)
-                                                        <i class="fas fa-eye"></i>
-                                                    @else
-                                                        <i class="fas fa-edit"></i>
-                                                    @endif
-
-                                                    {{ $language->lang_name }}</a></li>
-                                                @endforeach
-                                            </ul>
-
-                                            <div class="alert alert-secondary" role="alert">
-
-                                                @php
-                                                    $edited_language = $language_list->where('lang_code', request()->get('lang_code'))->first();
-                                                @endphp
-
-                                            <p>{{ __('translate.Your editing mode') }} : <b>{{ $edited_language->lang_name }}</b></p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- End Product Card -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Dashboard Inner -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End crancy Dashboard -->
 
     <!-- crancy Dashboard -->
     <section class="crancy-adashboard crancy-show">
@@ -107,20 +50,6 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-md-6">
-                                                            <div class="crancy__item-form--group w-100 h-100">
-                                                                <label class="crancy__item-label">{{ __('translate.Foreground Image') }} </label>
-                                                                <div class="crancy-product-card__upload crancy-product-card__upload--border">
-                                                                    <input type="file" class="btn-check" name="home2_intro_forground" id="input-img2" autocomplete="off" onchange="previewImage2(event)">
-                                                                    <label class="crancy-image-video-upload__label" for="input-img2">
-                                                                        <img class="intro_imagee intro_imagee2" id="view_img2" src="{{ asset($homepage->home2_intro_forground) }}">
-                                                                        <h4 class="crancy-image-video-upload__title">{{ __('translate.Click here to') }} <span class="crancy-primary-color">{{ __('translate.Choose File') }}</span> {{ __('translate.and upload') }} </h4>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
                                                     </div>
 
                                                 </div>
@@ -138,22 +67,9 @@
                                                 <div class="col-12">
                                                     <div class="crancy__item-form--group mg-top-form-20">
                                                         <label class="crancy__item-label">{{ __('translate.Description') }} *</label>
-                                                        <input class="crancy__item-input" type="text" name="home2_intro_description" id="home2_intro_description" value="{{ $translate->home2_intro_description }}">
+                                                        <textarea class="crancy__item-input crancy__item-textarea summernote" id="description" name="home2_intro_description" id="home2_intro_description">{{ $translate->home2_intro_description }}</textarea>
                                                     </div>
                                                 </div>
-
-
-
-                                                @if (admin_lang() == request()->get('lang_code'))
-                                                <div class="col-12">
-                                                    <div class="crancy__item-form--group mg-top-form-20">
-                                                        <label class="crancy__item-label">{{ __('translate.Tag') }} * </label>
-                                                        <input class="crancy__item-input tags" type="text" name="home2_intro_tags" id="home2_intro_tags" value="{{ $homepage->home2_intro_tags }}">
-                                                    </div>
-                                                </div>
-                                                @endif
-
-
                                             </div>
 
                                             <button class="crancy-btn mg-top-25" type="submit">{{ __('translate.Update') }}</button>
@@ -181,7 +97,7 @@
 @endpush
 
 @push('js_section')
-
+<script src="{{ asset('global/tinymce/js/tinymce/tinymce.min.js') }}"></script>
 <script src="{{ asset('global/tagify/tagify.js') }}"></script>
 
     <script>
@@ -213,5 +129,18 @@
         };
 
 
+    </script>
+    <script>
+         tinymce.init({
+                    selector: '.summernote',
+                    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+                    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+                    tinycomments_mode: 'embedded',
+                    tinycomments_author: 'Author name',
+                    mergetags_list: [
+                        { value: 'First.Name', title: 'First Name' },
+                        { value: 'Email', title: 'Email' },
+                    ]
+                });
     </script>
 @endpush

@@ -276,7 +276,7 @@
                 <div class="collapse crancy__dropdown {{ Route::is('admin.intro-section') || Route::is('admin.intro2-section') || Route::is('admin.join-seller') || Route::is('admin.working-step') || Route::is('admin.counter') || Route::is('admin.testimonial.*') || Route::is('admin.footer') || Route::is('admin.explore-section') || Route::is('admin.our-feature') ? 'show' : '' }}" id="menu-item__for_section"  data-bs-parent="#CrancyMenu">
                     <ul class="menu-bar__one-dropdown">
 
-                        <li><a href="{{ route('admin.intro-section', ['lang_code' => admin_lang()]) }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Intro Section') }}</span></span></a></li>
+                        <li><a href="{{ route('admin.intro-section', ['lang_code' => admin_lang()]) }}"><span class="menu-bar__text"><span class="menu-bar__name">Manage Banner</span></span></a></li>
 
                         <li><a href="{{ route('admin.intro2-section', ['lang_code' => admin_lang()]) }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Intro Section') }}({{ __('translate.Home-2') }})</span></span></a></li>
 

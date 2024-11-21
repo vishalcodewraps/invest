@@ -3407,6 +3407,7 @@ return array(
     'Modules\\Page\\App\\Http\\Requests\\WorkingStepRequest' => $baseDir . '/Modules/Page/App/Http/Requests/WorkingStepRequest.php',
     'Modules\\Page\\App\\Models\\AboutUs' => $baseDir . '/Modules/Page/App/Models/AboutUs.php',
     'Modules\\Page\\App\\Models\\AboutUsTranslation' => $baseDir . '/Modules/Page/App/Models/AboutUsTranslation.php',
+    'Modules\\Page\\App\\Models\\Banner' => $baseDir . '/Modules/Page/App/Models/Banner.php',
     'Modules\\Page\\App\\Models\\ContactUs' => $baseDir . '/Modules/Page/App/Models/ContactUs.php',
     'Modules\\Page\\App\\Models\\ContactUsTranslation' => $baseDir . '/Modules/Page/App/Models/ContactUsTranslation.php',
     'Modules\\Page\\App\\Models\\CustomPage' => $baseDir . '/Modules/Page/App/Models/CustomPage.php',

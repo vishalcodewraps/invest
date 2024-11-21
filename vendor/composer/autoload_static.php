@@ -4023,6 +4023,7 @@ class ComposerStaticInit0c791237df9f11e49f6488633cd9afe4
         'Modules\\Page\\App\\Http\\Requests\\WorkingStepRequest' => __DIR__ . '/../..' . '/Modules/Page/App/Http/Requests/WorkingStepRequest.php',
         'Modules\\Page\\App\\Models\\AboutUs' => __DIR__ . '/../..' . '/Modules/Page/App/Models/AboutUs.php',
         'Modules\\Page\\App\\Models\\AboutUsTranslation' => __DIR__ . '/../..' . '/Modules/Page/App/Models/AboutUsTranslation.php',
+        'Modules\\Page\\App\\Models\\Banner' => __DIR__ . '/../..' . '/Modules/Page/App/Models/Banner.php',
         'Modules\\Page\\App\\Models\\ContactUs' => __DIR__ . '/../..' . '/Modules/Page/App/Models/ContactUs.php',
         'Modules\\Page\\App\\Models\\ContactUsTranslation' => __DIR__ . '/../..' . '/Modules/Page/App/Models/ContactUsTranslation.php',
         'Modules\\Page\\App\\Models\\CustomPage' => __DIR__ . '/../..' . '/Modules/Page/App/Models/CustomPage.php',

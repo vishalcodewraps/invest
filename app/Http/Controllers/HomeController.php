@@ -160,20 +160,29 @@ class HomeController extends Controller
 
     public function blogs(Request $request)
     {
-        $blogs = Blog::with('author')->where('status', 1);
+        // $blogs = Blog::with('author')->where('status', 1);
 
-        if($request->category){
-            $blogs = $blogs->where('blog_category_id', $request->category);
-        }
+        // if($request->category){
+        //     $blogs = $blogs->where('blog_category_id', $request->category);
+        // }
 
-        $blogs = $blogs->paginate(12);
+        // $blogs = $blogs->paginate(12);
 
-        $seo_setting = SeoSetting::where('id', 2)->first();
+        // $seo_setting = SeoSetting::where('id', 2)->first();
 
-        return view('blogs', [
-            'blogs' => $blogs,
-            'seo_setting' => $seo_setting,
-        ]);
+        return view('frontend.blog');
+    }
+    public function blog_detail(Request $request)
+    {
+        return view('frontend.blog-details');
+    }
+    public function our_team(Request $request)
+    {
+        return view('frontend.our-team');
+    }
+    public function contact(Request $request)
+    {
+        return view('frontend.contact');
     }
 
     public function blog($slug)
