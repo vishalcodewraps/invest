@@ -413,3 +413,10 @@ input.border-bottom-input:focus {
 
 
   }
+
+  .btn-red {
+    background-color: #b30000;
+    color: white;
+    border-radius: 0;
+    padding: 17px 60px;
+}
