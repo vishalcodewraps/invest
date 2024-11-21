@@ -4,7 +4,7 @@
         <div class="row border-bottom">
             <div class="col-lg-9 col-md-4 mb-4">
                 <div class="logo">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{{url('/')}}">
                         <div class="d-flex align-items-center gap-2">
                             <img src="{{ asset('main-frontend/img/logo.png') }}" alt="logo" class="img-fluid"
                                 style="height: 68px;">
@@ -43,13 +43,13 @@
                 <h6 class="section-title text-white">Navigation</h6>
                 <ul class="list-unstyled">
                     <li><a href="#" class="text-white text-decoration-none">Login</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                    <li><a href="{{url('/contact')}}" class="text-white text-decoration-none">Contact Us</a></li>
                     <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
                     <li><a href="#" class="text-white text-decoration-none">Testimonials</a></li>
                     <li><a href="#" class="text-white text-decoration-none">Company Info</a></li>
                     <li><a href="#" class="text-white text-decoration-none">Partners</a></li>
                     <li><a href="#" class="text-white text-decoration-none">Refer a Friend</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                    <li><a href="{{url('/blogs')}}" class="text-white text-decoration-none">Blog</a></li>
                 </ul>
             </div>
 
