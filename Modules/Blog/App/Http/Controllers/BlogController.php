@@ -7,13 +7,16 @@ use Image, File, Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Modules\Blog\App\Models\Blog;
+use Modules\Blog\App\Models\Team;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Modules\Blog\App\Models\BlogComment;
 use Modules\Blog\App\Models\BlogCategory;
 use Modules\Language\App\Models\Language;
 use Modules\Blog\App\Models\BlogTranslation;
+use Modules\Blog\App\Models\TeamTranslation;
 use Modules\Blog\App\Http\Requests\BlogRequest;
+use Modules\Blog\App\Http\Requests\TeamRequest;
 
 class BlogController extends Controller
 {
@@ -28,6 +31,16 @@ class BlogController extends Controller
         return view('blog::blog_list', ['blogs' => $blogs]);
     }
 
+    public function team_list()
+    {
+       
+        $blogs = Team::latest()->get();
+
+        // dd($blogs);
+
+        return view('blog::team_list', ['blogs' => $blogs]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -36,6 +49,59 @@ class BlogController extends Controller
         $blog_categories = BlogCategory::with('translate')->get();
 
         return view('blog::blog_create', ['blog_categories' => $blog_categories]);
+    }
+
+
+    public function teamCreate()
+    {
+        
+        $blog_categories = BlogCategory::with('translate')->get();
+
+        return view('blog::team_create', ['blog_categories' => $blog_categories]);
+    }
+
+
+    public function teamStore(TeamRequest $request)
+    {
+        $auth_admin = Auth::guard('admin')->user();
+
+        $blog = new Team();
+
+        if($request->image){
+            $image_name = 'blog-'.date('-Y-m-d-h-i-s-').rand(999,9999).'.webp';
+            $image_name ='uploads/custom-images/'.$image_name;
+            Image::make($request->image)
+                ->encode('webp', 80)
+                ->save(public_path().'/'.$image_name);
+            $blog->image = $image_name;
+        }
+
+       
+        $blog->slug = $request->slug;
+        $blog->admin_id = $auth_admin->id;
+        $blog->is_popular = $request->is_popular ? 1 : 0;
+        $blog->status = $request->status ? 1 : 0;
+        $blog->save();
+
+        $languages = Language::all();
+        foreach($languages as $language){
+            $blog_trans = new TeamTranslation();
+            $blog_trans->lang_code = $language->lang_code;
+            $blog_trans->blog_id = $blog->id;
+            $blog_trans->title = $request->title;
+            $blog_trans->description = $request->description;
+            $blog_trans->seo_title = $request->seo_title ? $request->seo_title : $request->title;
+            $blog_trans->seo_description = $request->seo_description ? $request->seo_description : $request->title;
+            $blog_trans->save();
+
+        }
+
+
+        $notify_message = trans('translate.Created successfully');
+        $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
+        return redirect()->route('admin.teamedit', ['blog' => $blog->id, 'lang_code' => admin_lang()])->with($notify_message);
+
+
     }
 
     /**
@@ -56,7 +122,7 @@ class BlogController extends Controller
             $blog->image = $image_name;
         }
 
-        $blog->blog_category_id = $request->category;
+        $blog->blog_category_id = '0';
         $blog->slug = $request->slug;
         $blog->admin_id = $auth_admin->id;
         $blog->is_popular = $request->is_popular ? 1 : 0;
@@ -100,6 +166,18 @@ class BlogController extends Controller
         return view('blog::blog_edit', ['blog' => $blog, 'blog_categories' => $blog_categories, 'blog_translate' => $blog_translate]);
     }
 
+
+    public function teamEdit(Request $request, $id)
+    {
+        $blog = Team::findOrFail($id);
+
+        $blog_translate = TeamTranslation::where(['blog_id' => $id, 'lang_code' => $request->lang_code])->first();
+
+        $blog_categories = BlogCategory::with('translate')->get();
+
+        return view('blog::team_edit', ['blog' => $blog, 'blog_categories' => $blog_categories, 'blog_translate' => $blog_translate]);
+    }
+
     /**
      * Update the specified resource in storage.
      */
@@ -123,7 +201,7 @@ class BlogController extends Controller
         }
 
         if($request->lang_code == admin_lang()){
-            $blog->blog_category_id = $request->category;
+            $blog->blog_category_id = '0';
             $blog->slug = $request->slug;
             $blog->is_popular = $request->is_popular ? 1 : 0;
             $blog->status = $request->status ? 1 : 0;
@@ -132,6 +210,49 @@ class BlogController extends Controller
         }
 
         $blog_trans = BlogTranslation::where(['id' => $request->translate_id])->first();
+        $blog_trans->title = $request->title;
+        $blog_trans->description = $request->description;
+        $blog_trans->seo_title = $request->seo_title ? $request->seo_title : $request->title;
+        $blog_trans->seo_description = $request->seo_description ? $request->seo_description : $request->title;
+        $blog_trans->save();
+
+
+        $notify_message = trans('translate.Updated successfully');
+        $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
+        return redirect()->back()->with($notify_message);
+
+    }
+
+
+
+    public function teamUpdate(TeamRequest $request, $id)
+    {
+        $blog = Team::findOrFail($id);
+
+        if($request->image){
+            $old_image = $blog->image;
+            $image_name = 'blog-'.date('-Y-m-d-h-i-s-').rand(999,9999).'.webp';
+            $image_name ='uploads/custom-images/'.$image_name;
+            Image::make($request->image)
+                ->encode('webp', 80)
+                ->save(public_path().'/'.$image_name);
+            $blog->image = $image_name;
+            $blog->save();
+
+            if($old_image){
+                if(File::exists(public_path().'/'.$old_image))unlink(public_path().'/'.$old_image);
+            }
+        }
+
+        if($request->lang_code == admin_lang()){
+            
+            $blog->is_popular = $request->is_popular ? 1 : 0;
+            $blog->status = $request->status ? 1 : 0;
+            $blog->tags = $request->tags;
+            $blog->save();
+        }
+
+        $blog_trans = TeamTranslation::where(['id' => $request->translate_id])->first();
         $blog_trans->title = $request->title;
         $blog_trans->description = $request->description;
         $blog_trans->seo_title = $request->seo_title ? $request->seo_title : $request->title;
