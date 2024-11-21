@@ -142,10 +142,10 @@
             $('.slider-1').slick({
                 slidesToShow: 3, // Number of slides to show per row
                 rows: 3, // Number of rows
-                dots: true, // Enable dots for navigation
+                dots: false, // Enable dots for navigation
                 arrows: true, // Enable arrows for navigation
-                infinite: true, // Enable infinite scrolling
-                autoplay: true, // Enable autoplay
+                infinite: false, // Enable infinite scrolling
+                autoplay: false, // Enable autoplay
                 autoplaySpeed: 1000, // Autoplay speed in milliseconds
             });
 
@@ -154,13 +154,11 @@
                 rows: 2,
                 dots: false,
                 arrows: true,
-                infinite: true,
-                autoplay: true, // Enable autoplay
+                infinite: false,
+                autoplay: false, // Enable autoplay
                 autoplaySpeed: 1000, // Autoplay speed in milliseconds
             });
         });
-
-
     </script>
 </body>
 

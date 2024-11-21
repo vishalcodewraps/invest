@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +30,7 @@
         <div class="container-fluid bg-light">
             <div class="container">
                 <div class="row py-3">
+
                     <div class="col-md-4">
                         <a class="navbar-brand d-none d-md-block d-lg-block" href="#">
                             <div class="d-flex align-items-center gap-2">
@@ -41,11 +41,14 @@
                             </div>
                         </a>
                     </div>
+
                     <div class="col-md-4 d-none d-md-block d-lg-block">
                         <div class="m-auto">
                             <form class="d-flex mt-2" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search"
-                                    aria-label="Search">
+                                <div class="input-group">
+                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                    <span class="input-group-text"><i class="fas fa-search" style="color:#B91C1C;"></i></span>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -57,7 +60,7 @@
                                     Login</a></li>
                             <li><a href="#" class="text-decoration-none text-dark"><img src="{{asset('main-frontend/img/register.png')}}"
                                         class="img-fluid" style="height: 24px;">
-                                    <br> Register</a></li>
+                             <br> Register</a></li>
                         </ul>
                     </div>
 
@@ -85,7 +88,6 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
