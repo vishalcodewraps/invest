@@ -67,7 +67,7 @@
 
                         <li><a href="{{ route('admin.sub-category.index') }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Sub Category List') }}</span></span></a></li>
 
-                        {{-- <li><a href="{{ route('admin.listings.create') }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Create Service') }}</span></span></a></li>
+                         <li><a href="{{ route('admin.listings.create') }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Create Service') }}</span></span></a></li>
 
                         <li><a href="{{ route('admin.listings.index') }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.All Services') }}</span></span></a></li>
 
@@ -75,7 +75,7 @@
 
                         <li><a href="{{ route('admin.featured-listings') }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Featured Service') }}</span></span></a></li>
 
-                        <li><a href="{{ route('admin.review-list') }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Review List') }}</span></span></a></li> --}}
+                        <li><a href="{{ route('admin.review-list') }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Review List') }}</span></span></a></li> 
                     </ul>
                 </div>
             </li>

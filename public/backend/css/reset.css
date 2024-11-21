@@ -1971,7 +1971,7 @@ object {
     color: #fff;
 }
 .crancy-btn {
-    padding: 9px 25px;
+    padding: 4px 10px;
     text-align: center;
     font-weight: 400;
     -webkit-transition: all 0.3s linear;
@@ -1983,7 +1983,7 @@ object {
     font-size: 16px;
     color: #fff;
     align-items: center;
-    gap: 12px;
+    gap: 4px;
     width: initial;
     display: inline-flex;
     border-radius: 8px;
@@ -2137,7 +2137,7 @@ object {
 
 @media only screen and (min-width: 1279px) and (max-width: 1550px) {
     .crancy-btn {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 

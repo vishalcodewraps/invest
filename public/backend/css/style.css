@@ -187,7 +187,7 @@
 
 .menu-bar li a {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 22px;
     color: var(--theme-color);
     padding: 14px 0px;
@@ -206,7 +206,7 @@
 .menu-bar li ul li a {
     color: #fff;
     padding: 10px 0px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .menu-bar li ul li a span {
@@ -234,9 +234,9 @@
 }
 
 .menu-bar li .crancy__dropdown {
-    padding-left: 15px;
+    padding-left: 10px;
     border-left: 1px solid #e4f2ffb5;
-    margin-left: 40px;
+    margin-left: 12px;
 }
 
 .menu-bar li.show-dropdown ul {
@@ -4542,7 +4542,7 @@ button.crancy-item__btn {
 
 .crancy-table__product-title {
     margin: 0;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     display: flex;
     flex-direction: column;
