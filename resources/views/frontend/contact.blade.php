@@ -34,45 +34,47 @@
                         <li><span><img src="{{ asset('main-frontend/img/map-icon.png')}}" alt=""></span> 132 Dartmouth Street Boston, Massachusetts 02156 United States</li>
                     </ul>
 
+                    <form action="{{url('send-contact')}}" method="post">
+                        @csrf
                     <div class="row my-5">
-                        <form action=""></form>
                         <div class="col-md-6">                            
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Name</label>
-                                    <input type="email" class="border-bottom-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+                                    <input type="text" class="border-bottom-input" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
                                 </div>                          
                         </div>
 
                         <div class="col-md-6">                            
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                                <input type="email" class="border-bottom-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="last Name">
+                                <input type="text" class="border-bottom-input" name="last_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="last Name">
                             </div>                          
                         </div>
 
                         <div class="col-md-6">                            
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input type="email" class="border-bottom-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                <input type="email" class="border-bottom-input" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                             </div>                          
                         </div>
 
                         <div class="col-md-6">                            
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Phone</label>
-                                <input type="phone" class="border-bottom-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="phone">
+                                <input type="phone" class="border-bottom-input" name="phone" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="phone">
                             </div>                          
                         </div>
                     <div class="col-md-12">                            
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Message</label>
-                            <input type="email" class="border-bottom-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write your message..">
+                            <input type="text" class="border-bottom-input" name="message" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write your message..">
                         </div>     
                         
                         <div class="text-end">
                             <button class="btn btn-red">Send Message</button>
                         </div>
-                     </div>
+                    </div>
+                </form>
 
                     </form>
                     </div>
@@ -86,3 +88,12 @@
 
     <!-- section end -->
     @include('frontend.layouts.footer')
+    @if(session('success'))
+    <script>
+       Swal.fire({
+       title: "Success!",
+       text: "{{session('success')}}",
+       icon: "success"
+       });
+    </script>
+@endif

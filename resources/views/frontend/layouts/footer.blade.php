@@ -114,6 +114,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Initialize Owl Carousel -->
 <script>
@@ -134,6 +135,7 @@
                 }
             }
         });
+        });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
@@ -143,8 +145,8 @@
                 rows: 3, // Number of rows
                 dots: false, // Enable dots for navigation
                 arrows: true, // Enable arrows for navigation
-                infinite: false, // Enable infinite scrolling
-                autoplay: false, // Enable autoplay
+                infinite: true, // Enable infinite scrolling
+                autoplay: true, // Enable autoplay
                 autoplaySpeed: 1000, // Autoplay speed in milliseconds
             });
 
@@ -153,12 +155,21 @@
                 rows: 2,
                 dots: false,
                 arrows: true,
-                infinite: false,
-                autoplay: false, // Enable autoplay
+                infinite: true,
+                autoplay: true, // Enable autoplay
                 autoplaySpeed: 1000, // Autoplay speed in milliseconds
             });
         });
     </script>
+            @if(session('success'))
+            <script>
+               Swal.fire({
+               title: "Success!",
+               text: "{{session('success')}}",
+               icon: "success"
+               });
+            </script>
+       @endif
 </body>
 
 </html>

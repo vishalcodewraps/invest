@@ -29,7 +29,7 @@ use Modules\SeoSetting\App\Models\SeoSetting;
 use Modules\Listing\App\Models\ListingPackage;
 use Modules\Testimonial\App\Models\Testimonial;
 use Modules\GlobalSetting\App\Models\GlobalSetting;
-
+use Modules\ContactMessage\App\Models\ContactMessage;
 class HomeController extends Controller
 {
 
@@ -91,7 +91,7 @@ class HomeController extends Controller
         $selected_theme = Session::get('selected_theme');
 
         if ($selected_theme == 'theme_one'){
-            return view('frontend.index');
+            return view('frontend.index',compact('testimonials'));
             // return view('index', [
             //     'seo_setting' => $seo_setting,
             //     'homepage' => $homepage,
@@ -175,6 +175,17 @@ class HomeController extends Controller
     public function blog_detail(Request $request)
     {
         return view('frontend.blog-details');
+    }
+    public function send_contact(Request $request)
+    {
+        $contact = new ContactMessage;
+        $contact->name = $request->name;
+        $contact->last_name = $request->last_name;
+        $contact->email = $request->email;
+        $contact->phone = $request->phone;
+        $contact->message = $request->message;
+        $contact->save();
+        return back()->with('success','Enquiry send successfully');
     }
     public function our_team(Request $request)
     {
