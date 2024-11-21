@@ -574,47 +574,25 @@
                 <!-- HTML Structure for Owl Carousel -->
                 <div class="col-md-12 red-section p-4" style="border-radius: 10px;">
                 <h2 class="heading3 text-white my-4  text-center">Testimonials</h2>
-                    <div class="owl-carousel owl-theme">
+                <div class="owl-carousel owl-theme">
+                    @foreach($testimonials as $res)
+                    <div class="item">
+                        <div class="bg-white p-3" style="border-radius: 20px;">
 
-                        <div class="item">
-                            <div class="bg-white p-3" style="border-radius: 20px;">
-                                <h3>Great investor to work</h3>
-                                <p>Great investor to work with. Great energy. Thoughtful & considerate and asked great questions. Highly recommended!</p>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{asset('main-frontend/img/a22.jpg')}}" alt="" class="img-fluid rounded"
-                                        style="height: 60px !important; width: 60px !important; border-radius: 50% !important;">
-                                    <p>Indiana Gregg<br><span>wedo.ai</span></>
-                                </div>
+                            <h3>{{$res->translate->name}}</h3>
+                            <p>{{$res->translate->comment}}</p>
+
+                            <div class="d-flex gap-2 align-items-center">
+                                <img src="{{ asset($res->image) }}" alt="" class="img-fluid rounded"
+                                    style="height: 100px; width: 100px; border-radius: 50% !important;">
+                                <p>Indiana Gregg</p>
                             </div>
+
                         </div>
+                    </div>
+                    @endforeach
 
-                        <div class="item">
-                            <div class="bg-white p-3" style="border-radius: 20px;">
-                                <h3>Igning up to AIN led</h3>
-                                <p>Signing up to AIN led to us connecting with one of our biggest investors that was instrumental to helping us close the round.</p>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{asset('main-frontend/img/a1.jpg')}}" alt="" class="img-fluid rounded"
-                                        style="height: 60px !important; width: 60px !important; border-radius: 50% !important;">
-                                    <p>Katie McCourt @ Pantee<br><span>pantee.co.uk</span></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="bg-white p-3" style="border-radius: 20px;">
-
-                                <h3>AIN is an excellent</h3>
-                                <p>AIN is an excellent place to make contact with potential investors for different stages of financing. From small investors to large VC funds.</p>
-
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{asset('main-frontend/img/a33.jpg')}}" alt="" class="img-fluid rounded"
-                                        style="height: 60px !important; width: 60px !important; border-radius: 50% !important;">
-                                    <p>Alexandros Christodoulakis <br><span>Wealthyhood</span></p>
-                                </div>
-                            </div>
-                        </div>
-
-                   </div>
+               </div>
 
 
                 </div>

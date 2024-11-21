@@ -45,9 +45,18 @@
                                                 </th>
 
                                                 <th class="crancy-table__column-2 crancy-table__h2 sorting" >
+                                                   Last Name
+                                                </th>
+                                                
+                                                <th class="crancy-table__column-2 crancy-table__h2 sorting" >
                                                     {{ __('translate.Email') }}
                                                 </th>
-
+                                                <th class="crancy-table__column-2 crancy-table__h2 sorting" >
+                                                  Phone
+                                                </th>
+                                                <th class="crancy-table__column-2 crancy-table__h2 sorting" >
+                                                  Message
+                                                </th>
                                                 <th class="crancy-table__column-2 crancy-table__h2 sorting" >
                                                     {{ __('translate.Created') }}
                                                 </th>
@@ -69,11 +78,20 @@
                                                     <td class="crancy-table__column-2 crancy-table__data-2">
                                                         <h4 class="crancy-table__product-title">{{ html_decode($contact_message->name) }}</h4>
                                                     </td>
-
+                                                    <td class="crancy-table__column-2 crancy-table__data-2">
+                                                        <h4 class="crancy-table__product-title">{{ html_decode($contact_message->last_name) }}</h4>
+                                                    </td>
+                                                    
                                                     <td class="crancy-table__column-2 crancy-table__data-2">
                                                         <h4 class="crancy-table__product-title">{{ html_decode($contact_message->email) }}</h4>
                                                     </td>
-
+                                                    <td class="crancy-table__column-2 crancy-table__data-2">
+                                                        <h4 class="crancy-table__product-title">{{ html_decode($contact_message->phone) }}</h4>
+                                                    </td>
+                                                    <td class="crancy-table__column-2 crancy-table__data-2">
+                                                        <h4 class="crancy-table__product-title">{{ html_decode($contact_message->message) }}</h4>
+                                                    </td>
+                                                    
                                                     <td class="crancy-table__column-2 crancy-table__data-2">
                                                         <h4 class="crancy-table__product-title">{{ $contact_message->created_at->format('h:iA, d F Y') }}</h4>
                                                     </td>
@@ -86,10 +104,10 @@
                                                             </button>
                                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
-                                                                <li>
+                                                                {{-- <li>
                                                                     <a href="{{ route('admin.show-message', $contact_message->id) }}" class=" dropdown-item"><i class="fas fa-eye"></i> {{ __('translate.Show') }}</a>
 
-                                                                </li>
+                                                                </li> --}}
 
                                                                 <li>
                                                                     <a onclick="itemDeleteConfrimation({{ $contact_message->id }})" href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-item"><i class="fas fa-trash"></i> {{ __('translate.Delete') }}</a>
