@@ -55,10 +55,12 @@
 
                     <div class="col-md-4 d-none d-md-block d-lg-block">
                         <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center text-center justify-content-end">
-                            <li><a href="#" class="text-decoration-none text-dark"><img src="{{asset('main-frontend/img/login.png')}}"
+                            <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><img src="{{asset('main-frontend/img/login.png')}}"
                                         class="img-fluid" style="height: 24px;"> <br>
                                     Login</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark"><img src="{{asset('main-frontend/img/register.png')}}"
+                            <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"><img src="{{asset('main-frontend/img/register.png')}}"
                                         class="img-fluid" style="height: 24px;">
                              <br> Register</a></li>
                         </ul>
@@ -123,10 +125,12 @@
 
                     <div class="d-sm-block d-md-none">
                         <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center text-center justify-content-end">
-                            <li><a href="#" class="text-decoration-none text-black"><img src="{{asset('main-frontend/img/login.png')}}"
-                                        class="img-fluid" style="height: 24px;"> <br>
+                            <li><a href="#" class="text-decoration-none text-black"  data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><img src="{{asset('main-frontend/img/login.png')}}"
+                                        class="img-fluid" style="height: 24px;" > <br>
                                     Login</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark"><img src="{{asset('main-frontend/img/register.png')}}"
+                            <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"  ><img src="{{asset('main-frontend/img/register.png')}}"
                                         class="img-fluid" style="height: 24px;">
                                     <br> Register</a></li>
                         </ul>

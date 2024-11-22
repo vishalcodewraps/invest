@@ -430,3 +430,100 @@ input.border-bottom-input:focus {
     font-size: 60px;
     font-weight: 600;
 }
+
+.login-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #b30000;
+}
+
+.button-color {
+    background-color: white;
+
+}
+
+.margin-forget{
+    margin-top: 80px;
+}
+
+/* login modal css end */
+
+
+/* register modal css start */
+.modal-content {
+    border-radius: 23px;
+}
+
+.btn-close {
+    position: relative;
+    right: 10px;
+    top: 14px;
+}
+
+
+.modal-img {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-one__form-input-box {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 28px;
+}
+
+.name-span {
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    z-index: 99;
+    background: white;
+    padding: 0 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.contact-one__form-input-box input[type="text"],
+.contact-one__form-input-box input[type="email"],
+.contact-one__form-input-box input[type="date"] {
+    height: 52px;
+    width: 100%;
+    background-color: white !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: none;
+    font-size: 14px;
+    color: var(--treck-gray);
+    display: block;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+
+.contact-one__form-input-box input[type="password"],
+.contact-one__form-input-box input[type="email"],
+.contact-one__form-input-box input[type="date"] {
+    height: 52px;
+    width: 100%;
+
+    background-color: white !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: none;
+    font-size: 14px;
+    color: var(--treck-gray);
+    display: block;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+
+.fa-facebook-f {
+    color: blue;
+}
+
+.fa-google {
+    color: #b30000;
+}

@@ -30,6 +30,8 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::get('/about-us', [HomeController::class, 'about_us'])->name('about-us');
+    Route::post('/create-user', [HomeController::class, 'create_user']);
+    Route::post('/user-login', [HomeController::class, 'user_login']);
 
     Route::get('/services', [HomeController::class, 'services'])->name('services');
     Route::get('/service/{slug}', [HomeController::class, 'service'])->name('service');

@@ -31,7 +31,7 @@ use Modules\Testimonial\App\Models\Testimonial;
 use Modules\GlobalSetting\App\Models\GlobalSetting;
 use Modules\ContactMessage\App\Models\ContactMessage;
 use Modules\Blog\App\Models\Team;
-
+use Hash;
 class HomeController extends Controller
 {
 
@@ -649,9 +649,37 @@ class HomeController extends Controller
         return response()->download($filepath);
     }
 
+    public function create_user(Request $request){
+
+        $get = User::where('email',$request->email)->count();
+        if($get > 0){
+            return back()->with('error','This email already exist');
+        }
+
+        $user = new User;
+        $user->type = $request->type;
+        $user->name = $request->name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->password = Hash::make($request->password);
+        $user->save();
+        return back()->with('success','Registration Successfully');
+    }
 
 
 
+    public function user_login(Request $request){
+
+        $get = User::where('email',$request->email)->first();
+        if($get != null){
+            if(Hash::check($request->password, $get->password)){
+                return back()->with('success','Login Successfully');
+            }
+            return back()->with('error','User not exits');
+        }
+        return back()->with('error','User not exits');
+    }
 
 
 

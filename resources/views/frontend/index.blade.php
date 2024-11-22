@@ -49,7 +49,7 @@
                             Converge. Discover the Future of Angel Investing</strong></p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="{{asset('main-frontend/img/1.png')}}" alt="" class="img-fluid section2-img">
+                    <img src="{{asset('main-frontend/img/image-26.png')}}" alt="" class="img-fluid section2-img">
                 </div>
             </div>
         </div>

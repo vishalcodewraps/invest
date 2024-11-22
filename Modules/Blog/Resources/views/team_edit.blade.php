@@ -21,7 +21,6 @@
                         <div class="crancy-dsinner">
                             <form action="{{ route('admin.editupdate',$blog->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @method('PUT')
 
                                 <input type="hidden" name="translate_id" value="{{ $blog_translate->id }}">
                                 <input type="hidden" name="lang_code" value="{{ $blog_translate->lang_code }}">
