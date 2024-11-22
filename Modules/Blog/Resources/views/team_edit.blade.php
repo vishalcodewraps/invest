@@ -1,6 +1,6 @@
 @extends('admin.master_layout')
 @section('title')
-    <title>{{ __('translate.Edit Blog') }}</title>
+    <title>Team Edit</title>
 @endsection
 
 @section('body-header')
@@ -21,7 +21,6 @@
                         <div class="crancy-dsinner">
                             <form action="{{ route('admin.editupdate',$blog->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @method('PUT')
 
                                 <input type="hidden" name="translate_id" value="{{ $blog_translate->id }}">
                                 <input type="hidden" name="lang_code" value="{{ $blog_translate->lang_code }}">
@@ -31,9 +30,9 @@
                                         <!-- Product Card -->
                                         <div class="crancy-product-card">
                                             <div class="create_new_btn_inline_box">
-                                                <h4 class="crancy-product-card__title">{{ __('translate.Edit Blog') }}</h4>
+                                                <h4 class="crancy-product-card__title">Team Edit</h4>
 
-                                                <a href="{{ route('admin.blog.index') }}" class="crancy-btn "><i class="fa fa-list"></i> {{ __('translate.Blog List') }}</a>
+                                                <a href="{{ route('admin.team-list') }}" class="crancy-btn "><i class="fa fa-list"></i> Team List<a>
                                             </div>
 
 
@@ -67,19 +66,6 @@
                                                     </div>
                                                 </div>
 
-                                                @if (admin_lang() == request()->get('lang_code'))
-
-                                                    <div class="col-12">
-                                                        <div class="crancy__item-form--group mg-top-form-20">
-                                                            <label class="crancy__item-label">{{ __('translate.Slug') }} * </label>
-                                                            <input class="crancy__item-input" type="text" name="slug" id="slug" value="{{ $blog->slug }}">
-                                                        </div>
-                                                    </div>
-
-                                                   
-
-                                                @endif
-
                                                 <div class="col-12">
                                                     <div class="crancy__item-form--group mg-top-form-20">
                                                         <label class="crancy__item-label">{{ __('translate.Description') }} * </label>
@@ -88,46 +74,17 @@
 
                                                     </div>
                                                 </div>
-
-                                                @if (admin_lang() == request()->get('lang_code'))
-
-
-                                                    <div class="col-12">
-                                                        <div class="crancy__item-form--group mg-top-form-20">
-                                                            <label class="crancy__item-label">{{ __('translate.Visibility Status') }} </label>
-                                                            <div class="crancy-ptabs__notify-switch  crancy-ptabs__notify-switch--two">
-                                                                <label class="crancy__item-switch">
-                                                                <input {{ $blog->status == 1 ? 'checked' : '' }} name="status" type="checkbox" >
-                                                                <span class="crancy__item-switch--slide crancy__item-switch--round"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12">
-                                                        <div class="crancy__item-form--group mg-top-form-20">
-                                                            <label class="crancy__item-label">{{ __('translate.Tags') }} </label>
-                                                            <input class="crancy__item-input tags" type="text" name="tags" value="{{ $blog->tags }}">
-                                                        </div>
-                                                    </div>
-
-                                                @endif
-
                                                 <div class="col-12">
                                                     <div class="crancy__item-form--group mg-top-form-20">
-                                                        <label class="crancy__item-label">{{ __('translate.SEO Title') }} </label>
-                                                        <input class="crancy__item-input" type="text" name="seo_title" id="seo_title" value="{{ $blog_translate->seo_title }}">
+                                                        <label class="crancy__item-label">{{ __('translate.Visibility Status') }} </label>
+                                                        <div class="crancy-ptabs__notify-switch  crancy-ptabs__notify-switch--two">
+                                                            <label class="crancy__item-switch">
+                                                            <input {{ $blog->status == 1 ? 'checked' : '' }} name="status" type="checkbox" >
+                                                            <span class="crancy__item-switch--slide crancy__item-switch--round"></span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
-
-                                                <div class="col-12">
-                                                    <div class="crancy__item-form--group mg-top-form-20">
-                                                        <label class="crancy__item-label">{{ __('translate.SEO Description') }} </label>
-
-                                                        <textarea class="crancy__item-input crancy__item-textarea seo_description_box"  name="seo_description" id="seo_description">{{ $blog_translate->seo_description }}</textarea>
-                                                    </div>
-                                                </div>
-
                                             </div>
 
                                             <button class="crancy-btn mg-top-25" type="submit">{{ __('translate.Update') }}</button>

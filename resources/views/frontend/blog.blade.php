@@ -33,89 +33,26 @@
 
             <div class="row my-5">
 
+                @foreach($blogs as $res)
+
                   <div class="col-md-4 mb-4">
-                    <a href="{{url('blog-detail')}}" class="text-decoration-none">
+                    <a href="{{url('blog/'.$res->slug)}}" class="text-decoration-none">
                         <div class="card p-3 blog-card">
-                            <img src="{{ asset('main-frontend/img/image-25.png')}}" class="card-img-top" alt="...">
+                            <img src="{{ asset($res->image) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title">What is Lorem Ipsum?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="text-decoration-none card-a"> <span><img src="{{ asset('main-frontend/img/Man.png')}}" alt=""></span> &nbsp; Jonathan Wills</a>
+                            <h5 class="card-title">{{ $res->translate->title }}</h5>
+                            <p class="card-text">{!! $res->translate->short_description !!}</p>
+                            <a href="{{url('blog/'.$res->slug)}}" class="text-decoration-none card-a"> <span><img src="{{ asset('main-frontend/img/Man.png')}}" alt=""></span> &nbsp; {{ $res->translate->author }}</a>
                             </div>
                         </div>
                     </a>
                  </div>
-            
 
-                <div class="col-md-4 mb-4">
-                    <a href="{{url('blog-detail')}}" class="text-decoration-none">
-                        <div class="card p-3 blog-card">
-                            <img src="{{ asset('main-frontend/img/image-25.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <h5 class="card-title">What is Lorem Ipsum?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="text-decoration-none card-a"> <span><img src="{{ asset('main-frontend/img/Man.png')}}" alt=""></span> &nbsp; Jonathan Wills</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                 @endforeach
 
-
-                <div class="col-md-4 mb-4">
-                    <a href="{{url('blog-detail')}}" class="text-decoration-none">
-                        <div class="card p-3 blog-card">
-                            <img src="{{ asset('main-frontend/img/image-25.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <h5 class="card-title">What is Lorem Ipsum?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="text-decoration-none card-a"> <span><img src="{{ asset('main-frontend/img/Man.png')}}" alt=""></span> &nbsp; Jonathan Wills</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <a href="{{url('blog-detail')}}" class="text-decoration-none">
-                        <div class="card p-3 blog-card">
-                            <img src="{{ asset('main-frontend/img/image-25.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <h5 class="card-title">What is Lorem Ipsum?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="text-decoration-none card-a"> <span><img src="{{ asset('main-frontend/img/Man.png')}}" alt=""></span> &nbsp; Jonathan Wills</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <a href="{{url('blog-detail')}}" class="text-decoration-none">
-                        <div class="card p-3 blog-card">
-                            <img src="{{ asset('main-frontend/img/image-25.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <h5 class="card-title">What is Lorem Ipsum?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="text-decoration-none card-a"> <span><img src="{{ asset('main-frontend/img/Man.png')}}" alt=""></span> &nbsp; Jonathan Wills</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <a href="{{url('blog-detail')}}" class="text-decoration-none">
-                        <div class="card p-3 blog-card">
-                            <img src="{{ asset('main-frontend/img/image-25.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <h5 class="card-title">What is Lorem Ipsum?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="text-decoration-none card-a"> <span><img src="{{ asset('main-frontend/img/Man.png')}}" alt=""></span> &nbsp; Jonathan Wills</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-               <div class="text-center">
+               {{-- <div class="text-center">
                 <button class="btn btn-red">View more</button>
-               </div>
+               </div> --}}
                 
                
             </div>

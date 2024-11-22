@@ -15,7 +15,7 @@ Route::group(['as'=> 'admin.', 'prefix' => 'admin/cms', 'middleware' => ['auth:a
     Route::get('/team-edit/{blog?}', [BlogController::class, 'teamEdit'])->name('teamedit');
 
     Route::post('team-post', [BlogController::class, 'teamStore'])->name('teamPost');
-    Route::post('team-update', [BlogController::class, 'teamUpdate'])->name('editupdate');
+    Route::post('team-update/{id?}', [BlogController::class, 'teamUpdate'])->name('editupdate');
 
     Route::get('comment-list', [BlogController::class, 'blog_list'])->name('comment-list');
     Route::get('show-comment/{id}', [BlogController::class, 'show_comment'])->name('show-comment');

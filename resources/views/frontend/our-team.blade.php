@@ -34,67 +34,20 @@
 
 
             <div class="row my-5">
-
+                @foreach ($team as $res)
+                @php
+                    $teams = Modules\Blog\App\Models\TeamTranslation::where(['blog_id' => $res->id])->first();
+                @endphp
                 <div class="col-md-4 mb-4">
                     <div class="card p-3 text-center card-team">
-                        <img src="{{ asset('main-frontend/img/image-25.png')}}" alt="" class="img-fluid">
+                        <img src="{{ asset($res->image) }}" alt="" class="img-fluid">
                         <div class="card-body">
-                            <h1>Jonathan Wills</h1>
-                            <h3>CEO & Co - Founder</h3>
+                            <h1>{{$teams->title}}</h1>
+                            <h3>{!!clean($teams->description)!!}</h3>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 text-center card-team">
-                        <img src="{{ asset('main-frontend/img/image-25.png')}}" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h1>Jonathan Wills</h1>
-                            <h3>CEO & Co - Founder</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 text-center card-team">
-                        <img src="{{ asset('main-frontend/img/image-25.png')}}" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h1>Jonathan Wills</h1>
-                            <h3>CEO & Co - Founder</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 text-center card-team">
-                        <img src="{{ asset('main-frontend/img/image-25.png')}}" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h1>Jonathan Wills</h1>
-                            <h3>CEO & Co - Founder</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 text-center card-team">
-                        <img src="{{ asset('main-frontend/img/image-25.png')}}" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h1>Jonathan Wills</h1>
-                            <h3>CEO & Co - Founder</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 text-center card-team">
-                        <img src="{{ asset('main-frontend/img/image-25.png')}}" alt="" class="img-fluid">
-                        <div class="card-body">
-                            <h1>Jonathan Wills</h1>
-                            <h3>CEO & Co - Founder</h3>
-                        </div>
-                    </div>
-                </div>
-                
+                @endforeach
             </div>
         </div>
     </section>

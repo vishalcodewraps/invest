@@ -420,3 +420,13 @@ input.border-bottom-input:focus {
     border-radius: 0;
     padding: 17px 60px;
 }
+.ourteam-banner {
+    background-color: #b30000;
+    height: 350px;
+    border-radius: 0 0 40px 40px;
+}
+
+.team1 {
+    font-size: 60px;
+    font-weight: 600;
+}

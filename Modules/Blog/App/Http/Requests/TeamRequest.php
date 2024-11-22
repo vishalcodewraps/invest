@@ -11,7 +11,6 @@ class TeamRequest extends FormRequest
         if ($this->isMethod('post')) {
             $rules = [
                 'title'=>'required|unique:team_translations',
-                'image'=>'required',
                 'description'=>'required',                
             ];
         }

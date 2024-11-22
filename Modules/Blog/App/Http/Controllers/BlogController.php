@@ -16,7 +16,7 @@ use Modules\Language\App\Models\Language;
 use Modules\Blog\App\Models\BlogTranslation;
 use Modules\Blog\App\Models\TeamTranslation;
 use Modules\Blog\App\Http\Requests\BlogRequest;
-use Modules\Blog\App\Http\Requests\TeamRequest;
+use Modules\Blog\App\Http\Requests\TeamRequest; 
 
 class BlogController extends Controller
 {
@@ -136,6 +136,8 @@ class BlogController extends Controller
             $blog_trans->lang_code = $language->lang_code;
             $blog_trans->blog_id = $blog->id;
             $blog_trans->title = $request->title;
+            $blog_trans->author = $request->author;
+            $blog_trans->short_description = $request->short_description;
             $blog_trans->description = $request->description;
             $blog_trans->seo_title = $request->seo_title ? $request->seo_title : $request->title;
             $blog_trans->seo_description = $request->seo_description ? $request->seo_description : $request->title;
@@ -170,13 +172,11 @@ class BlogController extends Controller
     public function teamEdit($id)
     {
         
-        echo $id; die;
         $blog = Team::findOrFail($id);
 
-        $blog_translate = TeamTranslation::where(['blog_id' => $id, 'lang_code' => $request->lang_code])->first();
+        $blog_translate = TeamTranslation::where(['blog_id' => $id])->first();
 
         $blog_categories = BlogCategory::with('translate')->get();
-
         return view('blog::team_edit', ['blog' => $blog, 'blog_categories' => $blog_categories, 'blog_translate' => $blog_translate]);
     }
 
@@ -213,6 +213,8 @@ class BlogController extends Controller
 
         $blog_trans = BlogTranslation::where(['id' => $request->translate_id])->first();
         $blog_trans->title = $request->title;
+        $blog_trans->author = $request->author;
+        $blog_trans->short_description = $request->short_description;
         $blog_trans->description = $request->description;
         $blog_trans->seo_title = $request->seo_title ? $request->seo_title : $request->title;
         $blog_trans->seo_description = $request->seo_description ? $request->seo_description : $request->title;
@@ -229,6 +231,7 @@ class BlogController extends Controller
 
     public function teamUpdate(TeamRequest $request, $id)
     {
+
         $blog = Team::findOrFail($id);
 
         if($request->image){
@@ -264,7 +267,7 @@ class BlogController extends Controller
 
         $notify_message = trans('translate.Updated successfully');
         $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
-        return redirect()->back()->with($notify_message);
+        return redirect('admin/cms/team-list')->with($notify_message);
 
     }
 

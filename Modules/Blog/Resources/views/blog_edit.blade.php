@@ -66,7 +66,12 @@
                                                         <input class="crancy__item-input" type="text" name="title" id="title" value="{{ $blog_translate->title }}">
                                                     </div>
                                                 </div>
-
+                                                <div class="col-12">
+                                                    <div class="crancy__item-form--group mg-top-form-20">
+                                                        <label class="crancy__item-label">Author * </label>
+                                                        <input class="crancy__item-input" type="text" name="author" id="author" value="{{ $blog_translate->author }}">
+                                                    </div>
+                                                </div>
                                                 @if (admin_lang() == request()->get('lang_code'))
 
                                                     <div class="col-12">
@@ -75,11 +80,16 @@
                                                             <input class="crancy__item-input" type="text" name="slug" id="slug" value="{{ $blog->slug }}">
                                                         </div>
                                                     </div>
-
-                                                   
-
                                                 @endif
 
+                                                <div class="col-12">
+                                                    <div class="crancy__item-form--group mg-top-form-20">
+                                                        <label class="crancy__item-label">Short Description * </label>
+
+                                                        <textarea class="crancy__item-input crancy__item-textarea summernote"  name="short_description" id="short_description">{!! clean($blog_translate->short_description) !!}</textarea>
+
+                                                    </div>
+                                                </div>
                                                 <div class="col-12">
                                                     <div class="crancy__item-form--group mg-top-form-20">
                                                         <label class="crancy__item-label">{{ __('translate.Description') }} * </label>

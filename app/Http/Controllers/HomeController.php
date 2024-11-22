@@ -30,6 +30,8 @@ use Modules\Listing\App\Models\ListingPackage;
 use Modules\Testimonial\App\Models\Testimonial;
 use Modules\GlobalSetting\App\Models\GlobalSetting;
 use Modules\ContactMessage\App\Models\ContactMessage;
+use Modules\Blog\App\Models\Team;
+
 class HomeController extends Controller
 {
 
@@ -160,17 +162,17 @@ class HomeController extends Controller
 
     public function blogs(Request $request)
     {
-        // $blogs = Blog::with('author')->where('status', 1);
+        $blogs = Blog::with('author')->where('status', 1);
 
-        // if($request->category){
-        //     $blogs = $blogs->where('blog_category_id', $request->category);
-        // }
+        if($request->category){
+            $blogs = $blogs->where('blog_category_id', $request->category);
+        }
 
-        // $blogs = $blogs->paginate(12);
+        $blogs = $blogs->get();
 
-        // $seo_setting = SeoSetting::where('id', 2)->first();
+        $seo_setting = SeoSetting::where('id', 2)->first();
 
-        return view('frontend.blog');
+        return view('frontend.blog',compact('blogs'));
     }
     public function blog_detail(Request $request)
     {
@@ -189,7 +191,8 @@ class HomeController extends Controller
     }
     public function our_team(Request $request)
     {
-        return view('frontend.our-team');
+        $team = Team::where('status',1)->get();
+        return view('frontend.our-team',compact('team'));
     }
     public function contact(Request $request)
     {
@@ -202,9 +205,10 @@ class HomeController extends Controller
 
         $blog_comments = BlogComment::where('blog_id', $blog->id)->where('status', 1)->latest()->get();
 
-
-        return view('blog_detail', [
+        $blogs = Blog::with('author')->where('status', 1)->latest()->limit(3)->get();
+        return view('frontend.blog-details', [
             'blog' => $blog,
+            'blogs' => $blogs,
             'blog_comments' => $blog_comments,
         ]);
     }
