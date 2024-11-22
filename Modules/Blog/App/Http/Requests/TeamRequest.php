@@ -15,7 +15,7 @@ class TeamRequest extends FormRequest
             ];
         }
 
-        if ($this->isMethod('put')) {
+        if ($this->isMethod('post')) {
             if($this->request->get('lang_code') == admin_lang()){
                 $rules = [
                     'title'=>'required',
@@ -47,7 +47,7 @@ class TeamRequest extends FormRequest
         return [
             'title.required' => trans('translate.Title is required'),
             'title.unique' => trans('translate.Title already exist'),
-            'image.required' => trans('translate.Image is required'),
+          
             'description.required' => trans('translate.Description is required'),
             
         ];
