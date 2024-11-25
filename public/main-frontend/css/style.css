@@ -466,13 +466,13 @@ input.border-bottom-input:focus {
     box-shadow: 0;
 }
 
-.card-team:hover{
+/* .card-team:hover{
     background-color: #b30000;
     color: white;
     box-shadow: 0;
     transform: scale(1.0);
     /* Slightly enlarges the card */
-}
+} */
 
 
 
