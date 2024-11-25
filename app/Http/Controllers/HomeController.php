@@ -178,6 +178,10 @@ class HomeController extends Controller
     {
         return view('frontend.blog-details');
     }
+    public function news(Request $request)
+    {
+        return view('frontend.news');
+    }
     public function send_contact(Request $request)
     {
         $contact = new ContactMessage;

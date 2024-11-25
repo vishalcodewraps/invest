@@ -39,8 +39,14 @@
     font-size: 24px;
 }
 .heading2{
-    font-size: 40px;
+    font-size: 38px;
     font-weight: bold;
+}
+.text{
+    font-size: 18px !important;
+}
+.text1{
+    font-size: 15px !important;
 }
 .section2-img{
     height: 436px;
@@ -153,7 +159,7 @@
 
 .item-text {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     gap: 10px; /* Adjust spacing between text and icon */
 }
@@ -183,6 +189,8 @@
     color: #555;
     margin: 15px 0;
 }
+
+
 
 .expertise-title {
     font-weight: bold;
@@ -303,6 +311,28 @@
     padding: 15px !important;
 }
 
+/* homepage banner  css  start*/
+
+.carousel-content {
+    position: absolute;
+    right: 15%;
+    bottom: 9.25rem !important;
+    left: 8% !important;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: left !important;
+}
+.carousel-inner{
+    height: 550px;
+}
+
+.home-card{
+    height: 739px;
+}
+
+
+/* homepage banner css end */
 
 /* contact page start */
 
@@ -339,6 +369,114 @@ input.border-bottom-input:focus {
 
 /* contact page end */
 
+
+/* otp css start */
+
+.otp-input-fields {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.otp__digit {
+    width: 40px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.otp__digit:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.otp__digit::-webkit-inner-spin-button,
+.otp__digit::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.otp__digit::placeholder {
+    color: #ddd;
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .otp__digit {
+        width: 30px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* otp css end */
+/* blog page css start  */
+.blog-card:hover{
+    background-color: #b30000;
+}
+.card-a{
+    color: black !important;
+}
+.card-title{
+    color: black !important;
+}
+.blog-card:hover .card-title, .blog-card:hover .card-text{
+    color: white !important;
+}
+
+.blog-card:hover .card-a, .blog-card:hover .card-a{
+    color: white !important;
+}
+
+.btn-red{
+    background-color: #b30000;
+    color: white;
+    border-radius: 0;
+    padding: 17px 60px;
+}
+
+.btn-red:hover{
+    background-color: #b30000;
+    color: white;
+}
+/* blog page css end */
+
+/* team page css start */
+.ourteam-banner {
+    background-color: #b30000;
+    height: 350px;
+    border-radius: 0 0 40px 40px;
+}
+
+.team1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+
+.card-team{
+    height: 477px;
+    border-radius: 0 !important;
+    transition: 0;
+    box-shadow: 0;
+}
+
+.card-team:hover{
+    background-color: #b30000;
+    color: white;
+    box-shadow: 0;
+    transform: scale(1.0);
+    /* Slightly enlarges the card */
+}
+
+
+
+/* team page css end */
 /* Custom styles for the footer */
  .footer {
     background-color: #000;
@@ -518,6 +656,27 @@ input.border-bottom-input:focus {
     font-weight: 500;
     position: relative;
     border-radius: 5px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container .form-control {
+    padding-right: 40px; /* Adjust space for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+}
+
+.toggle-password:hover {
+    color: #333;
 }
 
 .fa-facebook-f {

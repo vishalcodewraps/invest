@@ -35,6 +35,7 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
 
     Route::get('/services', [HomeController::class, 'services'])->name('services');
     Route::get('/service/{slug}', [HomeController::class, 'service'])->name('service');
+    Route::get('/news', [HomeController::class, 'news'])->name('news');
 
     Route::get('/our-team', [HomeController::class, 'our_team']);
     Route::get('/contact', [HomeController::class, 'contact']);

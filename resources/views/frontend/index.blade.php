@@ -1,5 +1,5 @@
 @include('frontend.layouts.header')
-    <main class="banner bg-img" style="background-image: url('{{asset('main-frontend/img/banner.png')}}'); height: 567px; width: 100%; background-repeat: no-repeat; background-size: contain; background-position: center right;">
+    <!-- <main class="banner bg-img" style="background-image: url('{{asset('main-frontend/img/banner.png')}}'); height: 567px; width: 100%; background-repeat: no-repeat; background-size: contain; background-position: center right;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-10 col-sm-12">
@@ -27,23 +27,114 @@
 
             </div>
         </div>
+    </main> -->
+
+    <main class="banner">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+            <img src="{{asset('main-frontend/img/banner.png')}}" class="d-block w-100 banner-img" alt="...">
+            <div class="carousel-caption carousel-content d-none d-md-block">
+            <div class="col-lg-7 col-md-10 col-sm-12">
+                    <h1 class="h1-heading">
+                        We Connect UK Entrepreneurs, Angel Investors, & Professional Service Providers
+                    </h1>
+
+                    <div class="d-flex gap-2 mt-5 " style="align-items: center;">
+                        <h4 class="text-white">I am looking to</h4>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Investor
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Investor</a></li>
+                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
+                                <li><a class="dropdown-item" href="#">Our Marketplace</a></li>
+                            </ul>
+                        </div>
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid" style="height: 50px;">
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="carousel-item active">
+            <img src="{{asset('main-frontend/img/banner.png')}}" class="d-block w-100 banner-img" alt="...">
+            <div class="carousel-caption carousel-content d-none d-md-block">
+            <div class="col-lg-7 col-md-10 col-sm-12">
+                    <h1 class="h1-heading">
+                        We Connect UK Entrepreneurs, Angel Investors, & Professional Service Providers
+                    </h1>
+
+                    <div class="d-flex gap-2 mt-5 " style="align-items: center;">
+                        <h4 class="text-white">I am looking to</h4>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Investor
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Investor</a></li>
+                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
+                                <li><a class="dropdown-item" href="#">Our Marketplace</a></li>
+                            </ul>
+                        </div>
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid" style="height: 50px;">
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="carousel-item active">
+            <img src="{{asset('main-frontend/img/banner.png')}}" class="d-block w-100 banner-img" alt="...">
+            <div class="carousel-caption carousel-content d-none d-md-block">
+            <div class="col-lg-7 col-md-10 col-sm-12">
+                    <h1 class="h1-heading">
+                    Invest Connect Marketplace: Tailored Solutions for Entrepreneurs and Investors
+                    </h1>
+
+                    <div class="d-flex gap-2 mt-5 " style="align-items: center;">
+                        <h4 class="text-white">I am looking to</h4>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Investor
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Investor</a></li>
+                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
+                                <li><a class="dropdown-item" href="#">Our Marketplace</a></li>
+                            </ul>
+                        </div>
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid" style="height: 50px;">
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     </main>
+
+
 
 
     <section class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-7 col-sm-12">
-                    <h2 class="heading2 mt-4">Our Unique Selling Proposition (USP)</h2>
-                    <p class="mt-4 section2p">Invest Connect Marketplace is the first angel investment platform
-                        designed
-                        with a three-pillar
-                        user model to serve investors, entrepreneurs, and professional service providers. By bringing
-                        these essential players together on a single, streamlined platform, we offer a comprehensive
-                        ecosystem that fuels growth, collaboration, and investment success. Our vision is to establish
-                        Invest Connect Marketplace as the leading destination for angel investors and business owners
-                        looking to connect and innovate. We’re here to drive unmatched opportunities and transform the
-                        investment landscape for everyone involved.</p>
+                    <h2 class="heading2 mt-4"> Our Unique Selling Proposition (USP)</h2>
+                    <p class="mt-4 section2p">At Invest Connect Marketplace, we focus on empowering ideas, fostering innovation, and creating sustainable growth opportunities for entrepreneurs and investors alike. Our platform bridges the gap between passionate creators and visionary backers, offering a seamless space to fund groundbreaking solutions and drive meaningful impact worldwide</p>
 
                     <p class="sub-heading"><strong>Join Invest Connect Marketplace Today—Where Opportunity and Growth
                             Converge. Discover the Future of Angel Investing</strong></p>
@@ -59,35 +150,34 @@
 
         <div class="container">
             <div class="row">
-                <h2 class="heading3 mt-5 text-white text-center">Exploring Investment Opportunities in the UK?</h2>
-                <p class="para3 text-center mt-3 mb-5 text-white">Explore curated UK pitch decks from promising
-                    entrepreneurs, poised to make a lasting impact</p>
+                <h2 class="heading3 mt-5 text-white text-center">Exploring Investment Opportunities in the UK</h2>
+                <p class="para3 text-center mt-3 mb-5 text-white">At the heart of Invest Connect lies a clear vision: to create a world where access to capital and innovation knows no boundaries. By connecting ambitious entrepreneurs with investors seeking to make a difference, we build an ecosystem that transforms ideas into reality. Whether you’re a startup founder with a revolutionary vision or an investor passionate about driving change, our platform connects dreams with possibilities.</p>
 
                 <div class="col-md-4">
 
-                    <div class="card p-4 ">
+                    <div class="card p-4 home-card">
                         <img src="{{asset('main-frontend/img/i1.jpg')}}" class="card-img-top border border-1" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title my-3">The Flying Pigeon</h5>
+                            <h5 class="card-title my-3">Start Strong with Invest Connect</h5>
                             <p><span><i class="fa-solid fa-location-dot"></i></span> North East, United Kingdom</p>
-                            <p class="card-text" style="text-align:justify">A retail-tech solution for the off-trade wine industry. Our tool optimises retailer’s marketing & sales efforts, increasing market share, basket value, customer visit frequency & satisfaction. Raised £290,000</p>
+                            <p class="card-text" style="text-align:justify">Take the first steps toward success with streamlined solutions tailored for entrepreneurs and investors</p>
 
                             <p class="key"><strong>Key Metrics</strong></p>
 
                             <ul class="list-unstyled">
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Established trading business with working platform and reader base</span>
+                                <span class="text1">Incorporate Your Business with Ease</span>
                                     
                                 </li>
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Key partnerships in process for mutual referrals and revenue</span>
+                                <span class="text1">Craft Your Vision</span>
                                     
                                 </li>
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Test marketing under way and first sign ups of new offer achieved</span>
+                                <span class="text1">Plan for Growth</span>
                                     
                                 </li>
                             </ul>
@@ -103,29 +193,29 @@
 
                 <div class="col-md-4">
 
-                    <div class="card p-4 ">
+                    <div class="card p-4 home-card">
                         <img src="{{asset('main-frontend/img/i2.jpg')}}" class="card-img-top border border-1" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title my-3">Corkable</h5>
+                            <h5 class="card-title my-3">Unlock Your Growth Potential</h5>
                             <p><span><i class="fa-solid fa-location-dot"></i></span> Iceland, Iceland</p>
-                            <p class="card-text" style="text-align:justify">We are publishing a white-label APP that co-opts rental agencies, tour operators and travel agencies with AI-driven tour operators and travel itineraries for AI-driven tour operators and travel their users.</p>
+                            <p class="card-text" style="text-align:justify">Take your journey to the next level with tools and resources tailored to optimise every step of your growth</p>
 
                             <p class="key"><strong>Key Metrics</strong></p>
 
                             <ul class="list-unstyled">
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Our software is 98% complete -- this round of equity drives positive cash</span>
+                                <span class="text1">Build a Professional Profile</span>
                                     
                                 </li>
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">We have already booked 20 clients with signed agreements</span>
+                                <span class="text1">Extend Your Reach</span>
                                     
                                 </li>
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">As an early investor, the leverage and returns are exceptional (ROI 100%+)</span>
+                                <span class="text1">Connect with Accelerators and Programs</span>
                                     
                                 </li>
                             </ul>
@@ -141,31 +231,31 @@
 
                 <div class="col-md-4">
 
-                    <div class="card p-4 ">
+                    <div class="card p-4 home-card">
                         <img src="{{asset('main-frontend/img/i3.jpg')}}" class="card-img-top border border-1" alt="...">
                         <div class="card-body">
                             <h5 class="card-title my-3">Financial Markets Trading</h5>
                             <p><span><i class="fa-solid fa-location-dot"></i></span> North East, United Kingdom</p>
-                            <p class="card-text" style="text-align:justify">Having successfully navigated the World's Financial Markets for over 8 years. I'm now looking to expand my current investment Delivering returns of up to 3% per month to both existing and new clients.</p>
+                            <p class="card-text" style="text-align:justify">Having successfully navigated the World's Financial Markets for over 8 years. I'm now looking to expand my current investment</p>
 
                             <p class="key"><strong>Key Metrics</strong></p>
 
-                            <ul class="list-unstyled">
+                             <ul class="list-unstyled">
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Established trading business with working platform and reader base</span> 
+                                <span class="text1">A well-established trading business with an active platform and engaged readership.</span>
+                                    
                                 </li>
-
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Key partnerships in process for mutual referrals and revenue</span> 
+                                <span class="text1">Key partnerships in process for mutual</span>
+                                    
                                 </li>
-
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Test marketing under way and first sign ups of new offer achieved</span>  
+                                <span class="text1">Test marketing under way and first sign ups of new offer</span>
+                                    
                                 </li>
-
                             </ul>
 
                             <div class="text-center ">
@@ -220,28 +310,28 @@
                 <div class="col-md-4">
                     <div class="bg-light shadow border border-2 my-3 text-center p-4 Partner-box">
 
-                        <h3>Why Partner with Invest Connect</h3>
+                        <h3 style="font-size: 20px; font-weight:bold;">Why Invest Connect Marketplace Stands Out</h3>
 
 
-                          <ul class="list-unstyled">
+                          <ul class="list-unstyled mt-4">
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Access to a Thriving Community</span>                                    
+                                <span class="text" style="font-size: 19px;">A Marketplace of Possibilities</span>                                    
                                 </li>
 
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Collaborate and Grow</span>                                    
+                                <span class="text" style="font-size: 19px;">Transparent Processes</span>                                    
                                 </li>
 
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Lead in Innovation</span>                                    
+                                <span class="text" style="font-size: 19px;">A Global Network of Innovators</span>                                    
                                 </li>
 
                                 <li class="mb-3 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text">Scalable Opportunities</span>                                    
+                                <span class="text" style="font-size: 19px;">Tailored Support Services</span>                                    
                                 </li>
 
                             </ul>
@@ -310,7 +400,7 @@
                         </div>
 
                         <div class="salary"> <span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
-                                    style="height: 30px; width: 30px;"></span> &nbsp; £0-£100K</div>
+                                    style="height: 30px; width: 30px;"></span> &nbsp; £0 - £100K</div>
                         <div class="description">
                         I worked in software for over 20 years, helping grow a startup from 2010-2023 and now exited.
                         </div>
@@ -341,7 +431,7 @@
                         </div>
 
                         <div class="salary"> <span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
-                                    style="height: 30px; width: 30px;"></span> &nbsp; £500K-£10m</div>
+                                    style="height: 30px; width: 30px;"></span> &nbsp; £500K - £10m</div>
                         <div class="description">
                         Business Growth Manager, Business Owner, Startup Owner
                         </div>
@@ -369,7 +459,7 @@
                         </div>
 
                         <div class="salary"><span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
-                                    style="height: 30px; width: 30px;"></span> &nbsp; £200K-£500K</div>
+                                    style="height: 30px; width: 30px;"></span> &nbsp; £200K - £500K</div>
                         <div class="description">
                         23 years in management positions across 4 industries and 4 continents with the last 12 years in the CEO position.
                         </div>
@@ -559,7 +649,7 @@
                 </div>
 
                 <div class="col-lg-12 p-4 text-center">
-                    <button class="btn btn-danger">Find more Services Providers</button>
+                       <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #b91c1c; color:white;">Find more Services Providers</button>
                 </div>
 
 
@@ -764,8 +854,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <h2 class="heading3 mt-5 text-white">Join our growing network of UK-based entrepreneurs and angel investors</h2>
-                    <p class="para3  mt-3 mb-5 text-white">Angel Investment Network helps investors and entrepreneurs in the United Kingdom facilitate lasting and profitable relationships that build better businesses and brighter futures</p>
+                    <h2 class="heading3 mt-5 text-white">Ready to launch your dream venture or invest in the next big idea?</h2>
+                    <p class="para3  mt-3 mb-5 text-white">Join Invest Connect Marketplace today and take the first step toward achieving your entrepreneurial or investment goals. Whether you're here to launch your dream project, discover high-potential opportunities, or connect with a global network of changemakers, we’re here to support you. <a href="#" class="text-decoration-none "> <strong class="text-white"> Sign up </strong></a> now and be part of a community that fuels innovation and drives meaningful change. </p>
                 </div>
 
                 <div class="col-md-6 col-sm-12 text-center">

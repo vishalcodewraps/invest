@@ -6,30 +6,23 @@
             <div class="container">
                 <div class="row text-center ">
                     <h1 class="team1 text-white">Our Blogs</h1>
-                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nulla dolore
-                        fuga,
-                        exercitationem non laudantium, optio commodi esse, officiis aliquam repellat obcaecati mollitia
-                        incidunt quasi rerum est quibusdam cumque voluptate? Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Sapiente nulla dolore fuga,
-                        exercitationem non laudantium, optio commodi esse, officiis aliquam repellat obcaecati mollitia
-                        incidunt quasi rerum est quibusdam cumque voluptate?</p>
+                    <p class="text-white">The UK boasts a vibrant economy packed with opportunities. Whether you’re an experienced investor or a beginner, there’s something for everyone. From cutting-edge industries to sustainable ventures, the UK offers promising ways to grow your wealth. 
+</p>
                 </div>
             </div>
         </div>
 
 
         <div class="container">
-            <div class="row my-5">
+            <!-- <div class="row my-5">
                 <div class="col-md-6">
-                    <h2 class="fw-bold">Meet The Professionals Team </h2>
+                    <h2 class="fw-bold">Blogs</h2>
                 </div>
 
                 <div class="col-md-6">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.</p>
+                    <p>Let’s explore some of the best business and investment opportunities for UK investors.</p>
                 </div>
-            </div>
+            </div> -->
 
             <div class="row my-5">
 

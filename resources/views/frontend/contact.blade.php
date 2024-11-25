@@ -6,13 +6,10 @@
             <div class="container">
                 <div class="row text-center ">
                     <h1 class="team1 text-white">Contact Us</h1>
-                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nulla dolore
-                        fuga,
-                        exercitationem non laudantium, optio commodi esse, officiis aliquam repellat obcaecati mollitia
-                        incidunt quasi rerum est quibusdam cumque voluptate? Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Sapiente nulla dolore fuga,
-                        exercitationem non laudantium, optio commodi esse, officiis aliquam repellat obcaecati mollitia
-                        incidunt quasi rerum est quibusdam cumque voluptate?</p>
+                    <p class="text-white">We are here to help you, whether you are an investor, business owner, or marketplace leader. Do you have a query, need support, or looking for exciting opportunities? Our team is 24x7 available to collaborate with people like you. We understand today’s challenges of a fast-paced business environment nowadays and promise you the best to achieve your goals. 
+
+Reach out to us, and know how we can support you in your journey. We are waiting to hear from you!!.
+</p>
                 </div>
             </div>
         </div>
@@ -29,9 +26,9 @@
                     <p>Say something to start a live chat!</p>
 
                     <ul class="list-unstyled" style="line-height: 30px;">
-                        <li><span><img src="{{ asset('main-frontend/img/phone_call.png')}}" alt=""></span> +1012 3456 789</li>
-                        <li><span><img src="{{ asset('main-frontend/img/email.png')}}" alt=""></span> demo@gmail.com</li>
-                        <li><span><img src="{{ asset('main-frontend/img/map-icon.png')}}" alt=""></span> 132 Dartmouth Street Boston, Massachusetts 02156 United States</li>
+                        <li><span><img src="{{ asset('main-frontend/img/phone_call.png')}}" alt=""></span> +0800 246 5529</li>
+                        <li><span><img src="{{ asset('main-frontend/img/email.png')}}" alt=""></span> info@investconnectmarketplace.com</li>
+                        <li><span><img src="{{ asset('main-frontend/img/map-icon.png')}}" alt=""></span>  INVEST CONNECT MARKETPLACE LTD  128 CITY ROAD LONDON EC1V2NX</li>
                     </ul>
 
                     <form action="{{url('send-contact')}}" method="post">

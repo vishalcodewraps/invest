@@ -1,3 +1,4 @@
+
 <footer class="footer">
     <div class="container">
 
@@ -139,6 +140,9 @@
                                         <span class="name-span">Password</span>
                                         <input type="password" placeholder="***********" name="password" class="form-control"
                                             required>
+                                            <span class="toggle-password" id="togglePassword">
+                                            <i class="fa fa-eye" style="color:#b30000"></i>
+                                        </span>
                                     </div>
                                 </div>
 
@@ -196,6 +200,71 @@
 
     </div>
 
+    <!-- otp screen start -->
+
+   
+<!-- Modal Structure -->
+<div class="modal fade" id="otpModal" tabindex="-1" aria-labelledby="otpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <button type="button" class="btn-close float-end pe-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="row">
+                    <!-- Image Column -->
+                    <div class="col-12 col-md-6 p-0 d-none d-md-block">
+                        <img src="{{ asset('main-frontend/img/register-image.png') }}" alt="Register" class="img-fluid" style="height: 100%; object-fit: cover;">
+                    </div>
+
+                    <!-- Form Column -->
+                    <div class="col-12 col-md-6 pt-4 px-3">
+                        <h5>OTP Verificaiton</h5>
+
+                        <!-- Form Fields -->
+                        <div class="row">
+                            <div class="col-12 col-md-12 mb-3">
+                                <div class="contact-one__form-input-box input-design rounded">
+                                    <div class="otp-input-fields">
+                                        <input type="number" class="otp__digit otp__field__1">
+                                        <input type="number" class="otp__digit otp__field__2">
+                                        <input type="number" class="otp__digit otp__field__3">
+                                        <input type="number" class="otp__digit otp__field__4">
+                                        <input type="number" class="otp__digit otp__field__5">
+                                        <input type="number" class="otp__digit otp__field__6">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-12 mb-3">
+                                <button class="btn btn-red w-100">Verify OTP</button>
+                            </div>
+
+                            <!-- Login Link -->
+                            <div class="col-12 text-center mb-3">
+                                Didn't Recleve OTP ?<span><a href="#" class="text-decoration-none" style="color: #b30000;">Resend OTP</a></span>
+                            </div>
+
+                            <!-- Social Login Buttons -->
+                            <div class="col-6 mb-3">
+                                <button class="btn btn-outline-danger w-100"><i class="fa-brands fa-facebook-f"></i></button>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <button class="btn btn-outline-danger w-100"><i class="fa-brands fa-google"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- otp screen end -->
+
+
     <!-- login modal box end -->
 
     <!-- forget password start -->
@@ -232,7 +301,7 @@
 
                                 <!-- Submit Button -->
                                 <div class="col-12 mb-3">
-                                    <button class="btn btn-red w-100">Reset password</button>
+                                <button class="btn btn-red w-100" data-bs-toggle="modal" data-bs-target="#otpModal">Reset password</button>
                                 </div>
                                 <div class="col-12 text-center mb-3">
                                     Already have an account? <span><a href="#" class="text-decoration-none"
@@ -285,7 +354,7 @@
                             <!-- Dropdown -->
                             <div class="d-flex justify-content-start gap-2 align-items-center">
                                 I am Registering as
-                                <select name="type" id="" class="form-control form-select" required>
+                                <select name="type" id="" class="form-control form-select dropdown" required style="width:50%;">
                                     <option value="">Please Select</option>
                                     <option value="1">Investor</option>
                                     <option value="2">Business Owner</option>
@@ -336,17 +405,25 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="contact-one__form-input-box input-design rounded">
-                                        <span class="name-span">Password</span>
-                                        <input type="password" placeholder="***********" name="password" id="password" class="form-control"
-                                            required>
+                                <div class="contact-one__form-input-box input-design rounded">
+                                    <span class="name-span">Password</span>
+                                    <div class="password-container">
+                                        <input type="password" placeholder="***********" name="password" id="password" class="form-control" required>
+                                        <span class="toggle-password" id="togglePassword">
+                                            <i class="fa fa-eye" style="color:#b30000"></i>
+                                        </span>
                                     </div>
+                                </div>
+
                                 </div>
                                 <div class="col-12">
                                     <div class="contact-one__form-input-box input-design rounded">
                                         <span class="name-span">Confirm Password</span>
                                         <input type="password" placeholder="***********" name="c_password" id="c_password" class="form-control"
                                             required>
+                                            <span class="toggle-password" id="togglePassword">
+                                            <i class="fa fa-eye" style="color:#b30000"></i>
+                                        </span>
                                             <span class="text-danger" id="show_error"></span>
                                     </div>
                                 </div>
@@ -365,7 +442,7 @@
 
                                 <!-- Submit Button -->
                                 <div class="col-12 mb-3">
-                                    <button type="submit" class="btn btn-red w-100">Create Account</button>
+                                    <button type="submit" class="btn btn-red w-100" data-bs-toggle="modal" data-bs-target="#otpModal">Create Account</button>
                                 </div>
                                 <div class="col-12 text-center mb-3">
                                     Already have an account? <span><a href="#" class="text-decoration-none"
@@ -483,7 +560,43 @@
             return false;
         }
     }
+
+
+    // Select all OTP input fields
+  const otpInputs = document.querySelectorAll('.otp__digit');
+
+otpInputs.forEach((input, index) => {
+  input.addEventListener('input', (e) => {
+    const value = e.target.value;
+    if (value.length > 1) {
+      e.target.value = value.slice(0, 1); // Allow only one digit
+    }
+    if (value && index < otpInputs.length - 1) {
+      otpInputs[index + 1].focus(); // Move to the next input
+    }
+  });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Backspace' && !e.target.value && index > 0) {
+      otpInputs[index - 1].focus(); // Move to the previous input
+    }
+  });
+
+  input.addEventListener('paste', (e) => {
+    e.preventDefault(); // Prevent direct pasting
+    const pasteData = e.clipboardData.getData('text').split('');
+    pasteData.forEach((digit, i) => {
+      if (i < otpInputs.length) {
+        otpInputs[i].value = digit.match(/\d/) ? digit : ''; // Only paste numeric values
+        otpInputs[i].dispatchEvent(new Event('input')); // Trigger input event
+      }
+    });
+  });
+});
+
 </script>
+
+
 </body>
 
 </html>
