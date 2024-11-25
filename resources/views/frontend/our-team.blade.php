@@ -33,10 +33,10 @@
                 <div class="col-md-4 mb-4">
                     <div class="card p-3 text-center card-team">
                         <img src="{{ asset($res->image) }}" alt="" class="img-fluid" style="border:4px solid #b30000; border-radius: 50%; height: 300px; width: 300px;
-                        margin: auto;">
+        margin: auto;">
                         <div class="card-body">
                             <h1 style="font-size: 20px;font-weight: bold;">{{$teams->title}}</h1>
-                            <h3>{!!clean($teams->description)!!}</h3>
+                            <h3 style="font-size: 15px;font-weight: bold;">{!!clean($teams->description)!!}</h3>
                         </div>
                     </div>
                 </div>
