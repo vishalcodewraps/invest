@@ -49,7 +49,7 @@
                     <li><a href="#" class="text-white text-decoration-none">Testimonials</a></li>
                     <li><a href="#" class="text-white text-decoration-none">Company Info</a></li>
                     <li><a href="#" class="text-white text-decoration-none">Partners</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Refer a Friend</a></li>
+                    <li><a href="{{ url('/news') }}" class="text-white text-decoration-none">News</a></li>
                     <li><a href="{{ url('/blogs') }}" class="text-white text-decoration-none">Blog</a></li>
                 </ul>
             </div>
