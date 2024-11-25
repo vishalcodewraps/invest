@@ -99,7 +99,7 @@ class BlogController extends Controller
 
         $notify_message = trans('translate.Created successfully');
         $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
-        return redirect()->route('admin.teamedit', ['blog' => $blog->id, 'lang_code' => admin_lang()])->with($notify_message);
+        return redirect()->route('admin.team-list', ['blog' => $blog->id, 'lang_code' => admin_lang()])->with($notify_message);
 
 
     }
