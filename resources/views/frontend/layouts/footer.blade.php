@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="col-md-3 align-items-center">
-                <ul class="list-unstyled d-flex gap-2 mt-2">
+                <ul class="list-unstyled d-flex gap-2 my-3">
                     <li><img src="{{ asset('main-frontend/img/instagram.png') }}" alt="" class="img-fluid"></li>
                     <li><img src="{{ asset('main-frontend/img/facebook.png') }}" alt="" class="img-fluid"></li>
                     <li><img src="{{ asset('main-frontend/img/twitter.png') }}" alt="" class="img-fluid"></li>
@@ -510,27 +510,67 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.slider-1').slick({
-            slidesToShow: 3, // Number of slides to show per row
-            rows: 3, // Number of rows
-            dots: false, // Enable dots for navigation
-            arrows: true, // Enable arrows for navigation
-            infinite: true, // Enable infinite scrolling
-            autoplay: true, // Enable autoplay
-            autoplaySpeed: 1000, // Autoplay speed in milliseconds
-        });
-
-        $('.slider-2').slick({
-            slidesToShow: 4, // Different settings for the second slider
-            rows: 2,
-            dots: false,
-            arrows: true,
-            infinite: true,
-            autoplay: true, // Enable autoplay
-            autoplaySpeed: 1000, // Autoplay speed in milliseconds
-        });
+   $(document).ready(function () {
+    $('.slider-1').slick({
+        slidesToShow: 3, // Number of slides to show per row
+        rows: 3, // Number of rows
+        dots: false, // Disable dots
+        arrows: true, // Enable arrows for navigation
+        infinite: true, // Enable infinite scrolling
+        autoplay: true, // Enable autoplay
+        autoplaySpeed: 1000, // Autoplay speed in milliseconds
+        responsive: [
+            {
+                breakpoint: 1024, // Screen width <= 1024px
+                settings: {
+                    slidesToShow: 2, // Adjust slides to show
+                    rows: 2,
+                }
+            },
+            {
+                breakpoint: 768, // Screen width <= 768px
+                settings: {
+                    slidesToShow: 1, // Show 1 slide
+                    rows: 1,
+                }
+            }
+        ]
     });
+
+    $('.slider-2').slick({
+        slidesToShow: 4, // Different settings for the second slider
+        rows: 2, // Number of rows
+        dots: false, // Disable dots
+        arrows: true, // Enable arrows for navigation
+        infinite: true, // Enable infinite scrolling
+        autoplay: true, // Enable autoplay
+        autoplaySpeed: 1000, // Autoplay speed in milliseconds
+        responsive: [
+            {
+                breakpoint: 1024, // Screen width <= 1024px
+                settings: {
+                    slidesToShow: 3, // Adjust slides to show
+                    rows: 2,
+                }
+            },
+            {
+                breakpoint: 768, // Screen width <= 768px
+                settings: {
+                    slidesToShow: 2, // Show fewer slides
+                    rows: 1,
+                }
+            },
+            {
+                breakpoint: 480, // Screen width <= 480px
+                settings: {
+                    slidesToShow: 1, // Show 1 slide
+                    rows: 1,
+                }
+            }
+        ]
+    });
+});
+
 </script>
 @if (session('success'))
     <script>

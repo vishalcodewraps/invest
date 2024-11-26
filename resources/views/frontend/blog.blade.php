@@ -16,20 +16,11 @@
 
 
     <div class="container">
-        <!-- <div class="row my-5">
-                <div class="col-md-6">
-                    <h2 class="fw-bold">Blogs</h2>
-                </div>
-
-                <div class="col-md-6">
-                    <p>Let’s explore some of the best business and investment opportunities for UK investors.</p>
-                </div>
-            </div> -->
-
-        <div class="row my-5">
+      
+    <div class="row my-5">
 
             @foreach ($blogs as $res)
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
                     <a href="{{ url('blog/' . $res->slug) }}" class="text-decoration-none">
                         <div class="card p-3 blog-card">
                             <img src="{{ asset($res->image) }}" class="card-img-top" alt="...">

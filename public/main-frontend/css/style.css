@@ -1,96 +1,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
     color: black;
 
-    
+
 }
 
-.nav-link{
+.nav-link {
     font-size: 18px;
     font-weight: 600;
 }
-.logo-font{
+
+.Investor-button{
+    margin-top: 2rem;
+}
+
+.logo-font {
     font-size: 20px;
     font-weight: bold;
 }
-.banner{
+
+.banner {
     height: 530px;
     background-color: #B91C1C !important;
 }
-.bg-img{
-   
+
+.top-padding {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.bg-img {
+
     height: 530px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center right;
 }
-.h1-heading{
+
+.h1-heading {
     margin-top: 101px;
     color: white;
     font-weight: bold;
     font-size: 56px;
 }
-.sub-heading{
+
+.h11-heading{
+    margin-top: 101px;
+    color: white;
+    font-weight: bold;
+    font-size: 56px;
+}
+.h4-heading{
+    margin-top: 101px;
+    color: white;
+    font-weight: bold;
+    font-size: 56px;
+}
+.sub-heading {
     font-size: 24px;
 }
-.heading2{
+
+.heading2 {
     font-size: 38px;
     font-weight: bold;
 }
-.text{
+
+.text {
     font-size: 18px !important;
 }
-.text1{
-    font-size: 15px !important;
+
+.text1 {
+    font-size: 14px !important;
 }
-.section2-img{
+
+.section2-img {
     height: 436px;
 }
-.section2p{
+
+.section2p {
     font-size: 18px;
     line-height: 30px;
 }
-.red-section{
+
+.red-section {
     background: #B91C1C;
     padding: 40px 0;
 }
-.heading3{
+
+.heading3 {
     font-weight: bold;
 }
-.para3{
+
+.para3 {
     font-size: 20px;
 }
-.key{
+
+.key {
     font-weight: bold;
+    margin-bottom: 8px;
 }
-.bg-icon{
+
+.bg-icon {
     background-color: #B91C1C;
-    padding: 6px 9px;
+    padding: 13px;
     color: white;
     border-radius: 40px;
 }
-.text-red{
-    color:#B91C1C;
+
+.text-red {
+    color: #B91C1C;
 }
-.btn-white{
-    border: 1px solid #B91C1C;
+
+.h11-heading{
+    font-size: 40px;
+}
+
+.h4-heading{
+    font-size: 35px;margin-top: 30px;
+}
+
+.btn-white {
+    background-color: #B91C1C;
+    color: white;
     padding: 10px 20px;
 }
 
-.btn-white:hover{
+.btn-white:hover {
     background-color: #B91C1C;
     color: white;
 }
 
-.item-text{
+.item-text {
     font-size: 14px;
     font-weight: 600;
 }
+
 .card {
     border-radius: 20px !important;
     transition: 0.4s;
@@ -99,23 +149,28 @@
 
 .card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05); /* Slightly enlarges the card */
-    background-color: #f5f5f5; /* Optional: Change background color on hover */
+    transform: scale(1.05);
+    /* Slightly enlarges the card */
+    background-color: #f5f5f5;
+    /* Optional: Change background color on hover */
 }
-.Investment-btn{
+
+.Investment-btn {
     font-size: 18px;
     font-weight: bold;
 }
-.Partner-box{
+
+.Partner-box {
     border-radius: 20px;
 }
-.Partner-para{
+
+.Partner-para {
     font-weight: 500;
 }
 
 .profile-card {
     background-color: #fff;
-    padding: 20px;
+    padding: 18px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: start;
@@ -148,7 +203,11 @@
     font-size: 1.2rem;
     color: #e4002b;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 5px;
+}
+
+.card-text{
+    font-size: 15px;
 }
 
 .list-unstyled {
@@ -161,11 +220,13 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 10px; /* Adjust spacing between text and icon */
+    gap: 10px;
+    /* Adjust spacing between text and icon */
 }
 
 .item-text .text {
-    flex: 1; /* Text will take up the remaining space */
+    flex: 1;
+    /* Text will take up the remaining space */
     text-align: left;
 }
 
@@ -173,10 +234,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px; /* Set width for consistent alignment */
-    height: 40px; /* Set height for consistent alignment */
-    background-color: #B91C1C; /* Adjust background color */
-    border-radius: 50%; /* Make it circular */
+    width: 20px;
+    /* Set width for consistent alignment */
+    height: 20px;
+    /* Set height for consistent alignment */
+    background-color: #B91C1C;
+    /* Adjust background color */
+    border-radius: 50%;
+    /* Make it circular */
 }
 
 .bg-icon i {
@@ -203,7 +268,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    gap: 8px;
 }
 
 .tag {
@@ -213,7 +277,8 @@
     font-size: 0.8rem;
     color: #333;
 }
-.heading4{
+
+.heading4 {
     font-size: 25px;
     font-weight: bold;
 }
@@ -226,20 +291,24 @@
     display: flex;
     align-items: flex-start;
 }
+
 .service-icon {
     background-color: white;
     border-radius: 10px;
     padding: 10px;
     margin-right: 15px;
 }
+
 .service-icon img {
     width: 30px;
     height: 30px;
 }
+
 .service-title {
     font-weight: bold;
     margin-bottom: 15px;
 }
+
 .tag {
     background-color: #e0e0e0;
     color: #333;
@@ -250,17 +319,19 @@
     display: inline-block;
 }
 
-.accordion-button:focus{
-    box-shadow: 0 0 !important; 
+.accordion-button:focus {
+    box-shadow: 0 0 !important;
 }
 
-.accordion-button:not(.collapsed){
+.accordion-button:not(.collapsed) {
     background-color: gray;
 }
-.accordion-body{
+
+.accordion-body {
     border-radius: 30px !important;
 }
-.Industries{
+
+.Industries {
     background-color: #B91C1C;
 
 }
@@ -272,10 +343,13 @@
 }
 
 .industry-item img {
-    width: 50px; /* Adjust size as needed */
+    width: 50px;
+    /* Adjust size as needed */
     height: 50px;
-    margin-right: 15px; /* Spacing between image and text */
-    border-radius: 5px; /* Optional: Makes the image slightly rounded */
+    margin-right: 15px;
+    /* Spacing between image and text */
+    border-radius: 5px;
+    /* Optional: Makes the image slightly rounded */
 }
 
 .industry-item strong {
@@ -284,30 +358,37 @@
     font-weight: bold;
 }
 
-.accordion-header{
+.accordion-header {
     font-weight: bold;
 }
+
 .accordion-button:not(.collapsed) {
     background-color: #b91c1c;
     color: white;
 }
 
-.fa-location-dot{
+.fa-location-dot {
     color: #b91c1c;
 }
 
 .three-row-slider {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust min size */
-    gap: 10px; /* Space between the slides */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* Adjust min size */
+    gap: 10px;
+    /* Space between the slides */
 }
 
 .three-row-slider img {
     width: 100%;
-    height: 100px !important; /* Set a fixed height for uniformity */
-    object-fit: contain !important; /* Ensure the image fits within the container */
-    background-color: #f0f0f0 !important; /* Optional: Background for better visibility */
-    border-radius: 5px !important; /* Optional: Add rounded corners */
+    height: 100px !important;
+    /* Set a fixed height for uniformity */
+    object-fit: contain !important;
+    /* Ensure the image fits within the container */
+    background-color: #f0f0f0 !important;
+    /* Optional: Background for better visibility */
+    border-radius: 5px !important;
+    /* Optional: Add rounded corners */
     padding: 15px !important;
 }
 
@@ -323,12 +404,14 @@
     color: #fff;
     text-align: left !important;
 }
-.carousel-inner{
+
+.carousel-inner {
     height: 550px;
 }
 
-.home-card{
-    height: 739px;
+.home-card {
+    height: 561px;
+    padding: 16px !important;
 }
 
 
@@ -346,26 +429,27 @@
     border-bottom: 1px solid #333;
     width: 100%;
 }
+
 .border-bottom-input::placeholder {
-    color: rgba(230, 227, 227, 0.5); /* Black with 50% opacity */
-  }
+    color: rgba(230, 227, 227, 0.5);
+    /* Black with 50% opacity */
+}
 
 input.border-bottom-input:focus {
     border: none;
     border-bottom: 1px solid #333;
     width: 100%;
-  }
+}
 
-  .form-label{
+.form-label {
     color: #8D8D8D;
-  }
+}
 
-  .text{
+.text {
     font-size: 10px;
-  }
-  .blog-details-left{
-    
-  }
+}
+
+.blog-details-left {}
 
 /* contact page end */
 
@@ -416,34 +500,40 @@ input.border-bottom-input:focus {
 
 /* otp css end */
 /* blog page css start  */
-.blog-card:hover{
+.blog-card:hover {
     background-color: #b30000;
 }
-.card-a{
+
+.card-a {
     color: black !important;
 }
-.card-title{
+
+.card-title {
     color: black !important;
 }
-.blog-card:hover .card-title, .blog-card:hover .card-text{
+
+.blog-card:hover .card-title,
+.blog-card:hover .card-text {
     color: white !important;
 }
 
-.blog-card:hover .card-a, .blog-card:hover .card-a{
+.blog-card:hover .card-a,
+.blog-card:hover .card-a {
     color: white !important;
 }
 
-.btn-red{
+.btn-red {
     background-color: #b30000;
     color: white;
     border-radius: 0;
     padding: 17px 60px;
 }
 
-.btn-red:hover{
+.btn-red:hover {
     background-color: #b30000;
     color: white;
 }
+
 /* blog page css end */
 
 /* team page css start */
@@ -459,14 +549,14 @@ input.border-bottom-input:focus {
 }
 
 
-.card-team{
+.card-team {
     height: 477px;
     border-radius: 0 !important;
     transition: 0;
     box-shadow: 0;
 }
 
-.card-team:hover{
+.card-team:hover {
     /* background-color: #b30000;
     color: white;
     box-shadow: 0;
@@ -478,27 +568,32 @@ input.border-bottom-input:focus {
 
 /* team page css end */
 /* Custom styles for the footer */
- .footer {
+.footer {
     background-color: #000;
     color: #fff;
     padding: 40px 0;
 }
+
 .footer .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 .footer .social-icons img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
 }
+
 .footer .section-title {
     font-weight: bold;
     margin-bottom: 15px;
 }
+
 .footer .text-muted {
     font-size: 0.9rem;
 }
+
 .footer .subscribe-input {
     background-color: #333;
     border: none;
@@ -506,6 +601,7 @@ input.border-bottom-input:focus {
     padding: 10px;
     border-radius: 5px;
 }
+
 .footer .subscribe-button {
     background-color: #b30000;
     border: none;
@@ -514,50 +610,41 @@ input.border-bottom-input:focus {
     border-radius: 5px;
     font-weight: bold;
 }
+
 .footer .bottom-text {
     font-size: 0.8rem;
     margin-top: 20px;
 }
 
-  /* Basic styling for the slider */
-  .three-row-slider .slick-slide {
-    margin: 10px; /* Space between slides */
-  }
+/* Basic styling for the slider */
+.three-row-slider .slick-slide {
+    margin: 10px;
+    /* Space between slides */
+}
 
-  .three-row-slider img {
-    width: 100%; /* Full width for each slide image */
+.three-row-slider img {
+    width: 100%;
+    /* Full width for each slide image */
     height: auto;
     display: block;
-  }
+}
 
-  /* Additional styling */
-  .slider-container {
+/* Additional styling */
+.slider-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    html,body {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    .h1-heading{
-        font-size: 37px;
-        line-height: 51px;
-    }
+}
 
 
-  }
 
-  .btn-red {
+.btn-red {
     background-color: #b30000;
     color: white;
     border-radius: 0;
     padding: 17px 60px;
 }
+
 .ourteam-banner {
     background-color: #b30000;
     height: 350px;
@@ -580,7 +667,7 @@ input.border-bottom-input:focus {
 
 }
 
-.margin-forget{
+.margin-forget {
     margin-top: 80px;
 }
 
@@ -663,7 +750,8 @@ input.border-bottom-input:focus {
 }
 
 .password-container .form-control {
-    padding-right: 40px; /* Adjust space for the icon */
+    padding-right: 40px;
+    /* Adjust space for the icon */
 }
 
 .toggle-password {
@@ -685,4 +773,77 @@ input.border-bottom-input:focus {
 
 .fa-google {
     color: #b30000;
+}
+
+@media only screen and (max-width: 1200px) {
+    .nav-link {
+        font-size: 15px !important;
+    } 
+}
+
+@media only screen and (max-width: 1100px) {
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .h1-heading {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .carousel-content{
+        bottom: 0 !important;
+    }
+
+    .nav-link {
+        font-size: 15px !important;
+    }
+
+    .top-padding {
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    .ourteam-banner {
+        height: 430px;
+    }
+
+    .team1 {
+        font-size: 40px;
+    }
+
+    .banner,
+    .carousel-inner {
+        height: 300px;
+    }
+
+    .banner-img {
+        height: 300px;
+        object-fit: cover;
+        object-position: right;
+    }
+    .Investor-button{
+        margin-top: 0;
+    }
+
+    .Investor-button>h4{
+        font-size: 16px;
+    }
+    .h11-heading{
+        font-size: 26px;
+    }
+    .h4-heading{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .Investment-btn{
+        font-size: 17px;
+    }
+
+
 }

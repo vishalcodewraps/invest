@@ -35,13 +35,13 @@
 
             <div class="carousel-item active">
             <img src="{{asset('main-frontend/img/banner.png')}}" class="d-block w-100 banner-img" alt="...">
-            <div class="carousel-caption carousel-content d-none d-md-block">
+            <div class="carousel-caption carousel-content  d-md-block">
             <div class="col-lg-7 col-md-10 col-sm-12">
                     <h1 class="h1-heading">
                         We Connect UK Entrepreneurs, Angel Investors, & Professional Service Providers
                     </h1>
 
-                    <div class="d-flex gap-2 mt-5 " style="align-items: center;">
+                    <div class="d-flex gap-2 Investor-button" style="align-items: center;">
                         <h4 class="text-white">I am looking to</h4>
                         <div class="btn-group">
                             <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
@@ -62,16 +62,16 @@
 
             <div class="carousel-item">
             <img src="{{asset('main-frontend/img/Homepage-new.png')}}" class="d-block w-100 banner-img" alt="...">
-            <div class="carousel-caption carousel-content d-none d-md-block">
+            <div class="carousel-caption carousel-content  d-md-block">
             <div class="col-lg-7 col-md-10 col-sm-12">
-                    <h1 class="h1-heading" style="font-size: 40px;">
+                    <h1 class="h11-heading">
                         Bridging UK Entrepreneurs, Investors & Industry Experts: 
                     </h1>
-                    <h1 class="h1-heading" style="font-size: 35px;margin-top: 30px;">
+                    <h4 class="h4-heading">
                         Spark Innovation, Expedite Growth, and Achieve Unmatched Success!
-                    </h1>
+                    </h4>
 
-                    <div class="d-flex gap-2 mt-5 " style="align-items: center;">
+                    <div class="d-flex gap-2 Investor-button" style="align-items: center;">
                         <h4 class="text-white">I am looking to</h4>
                         <div class="btn-group">
                             <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
@@ -92,13 +92,13 @@
 
             <div class="carousel-item active">
             <img src="{{asset('main-frontend/img/Homepage-new2.png')}}" class="d-block w-100 banner-img" alt="...">
-            <div class="carousel-caption carousel-content d-none d-md-block">
+            <div class="carousel-caption carousel-content  d-md-block">
             <div class="col-lg-7 col-md-10 col-sm-12">
                     <h1 class="h1-heading">
                         Unlock Opportunities, Fuel Growth, and Achieve Success!
                     </h1>
 
-                    <div class="d-flex gap-2 mt-5 " style="align-items: center;">
+                    <div class="d-flex gap-2 Investor-button" style="align-items: center;">
                         <h4 class="text-white">I am looking to</h4>
                         <div class="btn-group">
                             <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
@@ -156,29 +156,29 @@
                 <h2 class="heading3 mt-5 text-white text-center">Exploring Investment Opportunities in the UK</h2>
                 <p class="para3 text-center mt-3 mb-5 text-white">At the heart of Invest Connect lies a clear vision: to create a world where access to capital and innovation knows no boundaries. By connecting ambitious entrepreneurs with investors seeking to make a difference, we build an ecosystem that transforms ideas into reality. Whether you’re a startup founder with a revolutionary vision or an investor passionate about driving change, our platform connects dreams with possibilities.</p>
 
-                <div class="col-md-4">
+                <div class="col-md-6 col-sm-12 col-lg-4 mb-3">
 
-                    <div class="card p-4 home-card">
+                    <div class="card p-1 home-card">
                         <img src="{{asset('main-frontend/img/i1.jpg')}}" class="card-img-top border border-1" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title my-3">Start Strong with Invest Connect</h5>
+                            <h5 class="card-title ">Start Strong with Invest Connect</h5>
                             <p><span><i class="fa-solid fa-location-dot"></i></span> North East, United Kingdom</p>
                             <p class="card-text" style="text-align:justify">Take the first steps toward success with streamlined solutions tailored for entrepreneurs and investors</p>
 
                             <p class="key"><strong>Key Metrics</strong></p>
 
-                            <ul class="list-unstyled">
-                                <li class="mb-3 item-text">
+                            <ul class="list-unstyled" style="margin-top: 12px;">
+                                <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
                                 <span class="text1">Incorporate Your Business with Ease</span>
                                     
                                 </li>
-                                <li class="mb-3 item-text">
+                                <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
                                 <span class="text1">Craft Your Vision</span>
                                     
                                 </li>
-                                <li class="mb-3 item-text">
+                                <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
                                 <span class="text1">Plan for Growth</span>
                                     
@@ -194,29 +194,29 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6 col-sm-12 col-lg-4 mb-3">
 
-                    <div class="card p-4 home-card">
+                    <div class="card p-1 home-card">
                         <img src="{{asset('main-frontend/img/i2.jpg')}}" class="card-img-top border border-1" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title my-3">Unlock Your Growth Potential</h5>
+                            <h5 class="card-title">Unlock Your Growth Potential</h5>
                             <p><span><i class="fa-solid fa-location-dot"></i></span> Iceland, Iceland</p>
                             <p class="card-text" style="text-align:justify">Take your journey to the next level with tools and resources tailored to optimise every step of your growth</p>
 
                             <p class="key"><strong>Key Metrics</strong></p>
 
-                            <ul class="list-unstyled">
-                                <li class="mb-3 item-text">
+                            <ul class="list-unstyled" style="margin-top: 12px;">
+                                <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
                                 <span class="text1">Build a Professional Profile</span>
                                     
                                 </li>
-                                <li class="mb-3 item-text">
+                                <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
                                 <span class="text1">Extend Your Reach</span>
                                     
                                 </li>
-                                <li class="mb-3 item-text">
+                                <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
                                 <span class="text1">Connect with Accelerators and Programs</span>
                                     
@@ -232,36 +232,35 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6 col-sm-12 col-lg-4">
 
-                    <div class="card p-4 home-card">
+                    <div class="card home-card">
                         <img src="{{asset('main-frontend/img/i3.jpg')}}" class="card-img-top border border-1" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title my-3">Financial Markets Trading</h5>
+                            <h5 class="card-title">Financial Markets Trading</h5>
                             <p><span><i class="fa-solid fa-location-dot"></i></span> North East, United Kingdom</p>
-                            <p class="card-text" style="text-align:justify">Having successfully navigated the World's Financial Markets for over 8 years. I'm now looking to expand my current investment</p>
-
+                            <p class="card-text" style="text-align:justify">Having successfully navigated the World's Financial Markets for over 8 years.</p>
                             <p class="key"><strong>Key Metrics</strong></p>
 
-                             <ul class="list-unstyled">
-                                <li class="mb-3 item-text">
+                             <ul class="list-unstyled" style="margin-top: 12px;">
+                                <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text1">A well-established trading business with an active platform and engaged readership.</span>
+                                <span class="text1">Established trading platform readership.</span>
                                     
                                 </li>
-                                <li class="mb-3 item-text">
+                                <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
                                 <span class="text1">Key partnerships in process for mutual</span>
                                     
                                 </li>
-                                <li class="mb-3 item-text">
+                                <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
-                                <span class="text1">Test marketing under way and first sign ups of new offer</span>
+                                <span class="text1">Test marketing under way</span>
                                     
                                 </li>
                             </ul>
 
-                            <div class="text-center ">
+                            <div class="text-center">
                                 <a href="#" class="btn btn-white text-red mt-3">View Full Pitch Deck</a>
                             </div>
                         </div>
@@ -288,15 +287,14 @@
                         <div class="slider-container">
                             <div class="three-row-slider slider-2">
                                 <div><img src="{{asset('main-frontend/img/bbc.svg')}}" alt="Slide 1"></div>
-                                <div><img src="{{asset('main-frontend/img/bloomberg.svg')}}" alt="Slide 2"></div>
-                                <div><img src="{{asset('main-frontend/img/business-insider.svg')}}" alt="Slide 3"></div>
-                                <div><img src="{{asset('main-frontend/img/entrepreneur.svg')}}" alt="Slide 4"></div>
-                                <div><img src="{{asset('main-frontend/img/financial-times.svg')}}" alt="Slide 5"></div>
-                                <div><img src="{{asset('main-frontend/img/forbes.svg')}}" alt="Slide 6"></div>
-                                <div><img src="{{asset('main-frontend/img/startups.svg')}}" alt="Slide 7"></div>
-                                <div><img src="{{asset('main-frontend/img/techcrunch.svg')}}" alt="Slide 8"></div>
-                                <div><img src="{{asset('main-frontend/img/the-guardian.svg')}}" alt="Slide 9"></div>
-                                <div><img src="{{asset('main-frontend/img/the-times.svg')}}" alt="Slide 10"></div>
+                                <div><img src="{{asset('main-frontend/img/bloomberg.png')}}" alt="Slide 2"></div>
+                                <div><img src="{{asset('main-frontend/img/business-insider.webp')}}" alt="Slide 3"></div>
+                                <div><img src="{{asset('main-frontend/img/entrepreneur.png')}}" alt="Slide 4"></div>
+                                <div><img src="{{asset('main-frontend/img/financial-times.png')}}" alt="Slide 5"></div>
+                                <div><img src="{{asset('main-frontend/img/forbes.png')}}" alt="Slide 6"></div>
+                                <div><img src="{{asset('main-frontend/img/techcrunch.png')}}" alt="Slide 8"></div>
+                                <div><img src="{{asset('main-frontend/img/the-guardian.png')}}" alt="Slide 9"></div>
+                                <div><img src="{{asset('main-frontend/img/the-times.png')}}" alt="Slide 10"></div>
                             </div>
                         </div>
                 </div>
@@ -348,19 +346,19 @@
 
                         <div class="slider-container">
                             <div class="three-row-slider slider-1">
-                            <div><img src="{{asset('main-frontend/img/bloomberg.svg')}}" alt="Slide 2"></div>
-                                <div><img src="{{asset('main-frontend/img/business-insider.svg')}}" alt="Slide 3"></div>
-                                <div><img src="{{asset('main-frontend/img/entrepreneur.svg')}}" alt="Slide 4"></div>
                                 <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
-                                <div><img src="{{asset('main-frontend/img/financial-times.svg')}}" alt="Slide 5"></div>
-                                <div><img src="{{asset('main-frontend/img/forbes.svg')}}" alt="Slide 6"></div>
+                                <div><img src="{{asset('main-frontend/img/bbc.svg')}}" alt="Slide 1"></div>
+                                <div><img src="{{asset('main-frontend/img/bloomberg.png')}}" alt="Slide 2"></div>
+                                <div><img src="{{asset('main-frontend/img/business-insider.webp')}}" alt="Slide 3"></div>
+                                <div><img src="{{asset('main-frontend/img/entrepreneur.png')}}" alt="Slide 4"></div>
+                                <div><img src="{{asset('main-frontend/img/financial-times.png')}}" alt="Slide 5"></div>
+                                <div><img src="{{asset('main-frontend/img/forbes.png')}}" alt="Slide 6"></div>
                                 <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
                                 <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
+                                <div><img src="{{asset('main-frontend/img/techcrunch.png')}}" alt="Slide 8"></div>
                                 <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
-                                <div><img src="{{asset('main-frontend/img/startups.svg')}}" alt="Slide 7"></div>
-                                <div><img src="{{asset('main-frontend/img/techcrunch.svg')}}" alt="Slide 8"></div>
-                                <div><img src="{{asset('main-frontend/img/the-guardian.svg')}}" alt="Slide 9"></div>
-                                <div><img src="{{asset('main-frontend/img/the-times.svg')}}" alt="Slide 10"></div>
+                                <div><img src="{{asset('main-frontend/img/the-guardian.png')}}" alt="Slide 9"></div>
+                                <div><img src="{{asset('main-frontend/img/the-times.png')}}" alt="Slide 10"></div>
                               
                               
                             </div>
@@ -390,7 +388,7 @@
                     helping us navigate challenges and seize opportunities in a rapidly evolving marketplace.</p>
 
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <div class="profile-card">
+                    <div class="profile-card mb-3">
                         <div class="d-flex gap-3">
                             <div><img src="{{asset('main-frontend/img/i22.jpg')}}" alt="Profile Picture"></div>
 
@@ -407,7 +405,7 @@
                         <div class="description">
                         I worked in software for over 20 years, helping grow a startup from 2010-2023 and now exited.
                         </div>
-                        <div class="expertise-title">Areas of Expertise</div>
+                        <div class="expertise-title">Areas of Interests </div>
                         <div class="expertise-tags">
                             <div class="tag">Pre-Startup/R&D</div>
                             <div class="tag">MVP/Finished Product</div>
@@ -420,7 +418,7 @@
                 </div>
 
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <div class="profile-card">
+                    <div class="profile-card mb-3">
                         <div class="d-flex gap-3">
 
                             <div>
@@ -438,7 +436,7 @@
                         <div class="description">
                         Business Growth Manager, Business Owner, Startup Owner
                         </div>
-                        <div class="expertise-title">Areas of Expertise</div>
+                        <div class="expertise-title">Areas of Interests </div>
                         <div class="expertise-tags">
                             <div class="tag">Pre-Startup/R&D</div>
                             <div class="tag">MVP/Finished Product</div>
@@ -452,7 +450,7 @@
 
 
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <div class="profile-card">
+                    <div class="profile-card mb-3">
                         <div class="d-flex gap-3">
                             <div><img src="{{asset('main-frontend/img/admin.png')}}" alt="Profile Picture"></div>
                             <div class="location flex-column justify-content-start">
@@ -466,7 +464,7 @@
                         <div class="description">
                         23 years in management positions across 4 industries and 4 continents with the last 12 years in the CEO position.
                         </div>
-                        <div class="expertise-title">Areas of Expertise</div>
+                        <div class="expertise-title">Areas of Interests</div>
                         <div class="expertise-tags">
                             <div class="tag">Pre-Startup/R&D</div>
                             <div class="tag">MVP/Finished Product</div>
@@ -672,14 +670,19 @@
                     <div class="item">
                         <div class="bg-white p-3" style="border-radius: 20px;">
 
-                            <h3>{{$res->translate->name}}</h3>
+                           
                             <p>{{$res->translate->comment}}</p>
 
                             <div class="d-flex gap-2 align-items-center">
                                 <img src="{{ asset($res->image) }}" alt="" class="img-fluid rounded"
-                                    style="height: 100px; width: 100px; border-radius: 50% !important;">
-                                <p>Indiana Gregg</p>
+                                    style="height: 70px; width: 70px; border-radius: 50% !important;">
+                                    <div class="">
+                                    <h3 class="m-0">{{$res->translate->name}}</h3> 
+                                    <p>{{$res->translate->designation}}</p>
+                                    </div>
+                               
                             </div>
+                            
 
                         </div>
                     </div>

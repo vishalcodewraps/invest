@@ -29,10 +29,10 @@
 
         <div class="container-fluid bg-light">
             <div class="container">
-                <div class="row py-3">
+                <div class="row top-padding">
 
                     <div class="col-md-4">
-                        <a class="navbar-brand d-none d-md-block d-lg-block" href="#">
+                        <a class="navbar-brand d-none d-md-none d-lg-block" href="#">
                             <div class="d-flex align-items-center gap-2">
                                 <img src="{{asset('main-frontend/img/logo.png')}}" alt="logo" class="img-fluid" style="height: 68px;">
                                 <div>
@@ -42,26 +42,26 @@
                         </a>
                     </div>
 
-                    <div class="col-md-4 d-none d-md-block d-lg-block">
+                    <div class="col-md-4 d-none d-md-none d-lg-block">
                         <div class="m-auto">
                             <form class="d-flex mt-2" role="search">
                                 <div class="input-group">
-                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                    <span class="input-group-text"><i class="fas fa-search" style="color:#B91C1C;"></i></span>
+                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="border:2px solid #dee2e6; box-shadow: 0px 0px 4px #dee2e6 #dee2e6;">
+                                    <span class="input-group-text" style="border:2px solid #dee2e6; box-shadow: 4px 4px 10px #dee2e6;"><i class="fas fa-search" style="color:#B91C1C;"></i></span>
                                 </div>
                             </form>
                         </div>
                     </div>
 
-                    <div class="col-md-4 d-none d-md-block d-lg-block">
+                    <div class="col-md-4 d-none d-md-none d-lg-block">
                         <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center text-center justify-content-end">
                             <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"><img src="{{asset('main-frontend/img/login.png')}}"
-                                        class="img-fluid" style="height: 24px;"> <br>
+                                        class="img-fluid" style="height: 30px; font-size:18px;"> <br>
                                     Login</a></li>
                             <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop"><img src="{{asset('main-frontend/img/register.png')}}"
-                                        class="img-fluid" style="height: 24px;">
+                                        class="img-fluid" style="height: 30px; font-size:18px;">
                              <br> Register</a></li>
                         </ul>
                     </div>
@@ -72,13 +72,13 @@
         </div>
 
 
-        <nav class="navbar navbar-expand-lg bg-light border-top">
+        <nav class="navbar navbar-expand-lg bg-light">
 
             <div class="container">
 
-                <a class="navbar-brand d-sm-block d-md-none d-lg-none" href="{{url('/')}}">
+                <a class="navbar-brand d-sm-block d-md-block d-lg-none" href="{{url('/')}}">
                     <div class="d-flex align-items-center gap-2">
-                        <img src="{{asset('main-frontend/img/logo.png')}}" alt="logo" class="img-fluid" style="height: 40px;">
+                        <img src="{{asset('main-frontend/img/logo.png')}}" alt="logo" class="img-fluid" style="height: 70px;">
                         <div>
                             <span class="logo-font">Invest Connect <br> Marketplace</span>
                         </div>
@@ -120,11 +120,12 @@
 
                     </ul>
                     <div>
-                        <button class="btn btn-danger">Join Our Marketplace </button>
+                        <button class="btn btn-danger d-sm-block d-md-none d-lg-block d-xl-block">Join Our Marketplace</button>
                     </div>
 
+
                     <div class="d-sm-block d-md-none">
-                        <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center text-center justify-content-end">
+                        <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center text-center justify-content-start my-2">
                             <li><a href="#" class="text-decoration-none text-black"  data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"><img src="{{asset('main-frontend/img/login.png')}}"
                                         class="img-fluid" style="height: 24px;" > <br>

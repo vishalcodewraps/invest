@@ -14,23 +14,18 @@
 
         <div class="container">
             <div class="row my-5">
-                <div class="col-md-6">
-                    <h2 class="fw-bold">Meet The Professionals Team </h2>
-                </div>
-
-                <div class="col-md-6">
+              <div class="col-md-12 text-center">
+                <h2 class="fw-bold">Meet The Professionals Team </h2>
                     <p>Our team is not just a team of skillful professionals – These are collective individuals committed to your success. Together we work to seamlessly deliver the expertise and insights you need to take your business to the top. Our team is your trusted partner for innovative investment strategies and scalable business solutions. We provide support and tools to navigate through the evolving market. Let’s work together for long-lasting impacts.</p>
                 </div>
             </div>
-
-
 
             <div class="row my-5">
                 @foreach ($team as $res)
                 @php
                     $teams = Modules\Blog\App\Models\TeamTranslation::where(['blog_id' => $res->id])->first();
                 @endphp
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
                     <div class="card p-3 text-center card-team">
                         <img src="{{ asset($res->image) }}" alt="" class="img-fluid" style="border:4px solid #b30000; border-radius: 50%; height: 300px; width: 300px;
         margin: auto;">
