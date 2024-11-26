@@ -6,7 +6,6 @@
         <div class="container">
             <div class="row text-center ">
                 <h1 class="team1 text-white">{{ $blog->translate->title }}</h1>
-                <p class="text-white">{!! $blog->translate->short_description !!}</p>
             </div>
         </div>
     </div>
@@ -17,6 +16,7 @@
                 <div class="blog-details bg-light p-4 rounded">
                     <img src="{{ asset($blog->image) }}" alt="" class="img-fluid rounded">
                     <h2 class="fw-bold my-3">{{ $blog->translate->title }}</h2>
+                    <p class="text-white">{!! $blog->translate->short_description !!}</p>
                     <p>
                         {!! $blog->translate->description !!}
                     </p>
@@ -26,14 +26,14 @@
             <div class="col-md-4 text-center">
                 <div class="blog-details-left  bg-light p-3 rounded">
                     @foreach ($blogs as $res)
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{ asset($res->image) }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $res->translate->title }}</h5>
-                            <p class="card-text">{!! $res->translate->short_description !!}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ asset($res->image) }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <a href="{{ url('blog/' . $res->slug) }}" style="text-decoration: none;">
+                                    <h5 class="card-title">{{ Str::words($res->translate->title, 5, '...') }}</h5>
+                                </a>
+                            </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
             </div>

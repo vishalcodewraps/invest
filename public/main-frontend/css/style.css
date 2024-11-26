@@ -467,10 +467,10 @@ input.border-bottom-input:focus {
 }
 
 .card-team:hover{
-    background-color: #b30000;
+    /* background-color: #b30000;
     color: white;
     box-shadow: 0;
-    transform: scale(1.0);
+    transform: scale(1.0); */
     /* Slightly enlarges the card */
 }
 

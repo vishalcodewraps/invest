@@ -60,12 +60,15 @@
             </div>
             </div>
 
-            <div class="carousel-item active">
-            <img src="{{asset('main-frontend/img/banner.png')}}" class="d-block w-100 banner-img" alt="...">
+            <div class="carousel-item">
+            <img src="{{asset('main-frontend/img/Homepage-new.png')}}" class="d-block w-100 banner-img" alt="...">
             <div class="carousel-caption carousel-content d-none d-md-block">
             <div class="col-lg-7 col-md-10 col-sm-12">
-                    <h1 class="h1-heading">
-                        We Connect UK Entrepreneurs, Angel Investors, & Professional Service Providers
+                    <h1 class="h1-heading" style="font-size: 40px;">
+                        Bridging UK Entrepreneurs, Investors & Industry Experts: 
+                    </h1>
+                    <h1 class="h1-heading" style="font-size: 35px;margin-top: 30px;">
+                        Spark Innovation, Expedite Growth, and Achieve Unmatched Success!
                     </h1>
 
                     <div class="d-flex gap-2 mt-5 " style="align-items: center;">
@@ -88,11 +91,11 @@
             </div>
 
             <div class="carousel-item active">
-            <img src="{{asset('main-frontend/img/banner.png')}}" class="d-block w-100 banner-img" alt="...">
+            <img src="{{asset('main-frontend/img/Homepage-new2.png')}}" class="d-block w-100 banner-img" alt="...">
             <div class="carousel-caption carousel-content d-none d-md-block">
             <div class="col-lg-7 col-md-10 col-sm-12">
                     <h1 class="h1-heading">
-                    Invest Connect Marketplace: Tailored Solutions for Entrepreneurs and Investors
+                        Unlock Opportunities, Fuel Growth, and Achieve Success!
                     </h1>
 
                     <div class="d-flex gap-2 mt-5 " style="align-items: center;">
@@ -140,7 +143,7 @@
                             Converge. Discover the Future of Angel Investing</strong></p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="{{asset('main-frontend/img/image-26.png')}}" alt="" class="img-fluid section2-img">
+                    <img src="{{asset('main-frontend/img/usp.jpg')}}" alt="" class="img-fluid section2-img" style="border-radius: 10px;float:right">
                 </div>
             </div>
         </div>

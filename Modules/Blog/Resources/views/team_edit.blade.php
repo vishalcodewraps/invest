@@ -82,14 +82,13 @@
 
                                                 <div class="col-12">
                                                     <div class="crancy__item-form--group mg-top-form-20">
-                                                        <label class="crancy__item-label">{{ __('translate.Description') }} * </label>
+                                                        <label class="crancy__item-label">Designation* </label>
 
-                                                        <textarea class="crancy__item-input crancy__item-textarea summernote"  name="description" id="description">{!! clean($blog_translate->description) !!}</textarea>
+                                                        <input class="crancy__item-input crancy__item-input"  name="description" value="{!! $blog_translate->description !!}">
 
                                                     </div>
                                                 </div>
 
-                                                @if (admin_lang() == request()->get('lang_code'))
 
 
                                                     <div class="col-12">
@@ -104,30 +103,9 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-12">
-                                                        <div class="crancy__item-form--group mg-top-form-20">
-                                                            <label class="crancy__item-label">{{ __('translate.Tags') }} </label>
-                                                            <input class="crancy__item-input tags" type="text" name="tags" value="{{ $blog->tags }}">
-                                                        </div>
-                                                    </div>
 
-                                                @endif
 
-                                                <div class="col-12">
-                                                    <div class="crancy__item-form--group mg-top-form-20">
-                                                        <label class="crancy__item-label">{{ __('translate.SEO Title') }} </label>
-                                                        <input class="crancy__item-input" type="text" name="seo_title" id="seo_title" value="{{ $blog_translate->seo_title }}">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <div class="crancy__item-form--group mg-top-form-20">
-                                                        <label class="crancy__item-label">{{ __('translate.SEO Description') }} </label>
-
-                                                        <textarea class="crancy__item-input crancy__item-textarea seo_description_box"  name="seo_description" id="seo_description">{{ $blog_translate->seo_description }}</textarea>
-                                                    </div>
-                                                </div>
-
+                                              
                                             </div>
 
                                             <button class="crancy-btn mg-top-25" type="submit">{{ __('translate.Update') }}</button>
