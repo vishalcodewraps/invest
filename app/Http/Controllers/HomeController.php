@@ -653,22 +653,53 @@ class HomeController extends Controller
         return response()->download($filepath);
     }
 
-    public function create_user(Request $request){
 
+    public function send_otp(Request $request){
         $get = User::where('email',$request->email)->count();
         if($get > 0){
             return back()->with('error','This email already exist');
         }
 
+        if(isset($request->type)){
+        session()->put('type', $request->type);
+        session()->put('name', $request->name);
+        session()->put('last_name', $request->last_name);
+        session()->put('email', $request->email);
+        session()->put('phone', $request->phone);
+        session()->put('password', $request->password);
+        }
+        $otp = rand(100000,999999);
+        session()->put('otp', $otp);
+        return back()->with('send_otp','OTP send successfully to your email')->with('error_type','success');
+    }
+
+    public function verify_otp(Request $request){
+
+       $otp = $request->number1.$request->number2.$request->number3.$request->number4.$request->number5.$request->number6;
+       
+       if($otp == session()->get('otp')){
         $user = new User;
-        $user->type = $request->type;
-        $user->name = $request->name;
-        $user->last_name = $request->last_name;
-        $user->email = $request->email;
-        $user->phone = $request->phone;
-        $user->password = Hash::make($request->password);
+        $user->type = session()->get('type');
+        $user->name = session()->get('name');
+        $user->last_name = session()->get('last_name');
+        $user->email = session()->get('email');
+        $user->phone = session()->get('phone');
+        $user->password = Hash::make(session()->get('password'));
         $user->save();
+
+
+        session()->forget('type');
+        session()->forget('name');
+        session()->forget('last_name');
+        session()->forget('email');
+        session()->forget('phone');
+        session()->forget('password');
+
         return back()->with('success','Registration Successfully');
+       }else{
+        return back()->with('send_otp','Please enter correct otp')->with('error_type','danger');
+       }
+      
     }
 
 
