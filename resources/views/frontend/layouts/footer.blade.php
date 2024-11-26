@@ -218,18 +218,25 @@
                     <!-- Form Column -->
                     <div class="col-12 col-md-6 pt-4 px-3">
                         <h5>OTP Verificaiton</h5>
-
+                        @if (session('send_otp'))
+                        <div class="alert alert-{{session('error_type')}}">
+                            {{session('send_otp')}}
+                        </div>
+                        @endif
+                        <p>{{ session('otp') }}</p>
                         <!-- Form Fields -->
+                        <form action="{{url('verify-otp')}}" method="post">
+                            @csrf
                         <div class="row">
                             <div class="col-12 col-md-12 mb-3">
                                 <div class="contact-one__form-input-box input-design rounded">
                                     <div class="otp-input-fields">
-                                        <input type="number" class="otp__digit otp__field__1">
-                                        <input type="number" class="otp__digit otp__field__2">
-                                        <input type="number" class="otp__digit otp__field__3">
-                                        <input type="number" class="otp__digit otp__field__4">
-                                        <input type="number" class="otp__digit otp__field__5">
-                                        <input type="number" class="otp__digit otp__field__6">
+                                        <input type="number" name="number1" class="otp__digit otp__field__1">
+                                        <input type="number" name="number2" class="otp__digit otp__field__2">
+                                        <input type="number" name="number3" class="otp__digit otp__field__3">
+                                        <input type="number" name="number4" class="otp__digit otp__field__4">
+                                        <input type="number" name="number5" class="otp__digit otp__field__5">
+                                        <input type="number" name="number6" class="otp__digit otp__field__6">
                                     </div>
                                 </div>
                             </div>
@@ -241,7 +248,7 @@
 
                             <!-- Login Link -->
                             <div class="col-12 text-center mb-3">
-                                Didn't Recleve OTP ?<span><a href="#" class="text-decoration-none" style="color: #b30000;">Resend OTP</a></span>
+                                Didn't Recleve OTP ?<span><a href="{{url('resend-otp')}}" class="text-decoration-none" style="color: #b30000;">Resend OTP</a></span>
                             </div>
 
                             <!-- Social Login Buttons -->
@@ -252,6 +259,7 @@
                                 <button class="btn btn-outline-danger w-100"><i class="fa-brands fa-google"></i></button>
                             </div>
                         </div>
+                    </form>
                     </div>
                 </div>
             </div>
@@ -442,7 +450,7 @@
 
                                 <!-- Submit Button -->
                                 <div class="col-12 mb-3">
-                                    <button type="submit" class="btn btn-red w-100" data-bs-toggle="modal" data-bs-target="#otpModal">Create Account</button>
+                                    <button type="submit" class="btn btn-red w-100">Create Account</button>
                                 </div>
                                 <div class="col-12 text-center mb-3">
                                     Already have an account? <span><a href="#" class="text-decoration-none"
@@ -532,6 +540,13 @@
         });
     });
 </script>
+@if (session('send_otp'))
+    <script>
+        $(document).ready(function(){
+            $("#otpModal").modal('show');
+        })
+    </script>
+@endif
 @if (session('success'))
     <script>
         Swal.fire({
