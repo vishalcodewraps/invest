@@ -151,7 +151,7 @@ class LoginController extends Controller
     }
 
     public function custom_forget_page(){
-
+        
         return view('auth.forget_password');
     }
 
@@ -245,9 +245,10 @@ class LoginController extends Controller
         $user->forget_password_token = null;
         $user->save();
 
-        $notify_message= trans('translate.Password reset successfully');
-        $notify_message = array('message'=>$notify_message,'alert-type'=>'success');
-        return redirect()->route('buyer.login')->with($notify_message);
+        // $notify_message= trans('translate.Password reset successfully');
+        // $notify_message = array('message'=>$notify_message,'alert-type'=>'success');
+        // return redirect()->route('buyer.login')->with($notify_message);
+        return back()->with('success','Password reset successfully');
     }
 
 
