@@ -31,6 +31,12 @@ use Modules\Testimonial\App\Models\Testimonial;
 use Modules\GlobalSetting\App\Models\GlobalSetting;
 use Modules\ContactMessage\App\Models\ContactMessage;
 use Modules\Blog\App\Models\Team;
+use App\Mail\UserRegistration;
+use App\Mail\UserForgetPassword;
+use Modules\EmailSetting\App\Models\EmailTemplate;
+use App\Helper\EmailHelper;
+use Mail, Str;
+
 use Hash;
 class HomeController extends Controller
 {
@@ -670,6 +676,19 @@ class HomeController extends Controller
         }
         $otp = rand(100000,999999);
         session()->put('otp', $otp);
+       
+        $user_name = session()->get('name');
+        $user_email = session()->get('email');
+          
+        EmailHelper::mail_setup();
+        $template=EmailTemplate::where('id',5)->first();
+        $subject=$template->subject;
+        $message=$template->description;
+        $message = str_replace('{{user_name}}',$user_name,$message);
+        $message = str_replace('{{otp}}',$otp,$message);
+    
+        Mail::to($user_email)->send(new UserRegistration($message,$subject,$user_name));
+ 
         return back()->with('send_otp','OTP send successfully to your email')->with('error_type','success');
     }
 
@@ -700,6 +719,85 @@ class HomeController extends Controller
         return back()->with('send_otp','Please enter correct otp')->with('error_type','danger');
        }
       
+    }
+
+
+    public function forgot_password(Request $request){
+
+        $user = User::where('email', $request->email)->first();
+     
+        if($user){
+
+            EmailHelper::mail_setup();
+
+            $user->forget_password_token = Str::random(100);
+            $user->save();
+
+            $reset_link = route('reset-password').'?token='.$user->forget_password_token.'&email='.$user->email;
+            $reset_link = '<a href="'.$reset_link.'">'.$reset_link.'</a>';
+
+            $template = EmailTemplate::where('id',1)->first();
+            $subject = $template->subject;
+            $message = $template->description;
+            $message = str_replace('{{user_name}}',$user->name,$message);
+            $message = str_replace('{{reset_link}}',$reset_link,$message);
+            Mail::to($user->email)->send(new UserForgetPassword($message,$subject,$user));
+
+            return back()->with('success','Password reset link send successfully to your email');
+
+        }else{
+            // return back()->with('Please enter correct email address')->with('error_type','danger');
+            return back()->with('error','Please enter correct email address');
+        }
+       
+     }
+
+
+     public function store_reset_password(Request $request, $token){
+
+        $request->validate([
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'confirmed', 'min:4', 'max:100'],
+            
+
+        ],[
+            'email.required' => trans('translate.Email is required'),
+            'email.unique' => trans('translate.Email already exist'),
+            'password.required' => trans('translate.Password is required'),
+            'password.confirmed' => trans('translate.Confirm password does not match'),
+            'password.min' => trans('translate.You have to provide minimum 4 character password'),
+        ]);
+
+
+        $user = User::where('forget_password_token', $token)->where('email', $request->email)->first();
+        
+        if(!$user){
+            // $notify_message = trans('translate.Invalid token, please try again');
+            // $notify_message = array('message'=>$notify_message,'alert-type'=>'error');
+            // return redirect()->back()->with($notify_message);
+            return back()->with('error','Invalid token, please try again');
+        }
+
+        $user->password = Hash::make($request->password);
+        $user->forget_password_token = null;
+        $user->save();
+
+        // $notify_message= trans('translate.Password reset successfully');
+        // $notify_message = array('message'=>$notify_message,'alert-type'=>'success');
+        // return redirect()->route('buyer.login')->with($notify_message);
+        return redirect()->route('home')->with('success','Password reset successfully');
+    }
+
+     public function custom_reset_password(Request $request){
+
+        $user = User::select('id','name','email','forget_password_token')->where('forget_password_token', $request->token)->where('email', $request->email)->first();
+
+        if(!$user){
+                        
+            return redirect()->route('home')->with('error','Invalid token, please try again');
+        }
+        
+        return view('frontend.reset_password1', compact('user'));
     }
 
 

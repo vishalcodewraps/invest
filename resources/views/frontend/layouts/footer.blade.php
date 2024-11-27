@@ -217,7 +217,7 @@
                             {{session('send_otp')}}
                         </div>
                         @endif
-                        <p>{{ session('otp') }}</p>
+                        
                         <!-- Form Fields -->
                         <form action="{{url('verify-otp')}}" method="post">
                             @csrf
@@ -290,24 +290,31 @@
                         <!-- Form Column -->
                         <div class="col-12 col-md-6 pt-4 px-3">
                             <h5>Forget Password</h5>
-
+                            @if (session('forgot_pass'))
+                            <div class="alert alert-{{session('error_type')}}">
+                                {{session('forgot_pass')}}
+                            </div>
+                            @endif
 
                             <!-- Form Fields -->
                             <div class="row ">
-
+                             <!-- Form Fields -->
+                        <form action="{{url('forgot-password')}}" method="post">
+                            @csrf
                                 <div class="col-12 col-md-12 mb-3">
                                     <div class="contact-one__form-input-box input-design rounded">
                                         <span class="name-span">Email</span>
-                                        <input type="email" placeholder="john.doe@gmail.com" class="form-control"
+                                        <input type="email" name="email" placeholder="john.doe@gmail.com" class="form-control"
                                             required>
                                     </div>
                                 </div>
 
                                 <!-- Submit Button -->
                                 <div class="col-12 mb-3">
-                                <button class="btn btn-red w-100" data-bs-toggle="modal" data-bs-target="#otpModal">Reset password</button>
+                                <button class="btn btn-red w-100">Reset password</button>
                                 </div>
-                                <div class="col-12 text-center mb-2">
+                                </form>
+                                <div class="col-12 text-center mb-3">
                                     Already have an account? <span><a href="#" class="text-decoration-none"
                                             style="color: #b30000;">Login</a></span>
                                 </div>

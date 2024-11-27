@@ -33,7 +33,12 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
     Route::post('/create-user', [HomeController::class, 'send_otp']);
     Route::get('/resend-otp', [HomeController::class, 'send_otp']);
     Route::post('/verify-otp', [HomeController::class, 'verify_otp']);
+    Route::post('/forgot-password', [HomeController::class, 'forgot_password']);
     Route::post('/user-login', [HomeController::class, 'user_login']);
+
+    Route::post('/send-forget-password', [BuyerLoginController::class, 'send_custom_forget_pass'])->name('send-forget-password');
+    Route::get('/reset-password', [HomeController::class, 'custom_reset_password'])->name('reset-password');
+    Route::post('/store-reset-password/{token}', [HomeController::class, 'store_reset_password'])->name('store-reset-password');
 
     Route::get('/services', [HomeController::class, 'services'])->name('services');
     Route::get('/service/{slug}', [HomeController::class, 'service'])->name('service');
