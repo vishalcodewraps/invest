@@ -37,7 +37,7 @@ use Modules\EmailSetting\App\Models\EmailTemplate;
 use App\Helper\EmailHelper;
 use Mail, Str;
 
-use Hash;
+use Auth,Hash;
 class HomeController extends Controller
 {
 
@@ -804,10 +804,29 @@ class HomeController extends Controller
 
     public function user_login(Request $request){
 
-        $get = User::where('email',$request->email)->first();
-        if($get != null){
-            if(Hash::check($request->password, $get->password)){
-                return back()->with('success','Login Successfully');
+        $user = User::where('email',$request->email)->first();
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        if($user != null){
+            if(Hash::check($request->password, $user->password)){
+
+                if(Auth::guard('web')->attempt($credentials, $request->remember)){
+                    $notify_message = trans('translate.Login successfully');
+                    $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
+                    if($user->type == 1){
+                        $user->online = 1;
+                        $user->save();
+                        return redirect()->route('invester.dashboard')->with($notify_message);;
+                        
+                    }else{
+                        return redirect()->route('invester.dashboard')->with($notify_message);;
+                    }
+
+                }
+
+                
             }
             return back()->with('error','User not exits');
         }

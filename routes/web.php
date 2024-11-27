@@ -20,6 +20,8 @@ use App\Http\Controllers\Auth\RegisterController as BuyerRegisterController;
 use App\Http\Controllers\Auth\RegisterController as SellerRegisterController;
 use App\Http\Controllers\Seller\ProfileController as SellerProfileController;
 
+use App\Http\Controllers\Invester\ProfileController as InvestProfileController;
+
 
 
 
@@ -53,6 +55,20 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
     Route::post('/store-blog-comment/{id}', [HomeController::class, 'store_blog_comment'])->name('store-blog-comment');
 
     Route::get('/contact-us', [HomeController::class, 'contact_us'])->name('contact-us');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
@@ -103,9 +119,48 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
 
     Auth::routes();
 
+
+
+    Route::group(['as' => 'invester.', 'prefix' => 'invester'], function(){
+
+       
+       
+        Route::get('/logout', [InvestProfileController::class, 'buyer_logout'])->name('logout');
+
+
+        Route::group(['middleware' => 'auth:web'],function () {
+
+            Route::get('/dashboard', [InvestProfileController::class, 'dashboard'])->name('dashboard');
+
+            Route::get('/edit-profile', [BuyerProfileController::class, 'edit_profile'])->name('edit-profile');
+            Route::put('/update-profile', [BuyerProfileController::class, 'update_profile'])->name('update-profile');
+
+            Route::get('/change-password', [BuyerProfileController::class, 'change_password'])->name('change-password');
+            Route::put('/update-password', [BuyerProfileController::class, 'update_password'])->name('update-password');
+
+            Route::get('/account-delete', [BuyerProfileController::class, 'account_delete'])->name('account-delete');
+            Route::delete('/confirm-account-delete', [BuyerProfileController::class, 'confirm_account_delete'])->name('confirm-account-delete');
+
+            Route::get('/orders', [BuyerProfileController::class, 'orders'])->name('orders');
+            Route::get('/order/{order_id}', [BuyerProfileController::class, 'order_show'])->name('order');
+
+            Route::post('/order-complete/{id}', [BuyerProfileController::class, 'order_complete'])->name('order-complete');
+            Route::post('/order-cancel/{id}', [BuyerProfileController::class, 'order_cancel'])->name('order-cancel');
+
+            Route::post('/store-review/{order_id}', [BuyerProfileController::class, 'store_review'])->name('store-review');
+
+        });
+
+
+
+
+
+    });
+
+
     Route::group(['as' => 'buyer.', 'prefix' => 'buyer'], function(){
 
-        Route::get('/login', [BuyerLoginController::class, 'custom_login_page'])->name('login');
+        //Route::get('/login', [BuyerLoginController::class, 'custom_login_page'])->name('login');
         Route::post('/store-login', [BuyerLoginController::class, 'store_login'])->name('store-login');
         Route::get('/logout', [BuyerLoginController::class, 'buyer_logout'])->name('logout');
 

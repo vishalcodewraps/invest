@@ -22,6 +22,8 @@ class ProfileController extends Controller
 
         $user = Auth::guard('web')->user();
 
+        dd($user);
+
         $orders = Order::with('listing', 'seller')->where('buyer_id', $user->id)->latest()->take(10)->get();
 
         $active_orders = Order::with('listing', 'seller')->where('buyer_id', $user->id)->where(['approved_by_seller' => 'approved', 'order_status' => 'approved_by_seller'])->latest()->count();
