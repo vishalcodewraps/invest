@@ -114,7 +114,7 @@
                         <!-- Image Column -->
                         <div class="col-12 col-md-6 p-0 d-none d-md-block">
                             <img src="{{ asset('main-frontend/img/login-image.png')}}" alt="Register" class="img-fluid"
-                                style="height: 100%; object-fit: cover; border-radius: 10px 0 0 10px;">
+                            style="height: 597px; width:100%; border-radius: 21px 0 0 21px">
                         </div>
 
                         <!-- Form Column -->
@@ -173,19 +173,13 @@
                                 </div>
                             </form>
                                 <!-- Social Login Buttons -->
-                                <div class="col-12 mb-1 pb-3">
-                                    <button class="btn button-color shadow  py-2 w-100"><i
-                                            class="fa-brands fa-facebook-f"></i></button>
+                                <div class="col-6 mb-4">
+                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
+                                    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>
                                 </div>
-                                <div class="col-12 mb-1 pb-3">
-                                    <button class="btn button-color shadow py-2 w-100"><i
-                                            class="fa-brands fa-google"></i></button>
-                                </div>
-
-                                <div class="col-12 text-center mb-3">
-                                    Don’t have an account? <span><a href="#" class="text-decoration-none"
-                                            style="color: #b30000;"data-bs-toggle="modal"
-                                            data-bs-target="#staticBackdrop">Register</a></span>
+                                <div class="col-6 mb-4">
+                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
+                                    class="fa-brands fa-google"></i></span> Google </button>
                                 </div>
 
                             </div>
@@ -212,7 +206,7 @@
                 <div class="row">
                     <!-- Image Column -->
                     <div class="col-12 col-md-6 p-0 d-none d-md-block">
-                        <img src="{{ asset('main-frontend/img/register-image.png') }}" alt="Register" class="img-fluid" style="height: 100%; object-fit: cover;">
+                        <img src="{{ asset('main-frontend/img/register-image.png') }}" alt="Register" class="img-fluid" style="height: 597px; width: 100%; object-fit: cover; border-radius: 21px 0 0 21px">
                     </div>
 
                     <!-- Form Column -->
@@ -252,12 +246,14 @@
                             </div>
 
                             <!-- Social Login Buttons -->
-                            <div class="col-6 mb-3">
-                                <button class="btn btn-outline-danger w-100"><i class="fa-brands fa-facebook-f"></i></button>
-                            </div>
-                            <div class="col-6 mb-3">
-                                <button class="btn btn-outline-danger w-100"><i class="fa-brands fa-google"></i></button>
-                            </div>
+                            <div class="col-6 mb-2">
+                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
+                                    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
+                                    class="fa-brands fa-google"></i></span> Google </button>
+                                </div>
                         </div>
                     </form>
                     </div>
@@ -288,7 +284,7 @@
                         <!-- Image Column -->
                         <div class="col-12 col-md-6 p-0 d-none d-md-block">
                             <img src="{{ asset('main-frontend/img/register-image.png')}}" alt="Register" class="img-fluid"
-                                style="height: 100%; object-fit: cover;">
+                            style=" height: 597px; width: 100%; object-fit: cover; border-radius: 21px 0 0 21px;">
                         </div>
 
                         <!-- Form Column -->
@@ -311,19 +307,19 @@
                                 <div class="col-12 mb-3">
                                 <button class="btn btn-red w-100" data-bs-toggle="modal" data-bs-target="#otpModal">Reset password</button>
                                 </div>
-                                <div class="col-12 text-center mb-3">
+                                <div class="col-12 text-center mb-2">
                                     Already have an account? <span><a href="#" class="text-decoration-none"
                                             style="color: #b30000;">Login</a></span>
                                 </div>
 
                                 <!-- Social Login Buttons -->
                                 <div class="col-6 mb-3">
-                                    <button class="btn btn-outline-danger w-100"><i
-                                            class="fa-brands fa-facebook-f"></i></button>
+                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
+                                    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>
                                 </div>
                                 <div class="col-6 mb-3">
-                                    <button class="btn btn-outline-danger w-100"><i
-                                            class="fa-brands fa-google"></i></button>
+                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
+                                    class="fa-brands fa-google"></i></span> Google </button>
                                 </div>
                             </div>
                         </div>
@@ -350,36 +346,24 @@
                         <!-- Image Column -->
                         <div class="col-12 col-md-6 p-0 d-none d-md-block">
                             <img src="{{ asset('main-frontend/img/register-image.png')}}" alt="Register" class="img-fluid"
-                                style="height: 100%; object-fit: cover;">
+                                style="height: 605px; width: 100%; object-fit: cover; border-radius: 21px 0 0 21px;">
                         </div>
 
                         <!-- Form Column -->
                         <div class="col-12 col-md-6 pt-4 px-3">
                             <h5>Register</h5>
-                            <p>Let’s get you all set up so you can access your personal account.</p>
+                            <p style="margin-bottom:0.5rem;">Let’s get you all set up so you can access your personal account.</p>
                             <form action="{{url('create-user')}}" method="post" onsubmit="return submit_registration()">
                                 @csrf
                             <!-- Dropdown -->
-                            <div class="d-flex justify-content-start gap-2 align-items-center">
+                            <div class="d-flex justify-content-start gap-2 align-items-center mb-2">
                                 I am Registering as
-                                <select name="type" id="" class="form-control form-select dropdown" required style="width:50%;">
+                                <select name="type" id="" class="form-control form-select dropdown"  required style="width:60%; background:#b30000; color:white;">
                                     <option value="">Please Select</option>
                                     <option value="1">Investor</option>
                                     <option value="2">Business Owner</option>
                                     <option value="3">Service Provider</option>
                                 </select>
-                                {{-- <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false"
-                                        style="background-color: #b30000; border: none;">
-                                        Please Select
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Investor</a></li>
-                                        <li><a class="dropdown-item" href="#">Business Owner</a></li>
-                                        <li><a class="dropdown-item" href="#">Service Provider</a></li>
-                                    </ul>
-                                </div> --}}
                             </div>
 
                             <!-- Form Fields -->
@@ -437,7 +421,7 @@
                                 </div>
 
                                 <!-- Checkbox -->
-                                <div class="col-12 mb-4">
+                                <div class="col-12 mb-3">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="flexCheckDefault"
                                             required>
@@ -449,7 +433,7 @@
                                 </div>
 
                                 <!-- Submit Button -->
-                                <div class="col-12 mb-3">
+                                <div class="col-12 mb-2">
                                     <button type="submit" class="btn btn-red w-100">Create Account</button>
                                 </div>
                                 <div class="col-12 text-center mb-3">
@@ -459,13 +443,13 @@
                                 </div>
 
                                 <!-- Social Login Buttons -->
-                                <div class="col-6 mb-3">
-                                    <button class="btn btn-outline-danger w-100"><i
-                                            class="fa-brands fa-facebook-f"></i></button>
+                                <div class="col-6 mb-2">
+                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
+                                    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>
                                 </div>
-                                <div class="col-6 mb-3">
-                                    <button class="btn btn-outline-danger w-100"><i
-                                            class="fa-brands fa-google"></i></button>
+                                <div class="col-6 mb-2">
+                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
+                                    class="fa-brands fa-google"></i></span> Google </button>
                                 </div>
                             </div>
                         </form>
@@ -615,7 +599,6 @@
             return false;
         }
     }
-
 
     // Select all OTP input fields
   const otpInputs = document.querySelectorAll('.otp__digit');

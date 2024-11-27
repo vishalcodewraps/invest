@@ -25,7 +25,7 @@
 
 .banner {
     height: 530px;
-    background-color: #B91C1C !important;
+    background-image: linear-gradient(45deg, #420101, #ff0000);
 }
 
 .top-padding {
@@ -44,10 +44,10 @@
 }
 
 .h1-heading {
-    margin-top: 101px;
     color: white;
     font-weight: bold;
     font-size: 56px;
+    text-align: left;
 }
 
 .h11-heading{
@@ -125,6 +125,10 @@
     font-size: 35px;margin-top: 30px;
 }
 
+.bg-color{
+    background-color: #B91C1C;
+    padding: 10px;
+}
 .btn-white {
     background-color: #B91C1C;
     color: white;
@@ -397,12 +401,12 @@
 .carousel-content {
     position: absolute;
     right: 15%;
-    bottom: 9.25rem !important;
-    left: 8% !important;
+    bottom: 14.25rem;
+    left: 8%;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     color: #fff;
-    text-align: left !important;
+    text-align: left;
 }
 
 .carousel-inner {
@@ -556,15 +560,6 @@ input.border-bottom-input:focus {
     box-shadow: 0;
 }
 
-.card-team:hover {
-    /* background-color: #b30000;
-    color: white;
-    box-shadow: 0;
-    transform: scale(1.0); */
-    /* Slightly enlarges the card */
-}
-
-
 
 /* team page css end */
 /* Custom styles for the footer */
@@ -695,8 +690,8 @@ input.border-bottom-input:focus {
 .contact-one__form-input-box {
     position: relative;
     display: block;
-    margin-bottom: 10px;
-    margin-top: 28px;
+    margin-bottom: 3px;
+    margin-top: 8px;
 }
 
 .name-span {
@@ -708,6 +703,10 @@ input.border-bottom-input:focus {
     padding: 0 8px;
     font-size: 12px;
     border-radius: 5px;
+}
+.form-select{
+background-color: #b30000;
+color: white;
 }
 
 .contact-one__form-input-box input[type="text"],
@@ -775,6 +774,9 @@ input.border-bottom-input:focus {
     color: #b30000;
 }
 
+.banner-heading{
+    height: 300px;
+}
 @media only screen and (max-width: 1200px) {
     .nav-link {
         font-size: 15px !important;
@@ -792,12 +794,12 @@ input.border-bottom-input:focus {
     }
 
     .h1-heading {
-        font-size: 30px;
+        font-size: 30px !important;
         line-height: 37px;
     }
 
-    .carousel-content{
-        bottom: 0 !important;
+    .banner-heading {
+        height: 151px;
     }
 
     .nav-link {
@@ -823,9 +825,10 @@ input.border-bottom-input:focus {
     }
 
     .banner-img {
-        height: 300px;
-        object-fit: cover;
-        object-position: right;
+        height: 300px !important;
+        object-fit: cover !important;
+        object-position: right !important;
+        display: none !important;
     }
     .Investor-button{
         margin-top: 0;
@@ -845,5 +848,116 @@ input.border-bottom-input:focus {
         font-size: 17px;
     }
 
+    .banner .carousel-caption {
+        max-width: 90%;
+        left: 0 !important;
+        transform: translateY(77%);
+    }
+
+    .h1-heading {
+        font-size: 30px !important;
+        line-height: 37px;
+    }
+    .looking-h4{
+        font-size: 17px;
+    }
+    .home-card{
+        height: 578px;
+    }
+
+    .top-padding {
+        padding: 8px 0;
+        border-bottom: 0;
+    }
+
+
 
 }
+
+/* banner responsive css start */
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    transform: translateY(-80%);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 50%;
+}
+
+.banner .h1-heading {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.Investor-button {
+    margin-top: 1rem;
+}
+
+.bg-white h4 {
+    font-size: 1.2rem;
+}
+
+.looking {
+    background: #B91C1C !important;
+    border-radius: 10px !important;
+}
+ 
+
+@media (max-width: 768px) {
+      
+    .top-padding {
+        padding: 0;
+        border-bottom: 0;
+    }
+    .h1-heading {
+        font-size: 19px !important;
+        line-height: 32px;
+    }
+
+    .looking-h4 {
+        font-size: 10px;
+    }
+    .bg-white h4 {
+        font-size: 1rem !important; /* Scale down */
+    }
+
+    .Investor-button img {
+        height: 30px; /* Adjust button size */
+    }
+
+    .Investor-button {
+        /* flex-direction: column; */
+        width: 55%;
+        gap: 10px;
+    }
+    .looking h4{
+        font-size: 15px;
+    }
+
+    .Investor-button > div {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-group {
+        width: 100%;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+    }
+
+    .banner .carousel-caption {
+        max-width: 90%;
+        left: 0 !important;
+        transform: translateY(0%);
+    }
+
+}
+
+
+/* banner responsive css end */

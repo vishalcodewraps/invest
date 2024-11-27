@@ -30,103 +30,129 @@
     </main> -->
 
     <main class="banner">
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
+    <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{asset('main-frontend/img/Homepage2020.png')}}" class="d-block w-100 banner-img" alt="..." >
+            <div class="carousel-caption container">
+              
+                <div class="banner-heading">
+                <h1 class="h1-heading">
+                    We Connect UK Entrepreneurs, Angel Investors, & Professional Service Providers
+                </h1>
+               </div>
 
-            <div class="carousel-item active">
-            <img src="{{asset('main-frontend/img/banner.png')}}" class="d-block w-100 banner-img" alt="...">
-            <div class="carousel-caption carousel-content  d-md-block">
-            <div class="col-lg-7 col-md-10 col-sm-12">
-                    <h1 class="h1-heading">
-                        We Connect UK Entrepreneurs, Angel Investors, & Professional Service Providers
-                    </h1>
 
-                    <div class="d-flex gap-2 Investor-button" style="align-items: center;">
-                        <h4 class="text-white">I am looking to</h4>
+                <div class="d-flex gap-2 Investor-button" style="align-items: center;">
+                        
+                        <div class="p-2" style="background:#B91C1C">
+                        <h4  class="m-0 text-white looking-h4">I am looking to connect with</h4>
+                        </div>
+                        
                         <div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Investor
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Investor</a></li>
                                 <li><a class="dropdown-item" href="#">Business Owner</a></li>
-                                <li><a class="dropdown-item" href="#">Our Marketplace</a></li>
+                                <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
                             </ul>
                         </div>
-                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid" style="height: 50px;">
+
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 50px;">
                     </div>
-                </div>
-            </div>
-            </div>
 
-            <div class="carousel-item">
-            <img src="{{asset('main-frontend/img/Homepage-new.png')}}" class="d-block w-100 banner-img" alt="...">
-            <div class="carousel-caption carousel-content  d-md-block">
-            <div class="col-lg-7 col-md-10 col-sm-12">
-                    <h1 class="h11-heading">
-                        Bridging UK Entrepreneurs, Investors & Industry Experts: 
-                    </h1>
-                    <h4 class="h4-heading">
-                        Spark Innovation, Expedite Growth, and Achieve Unmatched Success!
-                    </h4>
 
-                    <div class="d-flex gap-2 Investor-button" style="align-items: center;">
-                        <h4 class="text-white">I am looking to</h4>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Investor
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Investor</a></li>
-                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
-                                <li><a class="dropdown-item" href="#">Our Marketplace</a></li>
-                            </ul>
-                        </div>
-                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid" style="height: 50px;">
-                    </div>
-                </div>
-            </div>
-            </div>
 
-            <div class="carousel-item active">
-            <img src="{{asset('main-frontend/img/Homepage-new2.png')}}" class="d-block w-100 banner-img" alt="...">
-            <div class="carousel-caption carousel-content  d-md-block">
-            <div class="col-lg-7 col-md-10 col-sm-12">
-                    <h1 class="h1-heading">
-                        Unlock Opportunities, Fuel Growth, and Achieve Success!
-                    </h1>
 
-                    <div class="d-flex gap-2 Investor-button" style="align-items: center;">
-                        <h4 class="text-white">I am looking to</h4>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Investor
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Investor</a></li>
-                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
-                                <li><a class="dropdown-item" href="#">Our Marketplace</a></li>
-                            </ul>
-                        </div>
-                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid" style="height: 50px;">
-                    </div>
-                </div>
+
             </div>
-            </div>
-            
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+
+        <div class="carousel-item">
+            <img src="{{asset('main-frontend/img/Frame%20403.png')}}" class="d-block w-100 banner-img" alt="...">
+            <div class="carousel-caption container">
+               <div class="banner-heading">
+               <h1 class="h1-heading">
+                Bridging UK Entrepreneurs, Investors & Industry Experts <Br>
+                Spark Innovation, Expedite Growth, and Achieve Unmatched Success!</Br>
+                </h1>
+               </div>
+
+                <div class="d-flex gap-2 Investor-button" style="align-items: center;">
+                        
+                        <div class="p-2 " style="background:#B91C1C">
+                        <h4  class="m-0 text-white looking-h4">I am looking to connect with</h4>
+                        </div>
+                        
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Investor
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Investor</a></li>
+                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
+                                <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
+                            </ul>
+                        </div>
+
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 50px;">
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="{{asset('main-frontend/img/Homepage-new.png')}}" class="d-block w-100 banner-img" alt="...">
+            <div class="carousel-caption container">
+               
+
+                <div class="banner-heading">
+                <h1 class="h1-heading">
+                Unlock Opportunities, <br> Fuel Growth, and Achieve Success!
+                </h1>
+               </div>
+
+                <div class="d-flex gap-2 Investor-button" style="align-items: center;">
+                        
+                <div class="p-2 " style="background:#B91C1C">
+                    <h4 class="m-0 text-white looking-h4">I am looking to connect with</h4>
+                </div>
+
+                        
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Investor
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Investor</a></li>
+                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
+                                <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
+                            </ul>
+                        </div>
+
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 50px;">
+                    </div>
+
+            </div>
+        </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
     </main>
 
 
@@ -143,7 +169,7 @@
                             Converge. Discover the Future of Angel Investing</strong></p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="{{asset('main-frontend/img/usp.jpg')}}" alt="" class="img-fluid section2-img" style="border-radius: 10px;float:right">
+                    <img src="{{asset('main-frontend/img/usp.jpg')}}" alt="" class="img-fluid section2-img" style="border-radius: 10px;">
                 </div>
             </div>
         </div>
