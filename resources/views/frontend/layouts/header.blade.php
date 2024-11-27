@@ -103,7 +103,7 @@
                             <a class="nav-link" href="#">Business Owner</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Our Marketplace</a>
+                            <a class="nav-link" href="#">Marketplace Support</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Price</a>
