@@ -104,8 +104,12 @@
 .key {
     font-weight: bold;
     margin-bottom: 8px;
+    margin-top: 10px;
 }
 
+.dropdown-btn {
+    font-size: 28px !important;
+}
 .bg-icon {
     background-color: #B91C1C;
     padding: 13px;
@@ -212,6 +216,7 @@
 
 .card-text{
     font-size: 15px;
+    margin: 0;
 }
 
 .list-unstyled {
@@ -259,6 +264,9 @@
     margin: 15px 0;
 }
 
+.expertise-div{
+    height: 120px;
+}
 
 
 .expertise-title {
@@ -416,6 +424,17 @@
 .home-card {
     height: 561px;
     padding: 16px !important;
+}
+
+.home-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.Pitch-footer {
+    margin-top: auto; /* Push the button to the bottom of the card */
 }
 
 
@@ -776,6 +795,114 @@ color: white;
 
 .banner-heading{
     height: 300px;
+}
+/* new Get Our Professional Services start */
+
+.service-card-item {
+    width: 100%; /* Set to your required width */
+    max-width: 300px; /* Optional for limiting card width */
+    margin: 0 auto; /* Center the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.service-item-heading{
+    height: 82px;
+}
+
+.service-card-item h5 {
+    font-size: 17px;
+    color: #fff; /* Contrast color */
+    text-align: left;
+    margin: 0;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.service-card-item-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 200px; /* Fix height for consistent layout */
+    background-color: white;
+}
+
+.service-card-item-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures image fits within bounds */
+    border-radius: 10px;
+}
+
+/* new Get Our Professional Services end */
+
+/* Card Container */
+.review-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px; /* Adjust based on content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 329px;
+}
+
+/* Review Content */
+.review-content {
+    margin-bottom: auto;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+/* Footer Section */
+.review-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.profile-footer{
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    justify-content: end;
+}
+
+.Pitch-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* User Image */
+.review-image {
+    height: 70px !important;
+    width: 70px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* User Info */
+.review-user-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #222;
+}
+
+.review-user-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.social-link-login{
+    margin-top: 50px;
 }
 @media only screen and (max-width: 1200px) {
     .nav-link {

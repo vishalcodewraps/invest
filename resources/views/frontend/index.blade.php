@@ -30,7 +30,7 @@
     </main> -->
 
     <main class="banner">
-    <div id="carouselExampleCaptions" class="carousel slide">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="{{asset('main-frontend/img/Homepage2020.png')}}" class="d-block w-100 banner-img" alt="..." >
@@ -45,12 +45,12 @@
 
                 <div class="d-flex gap-2 Investor-button" style="align-items: center;">
                         
-                        <div class="p-2" style="background:#B91C1C">
-                        <h4  class="m-0 text-white looking-h4">I am looking to connect with</h4>
+                        <div class="p-2" style="background:white;">
+                        <h4  class="m-0 text-white looking-h4" style="color:#B91C1C !important;">I am looking to connect with</h4>
                         </div>
                         
                         <div class="btn-group">
-                            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Investor
                             </button>
@@ -61,7 +61,7 @@
                             </ul>
                         </div>
 
-                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 50px;">
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;">
                     </div>
 
 
@@ -83,12 +83,12 @@
 
                 <div class="d-flex gap-2 Investor-button" style="align-items: center;">
                         
-                        <div class="p-2 " style="background:#B91C1C">
-                        <h4  class="m-0 text-white looking-h4">I am looking to connect with</h4>
+                <div class="p-2" style="background:white;">
+                        <h4  class="m-0 text-white looking-h4" style="color:#B91C1C !important;">I am looking to connect with</h4>
                         </div>
                         
                         <div class="btn-group">
-                            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Investor
                             </button>
@@ -118,13 +118,50 @@
 
                 <div class="d-flex gap-2 Investor-button" style="align-items: center;">
                         
-                <div class="p-2 " style="background:#B91C1C">
-                    <h4 class="m-0 text-white looking-h4">I am looking to connect with</h4>
-                </div>
+                <div class="p-2" style="background:white;">
+                        <h4  class="m-0 text-white looking-h4" style="color:#B91C1C !important;">I am looking to connect with</h4>
+                        </div>
 
                         
                         <div class="btn-group">
-                            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Investor
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Investor</a></li>
+                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
+                                <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
+                            </ul>
+                        </div>
+
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 50px;">
+                    </div>
+
+            </div>
+        </div>
+
+        
+        <div class="carousel-item">
+            <img src="{{asset('main-frontend/img/Frame%20405.png')}}" class="d-block w-100 banner-img" alt="...">
+            <div class="carousel-caption container">
+               
+
+                <div class="banner-heading">
+                <h1 class="h1-heading">
+                We bring together people fostering meaningful connections and collaboration.
+                </h1>
+               </div>
+
+                <div class="d-flex gap-2 Investor-button" style="align-items: center;">
+                        
+                <div class="p-2" style="background:white;">
+                        <h4  class="m-0 text-white looking-h4" style="color:#B91C1C !important;">I am looking to connect with</h4>
+                        </div>
+
+                        
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Investor
                             </button>
@@ -155,9 +192,6 @@
 
     </main>
 
-
-
-
     <section class="py-5">
         <div class="container">
             <div class="row">
@@ -187,8 +221,8 @@
                     <div class="card p-1 home-card">
                         <img src="{{asset('main-frontend/img/i1.jpg')}}" class="card-img-top border border-1" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title ">Start Strong with Invest Connect</h5>
-                            <p><span><i class="fa-solid fa-location-dot"></i></span> North East, United Kingdom</p>
+                            <h5 class="card-title "> &nbsp; Start Strong with Invest Connect Marketplace</h5>
+                            <p style="margin-bottom:0.8rem;"><span><i class="fa-solid fa-location-dot"></i></span> North East, United Kingdom</p>
                             <p class="card-text" style="text-align:justify">Take the first steps toward success with streamlined solutions tailored for entrepreneurs and investors</p>
 
                             <p class="key"><strong>Key Metrics</strong></p>
@@ -211,7 +245,7 @@
                                 </li>
                             </ul>
 
-                            <div class="text-center">
+                            <div class="text-center Pitch-footer">
                                 <a href="#" class="btn btn-white text-red mt-3">View Full Pitch Deck</a>
                             </div>
                         </div>
@@ -222,12 +256,12 @@
 
                 <div class="col-md-6 col-sm-12 col-lg-4 mb-3">
 
-                    <div class="card p-1 home-card">
+                <div class="card p-1 home-card">
                         <img src="{{asset('main-frontend/img/i2.jpg')}}" class="card-img-top border border-1" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Unlock Your Growth Potential</h5>
-                            <p><span><i class="fa-solid fa-location-dot"></i></span> Iceland, Iceland</p>
-                            <p class="card-text" style="text-align:justify">Take your journey to the next level with tools and resources tailored to optimise every step of your growth</p>
+                            <h5 class="card-title ">Unlock Your Growth Potential</h5>
+                            <p style="margin-bottom:0.8rem;"><span><i class="fa-solid fa-location-dot"></i></span> &nbsp; Iceland, Iceland</p>
+                            <p class="card-text" style="text-align:justify;">Take your journey to the next level with tools and resources tailored to optimise every step of your growth</p>
 
                             <p class="key"><strong>Key Metrics</strong></p>
 
@@ -249,7 +283,7 @@
                                 </li>
                             </ul>
 
-                            <div class="text-center ">
+                            <div class="text-center Pitch-footer">
                                 <a href="#" class="btn btn-white text-red mt-3">View Full Pitch Deck</a>
                             </div>
                         </div>
@@ -260,15 +294,16 @@
 
                 <div class="col-md-6 col-sm-12 col-lg-4">
 
-                    <div class="card home-card">
+                <div class="card p-1 home-card">
                         <img src="{{asset('main-frontend/img/i3.jpg')}}" class="card-img-top border border-1" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Financial Markets Trading</h5>
-                            <p><span><i class="fa-solid fa-location-dot"></i></span> North East, United Kingdom</p>
-                            <p class="card-text" style="text-align:justify">Having successfully navigated the World's Financial Markets for over 8 years.</p>
+                            <h5 class="card-title ">Financial Markets Trading</h5>
+                            <p style="margin-bottom:0.5rem;"><span><i class="fa-solid fa-location-dot"></i></span> &nbsp; North East, United Kingdom</p>
+                            <p class="card-text" style="text-align:justify;">Having successfully navigated the World's Financial Markets for over 8 years.</p>
+
                             <p class="key"><strong>Key Metrics</strong></p>
 
-                             <ul class="list-unstyled" style="margin-top: 12px;">
+                            <ul class="list-unstyled" style="margin-top: 12px;">
                                 <li class="mb-1 item-text">
                                 <span class="bg-icon"><i class="fa-solid fa-check text-white"></i></span>
                                 <span class="text1">Established trading platform readership.</span>
@@ -286,7 +321,7 @@
                                 </li>
                             </ul>
 
-                            <div class="text-center">
+                            <div class="text-center Pitch-footer">
                                 <a href="#" class="btn btn-white text-red mt-3">View Full Pitch Deck</a>
                             </div>
                         </div>
@@ -320,7 +355,14 @@
                                 <div><img src="{{asset('main-frontend/img/forbes.png')}}" alt="Slide 6"></div>
                                 <div><img src="{{asset('main-frontend/img/techcrunch.png')}}" alt="Slide 8"></div>
                                 <div><img src="{{asset('main-frontend/img/the-guardian.png')}}" alt="Slide 9"></div>
-                                <div><img src="{{asset('main-frontend/img/the-times.png')}}" alt="Slide 10"></div>
+                                <div><img src="{{asset('main-frontend/img/startup.jpg')}}" alt="Slide 8"></div>
+                                <div><img src="{{asset('main-frontend/img/business-insider.webp')}}" alt="Slide 3"></div>
+                           
+                                
+
+                                
+
+                          
                             </div>
                         </div>
                 </div>
@@ -373,18 +415,20 @@
                         <div class="slider-container">
                             <div class="three-row-slider slider-1">
                                 <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
-                                <div><img src="{{asset('main-frontend/img/bbc.svg')}}" alt="Slide 1"></div>
-                                <div><img src="{{asset('main-frontend/img/bloomberg.png')}}" alt="Slide 2"></div>
-                                <div><img src="{{asset('main-frontend/img/business-insider.webp')}}" alt="Slide 3"></div>
-                                <div><img src="{{asset('main-frontend/img/entrepreneur.png')}}" alt="Slide 4"></div>
-                                <div><img src="{{asset('main-frontend/img/financial-times.png')}}" alt="Slide 5"></div>
-                                <div><img src="{{asset('main-frontend/img/forbes.png')}}" alt="Slide 6"></div>
-                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
-                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
-                                <div><img src="{{asset('main-frontend/img/techcrunch.png')}}" alt="Slide 8"></div>
-                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 1"></div>
-                                <div><img src="{{asset('main-frontend/img/the-guardian.png')}}" alt="Slide 9"></div>
-                                <div><img src="{{asset('main-frontend/img/the-times.png')}}" alt="Slide 10"></div>
+                                <div><img src="{{asset('main-frontend/img/bbc.svg')}}" alt="Slide 2"></div>
+                                <div><img src="{{asset('main-frontend/img/bloomberg.png')}}" alt="Slide 3"></div>
+                                <div><img src="{{asset('main-frontend/img/business-insider.webp')}}" alt="Slide 4"></div>
+                                <div><img src="{{asset('main-frontend/img/entrepreneur.png')}}" alt="Slide 5"></div>
+                                <div><img src="{{asset('main-frontend/img/financial-times.png')}}" alt="Slide 6"></div>
+                                <div><img src="{{asset('main-frontend/img/forbes.png')}}" alt="Slide 7"></div>
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 8"></div>
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 9"></div>
+                                <div><img src="{{asset('main-frontend/img/techcrunch.png')}}" alt="Slide 10"></div>
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 11"></div>
+                                <div><img src="{{asset('main-frontend/img/the-guardian.png')}}" alt="Slide 12"></div>
+                                <div><img src="{{asset('main-frontend/img/the-times.png')}}" alt="Slide 13"></div>
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 8"></div>
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 9"></div>
                               
                               
                             </div>
@@ -431,14 +475,21 @@
                         <div class="description">
                         I worked in software for over 20 years, helping grow a startup from 2010-2023 and now exited.
                         </div>
-                        <div class="expertise-title">Areas of Interests </div>
-                        <div class="expertise-tags">
-                            <div class="tag">Pre-Startup/R&D</div>
-                            <div class="tag">MVP/Finished Product</div>
-                            <div class="tag">Achieving Sales</div>
-                            <div class="tag">Breaking Even</div>
-                            <div class="tag">Profitable</div>
+                        <div class="expertise-div">
+                            <div class="expertise-title">Areas of Interests </div>
+                            <div class="expertise-tags">
+                                <div class="tag">Pre-Startup/R&D</div>
+                                <div class="tag">MVP/Finished Product</div>
+                                <div class="tag">Achieving Sales</div>
+                                <div class="tag">Breaking Even</div>
+                                <div class="tag">Profitable</div>
+                            </div>
                         </div>
+
+                        <div class="my-1 profile-footer">
+                            <button class="btn btn-danger">Find out more</button>
+                        </div>
+
                     </div>
 
                 </div>
@@ -462,14 +513,21 @@
                         <div class="description">
                         Business Growth Manager, Business Owner, Startup Owner
                         </div>
-                        <div class="expertise-title">Areas of Interests </div>
-                        <div class="expertise-tags">
-                            <div class="tag">Pre-Startup/R&D</div>
-                            <div class="tag">MVP/Finished Product</div>
-                            <div class="tag">Achieving Sales</div>
-                            <div class="tag">Breaking Even</div>
-                            <div class="tag">Profitable</div>
+                        <div class="expertise-div">
+                            <div class="expertise-title">Areas of Interests </div>
+                            <div class="expertise-tags">
+                                <div class="tag">Pre-Startup/R&D</div>
+                                <div class="tag">MVP/Finished Product</div>
+                                <div class="tag">Achieving Sales</div>
+                                <div class="tag">Breaking Even</div>
+                                <div class="tag">Profitable</div>
+                            </div>
                         </div>
+
+                        <div class="my-1 profile-footer">
+                            <button class="btn btn-danger">Find out more</button>
+                        </div>
+
                     </div>
 
                 </div>
@@ -488,16 +546,23 @@
                         <div class="salary"><span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
                                     style="height: 30px; width: 30px;"></span> &nbsp; £200K - £500K</div>
                         <div class="description">
-                        23 years in management positions across 4 industries and 4 continents with the last 12 years in the CEO position.
+                        23 years in management positions across 4 industries and 4 continents with the last 12 years.
                         </div>
-                        <div class="expertise-title">Areas of Interests</div>
-                        <div class="expertise-tags">
-                            <div class="tag">Pre-Startup/R&D</div>
-                            <div class="tag">MVP/Finished Product</div>
-                            <div class="tag">Achieving Sales</div>
-                            <div class="tag">Breaking Even</div>
-                            <div class="tag">Profitable</div>
+                        <div class="expertise-div">
+                            <div class="expertise-title">Areas of Interests </div>
+                            <div class="expertise-tags">
+                                <div class="tag">Pre-Startup/R&D</div>
+                                <div class="tag">MVP/Finished Product</div>
+                                <div class="tag">Achieving Sales</div>
+                                <div class="tag">Breaking Even</div>
+                                <div class="tag">Profitable</div>
+                            </div>
                         </div>
+
+                        <div class="my-1 profile-footer">
+                            <button class="btn btn-danger">Find out more</button>
+                        </div>
+
                     </div>
 
                 </div>
@@ -509,179 +574,113 @@
                     <button class="btn btn-light py-3 px-4 text-red Investment-btn">View Investor Profiles</button>
                 </div>
             </div>
+        </div>
+    </section>
 
 
-            <div class="row bg-white my-4 rounded">
-
+    <section>
+    <div class="container">
+    <div class="row bg-white my-4 rounded">
+            <!-- Get Our Professional Services start -->
                 <div class="col-lg-12 p-4">
                     <h2 class="heading3   text-center">Get Our Professional Services</h2>
                     <p class="mt-3 text-center">Assemble a Team for Your Project: It's Good; Organize Flawlessly: It's
                         Better. Why? To Boost Productivity, Save Time, and Ignite Ideas.</p>
                 </div>
 
-                <div class="col-md-6 mb-4">
-                    <div class="accordion" id="accordionPanelsStayOpenExample">
-                        <div class="accordion-item border border-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button p-1" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                    aria-controls="panelsStayOpen-collapseOne">
-                                    <span><img src="{{asset('main-frontend/img/11.png')}}" alt=""
-                                            style="height: 50px; width: 50px;"></span>
-                                    &nbsp; Investment & Funding Services
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <div class="expertise-tags">
-                                        <div class="tag">Branded Consumer Businesses</div>
-                                        <div class="tag">Strategy</div>
-                                        <div class="tag">Growth</div>
-                                        <div class="tag">Corporate Finance</div>
-                                        <div class="tag">Governance</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item my-3 border border-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed p-1" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
-                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                    <span><img src="{{asset('main-frontend/img/22.png')}}" alt=""
-                                            style="height: 50px; width: 50px;"></span>
-                                    &nbsp; Business Strategy & Management Consulting
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="col-lg-12">
+                <!-- Carousel 1 -->
+                <div class="owl-carousel carousel-one">
+                    <div class="item">
 
-                                <div class="accordion-body">
-                                    <div class="accordion-body">
-                                        <div class="expertise-tags">
-                                            <div class="tag">Branded Consumer Businesses</div>
-                                            <div class="tag">Strategy</div>
-                                            <div class="tag">Growth</div>
-                                            <div class="tag">Corporate Finance</div>
-                                            <div class="tag">Governance</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
+                    <div class="service-card-item" style="background: #74b9ff;">
+                        <div class="service-item-heading">
+                            <h5 style="margin: 0; padding: 10px 0;">Investment & Funding Services</h5>
                         </div>
-                        <div class="accordion-item border border-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed p-1" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
-                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                    <span><img src="{{asset('main-frontend/img/33.png')}}" alt=""
-                                            style="height: 50px; width: 50px;"></span>
-                                    &nbsp; Financial Services
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <div class="accordion-body">
-                                        <div class="expertise-tags">
-                                            <div class="tag">Branded Consumer Businesses</div>
-                                            <div class="tag">Strategy</div>
-                                            <div class="tag">Growth</div>
-                                            <div class="tag">Corporate Finance</div>
-                                            <div class="tag">Governance</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="service-card-item-inner">
+                            <img src="{{asset('main-frontend/img/Investment-Funding-Services.png')}}" alt="The Guardian" class="img-fluid">
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 mb-4">
-                    <div class="accordion" id="accordionPanelsStayOpenExample">
-                        <div class="accordion-item border border-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button p-1" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapse1" aria-expanded="true"
-                                    aria-controls="panelsStayOpen-collapse1">
-                                    <span><img src="{{asset('main-frontend/img/44.png')}}" alt=""
-                                            style="height: 50px; width: 50px;"></span>
-                                    &nbsp; Legal Services
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <div class="expertise-tags">
-                                        <div class="tag">Branded Consumer Businesses</div>
-                                        <div class="tag">Strategy</div>
-                                        <div class="tag">Growth</div>
-                                        <div class="tag">Corporate Finance</div>
-                                        <div class="tag">Governance</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item my-3 border border-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed p-1" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2"
-                                    aria-expanded="false" aria-controls="panelsStayOpen-collapse2">
-                                    <span><img src="{{asset('main-frontend/img/55.png')}}" alt=""
-                                            style="height: 50px; width: 50px;"></span>
-                                    &nbsp; Marketing & Branding
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse">
-
-                                <div class="accordion-body">
-                                    <div class="accordion-body">
-                                        <div class="expertise-tags">
-                                            <div class="tag">Branded Consumer Businesses</div>
-                                            <div class="tag">Strategy</div>
-                                            <div class="tag">Growth</div>
-                                            <div class="tag">Corporate Finance</div>
-                                            <div class="tag">Governance</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item border border-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed p-1" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3"
-                                    aria-expanded="false" aria-controls="panelsStayOpen-collapse3">
-                                    <span><img src="{{asset('main-frontend/img/66.png')}}" alt=""
-                                            style="height: 50px; width: 50px;"></span>
-                                    &nbsp; Risk Management & Insurance
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <div class="accordion-body">
-                                        <div class="expertise-tags">
-                                            <div class="tag">Branded Consumer Businesses</div>
-                                            <div class="tag">Strategy</div>
-                                            <div class="tag">Growth</div>
-                                            <div class="tag">Corporate Finance</div>
-                                            <div class="tag">Governance</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>                   
 
                     </div>
-                </div>
 
+                                      
+                    <div class="item">
+                      
+                          <div class="service-card-item" style="background: #f39c12;">
+                                <div class="service-item-heading">
+                                    <h5 style="margin: 0; padding: 10px 0;">Legal Services</h5>
+                                </div>
+                                <div class="service-card-item-inner">
+                                    <img src="{{asset('main-frontend/img/Legal-Services.jpg')}}" alt="The Guardian" class="img-fluid">
+                                </div>
+                            </div>                
+
+                    </div>
+
+                    <div class="item">
+                      
+                    <div class="service-card-item" style="background: #1abc9c;">
+                        <div class="service-item-heading">
+                            <h5 style="margin: 0; padding: 10px 0;">Business Strategy & Management Consulting</h5>
+                        </div>
+                        <div class="service-card-item-inner">
+                            <img src="{{asset('main-frontend/img/Business-Strategy.png')}}" alt="The Guardian" class="img-fluid">
+                        </div>
+                    </div>                 
+
+                  </div>
+
+                  <div class="item">
+                      
+                  <div class="service-card-item" style="background: #2980b9;">
+                        <div class="service-item-heading">
+                            <h5 style="margin: 0; padding: 10px 0;">Marketing & Branding</h5>
+                        </div>
+                        <div class="service-card-item-inner">
+                            <img src="{{asset('main-frontend/img/Marketing-Branding.png')}}" alt="The Guardian" class="img-fluid">
+                        </div>
+                    </div>                 
+
+                  </div>
+
+                  <div class="item">
+                      
+                  <div class="service-card-item" style="background: #8e44ad;">
+                        <div class="service-item-heading">
+                            <h5 style="margin: 0; padding: 10px 0; ">Financial Services</h5>
+                        </div>
+                        <div class="service-card-item-inner">
+                            <img src="{{asset('main-frontend/img/Financial-Services.jpg')}}" alt="The Guardian" class="img-fluid">
+                        </div>
+                    </div>                 
+
+                  </div>
+
+                  <div class="item">
+                      
+                  <div class="service-card-item" style="background: #d35400;">
+                        <div class="service-item-heading">
+                            <h5 style="margin: 0; padding: 10px 0; ">Risk Management & Insurance</h5>
+                        </div>
+                        <div class="service-card-item-inner">
+                            <img src="{{asset('main-frontend/img/Risk-Management-Insurance.jpg')}}" alt="The Guardian" class="img-fluid">
+                        </div>
+                    </div>               
+
+                  </div>
+      
+                </div>
+                </div>
+              
                 <div class="col-lg-12 p-4 text-center">
                        <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #b91c1c; color:white;">Find more Services Providers</button>
                 </div>
 
 
             </div>
-        </div>
+    </div>
+              <!-- Get Our Professional Services end -->
     </section>
 
 
@@ -691,30 +690,22 @@
                 <!-- HTML Structure for Owl Carousel -->
                 <div class="col-md-12 red-section p-4" style="border-radius: 10px;">
                 <h2 class="heading3 text-white my-4  text-center">Testimonials</h2>
-                <div class="owl-carousel owl-theme">
+                <div class="owl-carousel carousel-two">
                     @foreach($testimonials as $res)
                     <div class="item">
-                        <div class="bg-white p-3" style="border-radius: 20px;">
-
-                           
-                            <p>{{$res->translate->comment}}</p>
-
-                            <div class="d-flex gap-2 align-items-center">
-                                <img src="{{ asset($res->image) }}" alt="" class="img-fluid rounded"
-                                    style="height: 70px; width: 70px; border-radius: 50% !important;">
-                                    <div class="">
-                                    <h3 class="m-0">{{$res->translate->name}}</h3> 
-                                    <p>{{$res->translate->designation}}</p>
-                                    </div>
-                               
-                            </div>
-                            
-
+                    <div class="review-card">
+                    <p class="review-content">{{$res->translate->comment}}</p>
+                    <div class="review-footer">
+                        <img src="{{ asset($res->image) }}" alt="User Image" class="review-image">
+                        <div class="review-user-info">
+                            <h3>{{$res->translate->name}}</h3>
+                            <p>{{$res->translate->designation}}</p>
                         </div>
                     </div>
+                </div>
+                    </div>
                     @endforeach
-
-               </div>
+                </div>
 
 
                 </div>

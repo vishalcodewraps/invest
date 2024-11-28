@@ -58,11 +58,11 @@
                             <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"><img src="{{asset('main-frontend/img/login.png')}}"
                                         class="img-fluid" style="height: 30px; font-size:18px;"> <br>
-                                    Login</a></li>
+                                        <strong> Login </strong></a></li>
                             <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop"><img src="{{asset('main-frontend/img/register.png')}}"
                                         class="img-fluid" style="height: 30px; font-size:18px;">
-                             <br> Register</a></li>
+                             <br> <strong>Register</strong></a></li>
                         </ul>
                     </div>
 
@@ -129,11 +129,11 @@
                             <li><a href="#" class="text-decoration-none text-black"  data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"><img src="{{asset('main-frontend/img/login.png')}}"
                                         class="img-fluid" style="height: 24px;" > <br>
-                                    Login</a></li>
+                                   <strong>Login</strong></a></li>
                             <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop"  ><img src="{{asset('main-frontend/img/register.png')}}"
                                         class="img-fluid" style="height: 24px;">
-                                    <br> Register</a></li>
+                                    <br> <strong>Register</strong></a></li>
                         </ul>
                     </div>
 

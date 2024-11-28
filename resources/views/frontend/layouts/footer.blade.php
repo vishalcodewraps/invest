@@ -105,7 +105,7 @@
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-        <div class="modal-dialog  modal-xl">
+        <div class="modal-dialog  modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-0">
                     <button type="button" class="btn-close float-end pe-2" data-bs-dismiss="modal"
@@ -173,11 +173,11 @@
                                 </div>
                             </form>
                                 <!-- Social Login Buttons -->
-                                <div class="col-6 mb-4">
+                                <div class="col-6 mb-4 social-link-login">
                                     <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
                                     class="fa-brands fa-facebook-f"></i> Facebook</span> </button>
                                 </div>
-                                <div class="col-6 mb-4">
+                                <div class="col-6 mb-4 social-link-login">
                                     <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
                                     class="fa-brands fa-google"></i></span> Google </button>
                                 </div>
@@ -199,7 +199,7 @@
    
 <!-- Modal Structure -->
 <div class="modal fade" id="otpModal" tabindex="-1" aria-labelledby="otpModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body p-0">
                 <button type="button" class="btn-close float-end pe-2" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -275,7 +275,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-xl">
+        <div class="modal-dialog  modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-0">
                     <button type="button" class="btn-close float-end pe-2" data-bs-dismiss="modal"
@@ -332,8 +332,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -344,7 +342,7 @@
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
-        <div class="modal-dialog  modal-xl">
+        <div class="modal-dialog  modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-0">
                     <button type="button" class="btn-close float-end pe-2" data-bs-dismiss="modal"
@@ -488,24 +486,32 @@
 
 <!-- Initialize Owl Carousel -->
 <script>
-    $(document).ready(function() {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 3
-                }
-            }
-        });
+ $(document).ready(function() {
+    // Initialize Carousel 1
+    $('.carousel-one').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        autoplay: true,
+        responsive: {
+            0: { items: 1 },
+            600: { items: 3 },
+            1000: { items: 5 }
+        }
     });
+
+    // Initialize Carousel 2
+    $('.carousel-two').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        responsive: {
+            0: { items: 1 },
+            600: { items: 2 },
+            1000: { items: 3 }
+        }
+    });
+});
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
