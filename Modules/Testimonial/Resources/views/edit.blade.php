@@ -131,7 +131,7 @@
 
                                                 <div class="col-12">
                                                     <div class="crancy__item-form--group mg-top-form-20">
-                                                        <label class="crancy__item-label">{{ __('translate.Comment') }} * </label>
+                                                        <label class="crancy__item-label">{{ __('translate.Comment') }} (280 Words Limit) * </label>
                                                         <textarea class="crancy__item-input crancy__item-textarea"  name="comment" id="comment" max="280" maxlength="280">{{ $translate->comment }}</textarea>
                                                     </div>
                                                 </div>
