@@ -197,7 +197,7 @@
             <div class="row">
                 <div class="col-lg-7 col-md-7 col-sm-12">
                     <h2 class="heading2 mt-4"> Our Unique Selling Proposition (USP)</h2>
-                    <p class="mt-4 section2p">At Invest Connect Marketplace, we focus on empowering ideas, fostering innovation, and creating sustainable growth opportunities for entrepreneurs and investors alike. Our platform bridges the gap between passionate creators and visionary backers, offering a seamless space to fund groundbreaking solutions and drive meaningful impact worldwide</p>
+                    <p class="mt-4 section2p">Invest Connect Marketplace is an AI-driven, sustainable investment  ecosystem built to empower entrepreneurs, investors, and service professionals through strategic partnerships and comprehensive support. By combining tools, resources, and expert guidance within a 360-degree ecosystem, we offer seamless connections between investors and business owners. Through innovative technology, Invest Connect Marketplace delivers accurate matches, strategic insights, and tailored solutions, all geared toward nurturing sustainable growth. Our mission is to foster a thriving, collaborative environment where partnerships, innovation, and funding converge to unlock new opportunities for success.</p>
 
                     <p class="sub-heading"><strong>Join Invest Connect Marketplace Today—Where Opportunity and Growth
                             Converge. Discover the Future of Angel Investing</strong></p>
