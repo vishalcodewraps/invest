@@ -646,6 +646,23 @@ otpInputs.forEach((input, index) => {
 });
 
 </script>
+<script>
+      $(document).ready(function() {
+      $(".toggle-password").click(function() {
+        var inputField = $(this).prev("input"); // Get the input field before the icon
+        var icon = $(this).children("i"); // Get the icon inside the span
+
+        // Toggle the type attribute of the password field
+        if (inputField.attr("type") === "password") {
+          inputField.attr("type", "text");
+          icon.removeClass("fa-eye").addClass("fa-eye-slash"); // Change to "eye-slash"
+        } else {
+          inputField.attr("type", "password");
+          icon.removeClass("fa-eye-slash").addClass("fa-eye"); // Change to "eye"
+        }
+      });
+    });
+</script>
 
 
 </body>
