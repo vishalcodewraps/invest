@@ -197,7 +197,8 @@
             <div class="row">
                 <div class="col-lg-7 col-md-7 col-sm-12">
                     <h2 class="heading2 mt-4"> Our Unique Selling Proposition (USP)</h2>
-                    <p class="mt-4 section2p">At Invest Connect Marketplace, we focus on empowering ideas, fostering innovation, and creating sustainable growth opportunities for entrepreneurs and investors alike. Our platform bridges the gap between passionate creators and visionary backers, offering a seamless space to fund groundbreaking solutions and drive meaningful impact worldwide</p>
+                    <p class="mt-4 section2p">Invest Connect Marketplace is an AI-driven, sustainable investment  ecosystem built to empower entrepreneurs, investors, and service professionals through strategic partnerships and comprehensive support. By combining tools, resources, and expert guidance within a 360-degree ecosystem, we offer seamless connections between investors and business owners. Through innovative technology, Invest Connect Marketplace delivers accurate matches, strategic insights, and tailored solutions, all geared toward nurturing sustainable growth. Our mission is to foster a thriving, collaborative environment where partnerships, innovation, and funding converge to unlock new opportunities for success.
+</p>
 
                     <p class="sub-heading"><strong>Join Invest Connect Marketplace Today—Where Opportunity and Growth
                             Converge. Discover the Future of Angel Investing</strong></p>
@@ -457,52 +458,56 @@
                     Beyond financial backing, they offer mentorship, guidance, and connections, 
                     helping us navigate challenges and seize opportunities in a rapidly evolving marketplace.</p>
 
-                <div class="col-lg-4 d-flex justify-content-center">
-                    <div class="profile-card mb-3">
-                        <div class="d-flex gap-3">
-                            <div><img src="{{asset('main-frontend/img/i22.jpg')}}" alt="Profile Picture"></div>
+                <div class="col-lg-4 mb-3 ">
+                    <div class="profile-card ">
+                        <div class="profile-card-content">
+                                <div class="d-flex gap-3">
+                                    <div><img src="{{asset('main-frontend/img/i22.jpg')}}" alt="Profile Picture"></div>
 
 
-                            <div class="location flex-column justify-content-start">
-                                <h2>Tim R.</h2>
-                                <i class="fa-solid fa-location-dot"></i> London, United Kingdom
+                                    <div class="location flex-column justify-content-start">
+                                        <h2>Inv0001</h2>
+                                        <i class="fa-solid fa-location-dot"></i> London, United Kingdom
 
-                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="salary"> <span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
+                                            style="height: 30px; width: 30px;"></span> &nbsp; £0 - £100K</div>
+                                <div class="description">
+                                I worked in software for over 20 years, helping grow a startup from 2010-2023 and now exited.
+                                </div>
+                                <div class="expertise-div">
+                                    <div class="expertise-title">Areas of Interests </div>
+                                    <div class="expertise-tags">
+                                        <div class="tag">Pre-Startup/R&D</div>
+                                        <div class="tag">MVP/Finished Product</div>
+                                        <div class="tag">Achieving Sales</div>
+                                        <div class="tag">Breaking Even</div>
+                                        <div class="tag">Profitable</div>
+                                    </div>
+                                </div>
+
+                                <div class="p-2 text-end">
+                                    <button class="btn btn-danger">Find out more</button>
+                                </div>
                         </div>
 
-                        <div class="salary"> <span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
-                                    style="height: 30px; width: 30px;"></span> &nbsp; £0 - £100K</div>
-                        <div class="description">
-                        I worked in software for over 20 years, helping grow a startup from 2010-2023 and now exited.
-                        </div>
-                        <div class="expertise-div">
-                            <div class="expertise-title">Areas of Interests </div>
-                            <div class="expertise-tags">
-                                <div class="tag">Pre-Startup/R&D</div>
-                                <div class="tag">MVP/Finished Product</div>
-                                <div class="tag">Achieving Sales</div>
-                                <div class="tag">Breaking Even</div>
-                                <div class="tag">Profitable</div>
-                            </div>
-                        </div>
-
-                        <div class="my-1 profile-footer">
-                            <button class="btn btn-danger">Find out more</button>
-                        </div>
+                      
 
                     </div>
 
                 </div>
 
-                <div class="col-lg-4 d-flex justify-content-center">
-                    <div class="profile-card mb-3">
+                <div class="col-lg-4 mb-3 ">
+                    <div class="profile-card">
                         <div class="d-flex gap-3">
 
                             <div>
                                 <img src="{{asset('main-frontend/img/i11.jpg')}}" alt="Profile Picture">
                             </div>
                             <div class="location flex-column justify-content-start">
-                                <h2>James</h2>
+                                <h2>Inv0002</h2>
                                 <i class="fa-solid fa-location-dot"></i> Norwich, United Kingdom
                             </div>
 
@@ -511,7 +516,7 @@
                         <div class="salary"> <span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
                                     style="height: 30px; width: 30px;"></span> &nbsp; £500K - £10m</div>
                         <div class="description">
-                        Business Growth Manager, Business Owner, Startup Owner
+                        I’ve recently exited and am looking forward to new ventures.
                         </div>
                         <div class="expertise-div">
                             <div class="expertise-title">Areas of Interests </div>
@@ -524,21 +529,21 @@
                             </div>
                         </div>
 
-                        <div class="my-1 profile-footer">
-                            <button class="btn btn-danger">Find out more</button>
-                        </div>
-
+                        <div class="p-2 text-end">
+                                    <button class="btn btn-danger">Find out more</button>
+                                </div>
+                      
                     </div>
 
                 </div>
 
 
-                <div class="col-lg-4 d-flex justify-content-center">
-                    <div class="profile-card mb-3">
+                <div class="col-lg-4 mb-3 ">
+                    <div class="profile-card">
                         <div class="d-flex gap-3">
                             <div><img src="{{asset('main-frontend/img/admin.png')}}" alt="Profile Picture"></div>
                             <div class="location flex-column justify-content-start">
-                                <h2>Mohamed A.</h2>
+                                <h2>Inv0003</h2>
                                 <i class="fa-solid fa-location-dot"></i> High Wycombe, United Kingdom
                             </div>
                         </div>
@@ -546,7 +551,7 @@
                         <div class="salary"><span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
                                     style="height: 30px; width: 30px;"></span> &nbsp; £200K - £500K</div>
                         <div class="description">
-                        23 years in management positions across 4 industries and 4 continents with the last 12 years.
+                        I have over two decades of experience in the software industry,.
                         </div>
                         <div class="expertise-div">
                             <div class="expertise-title">Areas of Interests </div>
@@ -559,9 +564,9 @@
                             </div>
                         </div>
 
-                        <div class="my-1 profile-footer">
-                            <button class="btn btn-danger">Find out more</button>
-                        </div>
+                        <div class="p-2 text-end">
+                                    <button class="btn btn-danger">Find out more</button>
+                                </div>
 
                     </div>
 
@@ -674,7 +679,9 @@
                 </div>
               
                 <div class="col-lg-12 p-4 text-center">
-                       <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #b91c1c; color:white;">Find more Services Providers</button>
+
+                
+                       <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #f39c12;; color:white;">Find more Services Providers</button>
                 </div>
 
 
@@ -867,8 +874,8 @@
 
 
                 <div class="col-md-12 text-center py-3">
-                    <button class="btn btn-danger ">Explore more Industries</button>
-                </div>
+                <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #b91c1c; color:white;">Explore more Industries</button>
+                             </div>
                 
             </div>
         </div>
