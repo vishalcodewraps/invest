@@ -68,7 +68,7 @@
                                                 <div class="col-12">
                                                     <div class="crancy__item-form--group mg-top-form-20">
                                                         <label class="crancy__item-label">{{ __('translate.Comment') }} * </label>
-                                                        <textarea class="crancy__item-input crancy__item-textarea"  name="comment" id="comment">{{ old('comment') }}</textarea>
+                                                        <textarea class="crancy__item-input crancy__item-textarea"  name="comment" id="comment" max="280" maxlength="280">{{ old('comment') }}</textarea>
                                                     </div>
                                                 </div>
 
