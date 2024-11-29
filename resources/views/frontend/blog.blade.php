@@ -40,11 +40,14 @@
             <div class="col-lg-12 my-5">
             <img src="{{ asset($res->image) }}" class="img-fluid" alt="..." style="height:280px; object-fit:cover; width:100%;">
             </div>
+        </div>
 
-            @foreach ($blogs as $res)
-
+            <div class="row">
+          
             <!-- blog  start-->
             <div class="col-md-8 col-sm-12"> 
+
+            @foreach ($blogs as $res)
                 <a href="{{ url('blog/' . $res->slug) }}" class="text-decoration-none text-black">           
                     <div class="blog-card-new">
                     <h2 class="heading2 mt-4" style="">{{ Str::words($res->translate->title, 5, '...') }}</h2>
@@ -66,20 +69,36 @@
                         </div>
                     </div>
                     </div>
-                </a>              
+                </a>
+                @endforeach              
             </div>  
-            
+           
+            <!-- sidebar  start-->
             <div class="col-md-4">
-                asdfasdfasdfasdf
+                <div style="border:5px solid black;margin: 40px 0;"></div>
+                    <div class="input-group gap-2">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="border:2px solid #dee2e6; box-shadow: 0px 0px 4px #dee2e6 #dee2e6;">
+                        <span class="input-group-text" style="background-color: black;"><i class="fas fa-search" style="color:white;"></i></span>
+                    </div>
+                    <h3 class="my-4">Recent Posts</h3>
+
+                    <ul class="list-unstyled" style="line-height: 29px; margin-left: 30px;">
+                        <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
+                        <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
+                        <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
+                        <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
+                    </ul>
+
+                    <div style="border:5px solid black;margin: 40px 0;"></div>
             </div>
-            @endforeach
+            <!-- sidebar  end-->
+            </div>
 
           
             <!-- blog  end -->
 
-            <!-- sidebar  -->
-             
-        </div>
+           
+       
     </div>
 </section>
 

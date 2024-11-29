@@ -41,10 +41,7 @@
                     We Connect UK Entrepreneurs, Angel Investors, & Professional Service Providers
                 </h1>
                </div>
-
-
                 <div class="d-flex gap-2 Investor-button" style="align-items: center;">
-                        
                         <div class="p-2" style="background:white;">
                         <h4  class="m-0 text-white looking-h4" style="color:#B91C1C !important;">I am looking to connect with</h4>
                         </div>
@@ -63,11 +60,6 @@
 
                         <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;">
                     </div>
-
-
-
-
-
             </div>
         </div>
 
@@ -187,10 +179,7 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-
-
-
-    </main>
+</main>
 
     <section class="py-5">
         <div class="container">
@@ -209,12 +198,12 @@
         </div>
     </section>
 
-    <section class="red-section">
+    <section class="red-section" style="background-color:#ecf0f1;">
 
         <div class="container">
             <div class="row">
-                <h2 class="heading3 mt-5 text-white text-center">Exploring Investment Opportunities in the UK</h2>
-                <p class="para3 text-center mt-3 mb-5 text-white">At the heart of Invest Connect lies a clear vision: to create a world where access to capital and innovation knows no boundaries. By connecting ambitious entrepreneurs with investors seeking to make a difference, we build an ecosystem that transforms ideas into reality. Whether you’re a startup founder with a revolutionary vision or an investor passionate about driving change, our platform connects dreams with possibilities.</p>
+                <h2 class="heading3 mt-5 text-dark text-center">Explore Investment Opportunities</h2>
+                <p class="para3 text-center mt-3 mb-5 text-dark">At the heart of Invest Connect lies a clear vision: to create a world where access to capital and innovation knows no boundaries. By connecting ambitious entrepreneurs with investors seeking to make a difference, we build an ecosystem that transforms ideas into reality. Whether you’re a startup founder with a revolutionary vision or an investor passionate about driving change, our platform connects dreams with possibilities.</p>
 
                 <div class="col-md-6 col-sm-12 col-lg-4 mb-3">
 
@@ -332,8 +321,10 @@
 
 
                 <div class="my-5 text-center">
-                    <button class="btn btn-light py-3 px-4 text-red Investment-btn">View more Investment
+                    
+                     <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #b91c1c; color:white;">View more Investment
                         Oppourtunities</button>
+               
                 </div>
             </div>
         </div>
@@ -344,6 +335,7 @@
             <div class="row">
                 <div class="col-lg-12">
                 <h2 class="heading2 mt-4 text-center">Featured In</h2>
+                <hr>
           
                         <div class="slider-container">
                             <div class="three-row-slider slider-2">
@@ -433,31 +425,32 @@
                               
                             </div>
                         </div>
-
-                    <div class="text-center">
-                        <button class="btn btn-danger">Become Part of Our Marketplace</button>
-                    </div>
-
-
+                </div>
+                
+                <div class="col-md-12 text-center">
+                    
+                    <p>Build the perfect team and organize seamlessly to boost productivity, save time, and spark innovation—explore more to unlock your potential!</p>
+                    
+                    <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #b91c1c; color:white;">Become Part of Our Marketplace</button>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section class="red-section">
+    <section class="red-section" style="background-color:#ecf0f1;">
 
         <div class="container">
             <div class="row text-center " style="border-radius: 30px;">
-                <h2 class="heading3 mt-5 text-white text-center">Meet Our Investors</h2>
-                <p class="para3 text-center mt-3 mb-5 text-white">
+                <h2 class="heading3 mt-5 text-dark text-center">Meet Our Investors</h2>
+                <p class="para3 text-center mt-3 mb-5 text-dark">
                     Our investors represent diverse industries, 
                     including technology, finance, healthcare, and sustainability, 
                     reflecting a shared commitment to driving meaningful change. 
                     Beyond financial backing, they offer mentorship, guidance, and connections, 
                     helping us navigate challenges and seize opportunities in a rapidly evolving marketplace.</p>
 
-                <div class="col-lg-4 mb-3 ">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
                     <div class="profile-card ">
                         <div class="profile-card-content">
                                 <div class="d-flex gap-3">
@@ -474,7 +467,7 @@
                                 <div class="salary"> <span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
                                             style="height: 30px; width: 30px;"></span> &nbsp; £0 - £100K</div>
                                 <div class="description">
-                                I worked in software for over 20 years, helping grow a startup from 2010-2023 and now exited.
+                                 I helped scale the business successful.
                                 </div>
                                 <div class="expertise-div">
                                     <div class="expertise-title">Areas of Interests </div>
@@ -498,7 +491,7 @@
 
                 </div>
 
-                <div class="col-lg-4 mb-3 ">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
                     <div class="profile-card">
                         <div class="d-flex gap-3">
 
@@ -515,7 +508,7 @@
                         <div class="salary"> <span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
                                     style="height: 30px; width: 30px;"></span> &nbsp; £500K - £10m</div>
                         <div class="description">
-                        I’ve recently exited and am looking forward to new ventures.
+                        I’ve recently exited and am  ventures.
                         </div>
                         <div class="expertise-div">
                             <div class="expertise-title">Areas of Interests </div>
@@ -536,21 +529,20 @@
 
                 </div>
 
-
-                <div class="col-lg-4 mb-3 ">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
                     <div class="profile-card">
                         <div class="d-flex gap-3">
                             <div><img src="{{asset('main-frontend/img/admin.png')}}" alt="Profile Picture"></div>
                             <div class="location flex-column justify-content-start">
                                 <h2>Inv0003</h2>
-                                <i class="fa-solid fa-location-dot"></i> High Wycombe, United Kingdom
+                                <i class="fa-solid fa-location-dot"></i>Wycombe,United Kingdom
                             </div>
                         </div>
 
                         <div class="salary"><span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
                                     style="height: 30px; width: 30px;"></span> &nbsp; £200K - £500K</div>
                         <div class="description">
-                        I have over two decades of experience in the software industry,.
+                        I have over two decades of experience.
                         </div>
                         <div class="expertise-div">
                             <div class="expertise-title">Areas of Interests </div>
@@ -570,12 +562,50 @@
                     </div>
 
                 </div>
-                <p class="heading4 mt-5 text-white text-center">“Connect with thousands of investors ready to shape
+                
+                   <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <div class="profile-card">
+                        <div class="d-flex gap-3">
+                            <div><img src="{{asset('main-frontend/img/inv004.jpg')}}" alt="Profile Picture"></div>
+                            <div class="location flex-column justify-content-start">
+                                <h2>Inv0004</h2>
+                                <i class="fa-solid fa-location-dot"></i>Wycombe, United Kingdom
+                            </div>
+                        </div>
+
+                        <div class="salary"><span><img src="{{asset('main-frontend/img/ic.png')}}" class="img-fluid" alt="ic"
+                                    style="height: 30px; width: 30px;"></span> &nbsp; £200K - £500K</div>
+                        <div class="description">
+                        There are many variations of passages.
+                        </div>
+                        <div class="expertise-div">
+                            <div class="expertise-title">Areas of Interests </div>
+                            <div class="expertise-tags">
+                                <div class="tag">Pre-Startup/R&D</div>
+                                <div class="tag">MVP/Finished Product</div>
+                                <div class="tag">Achieving Sales</div>
+                                <div class="tag">Breaking Even</div>
+                                <div class="tag">Profitable</div>
+                            </div>
+                        </div>
+
+                        <div class="p-2 text-end">
+                                    <button class="btn btn-danger">Find out more</button>
+                                </div>
+
+                    </div>
+
+                </div>
+                
+                
+                <p class="heading4 mt-5 text-dark text-center">“Connect with thousands of investors ready to shape
                     your
                     idea and fuel your growth.”</p>
 
                 <div class="my-2">
-                    <button class="btn btn-light py-3 px-4 text-red Investment-btn">View Investor Profiles</button>
+                    
+                    <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #b91c1c; color:white;">View Investor Profiles</button>
+                    
                 </div>
             </div>
         </div>
@@ -680,7 +710,7 @@
                 <div class="col-lg-12 p-4 text-center">
 
                 
-                       <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #f39c12;; color:white;">Find more Services Providers</button>
+                       <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #f39c12;; color:white;">Find more Service Providers</button>
                 </div>
 
 
@@ -694,8 +724,8 @@
         <div class="container">
             <div class="row my-4">
                 <!-- HTML Structure for Owl Carousel -->
-                <div class="col-md-12 red-section p-4" style="border-radius: 10px;">
-                <h2 class="heading3 text-white my-4  text-center">Testimonials</h2>
+                <div class="col-md-12 p-4" style="border-radius: 10px; background-color:#ecf0f1;">
+                <h2 class="heading3 text-dark my-4  text-center">Testimonials</h2>
                 <div class="owl-carousel carousel-two">
                     @foreach($testimonials as $res)
                     <div class="item">
