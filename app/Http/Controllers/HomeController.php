@@ -694,30 +694,66 @@ class HomeController extends Controller
 
     public function verify_otp(Request $request){
 
-       $otp = $request->number1.$request->number2.$request->number3.$request->number4.$request->number5.$request->number6;
+    //    $otp = $request->number1.$request->number2.$request->number3.$request->number4.$request->number5.$request->number6;
        
-       if($otp == session()->get('otp')){
+    //    if($otp == session()->get('otp')){
+        // $user = new User;
+        // $user->type = session()->get('type');
+        // $user->name = session()->get('name');
+        // $user->last_name = session()->get('last_name');
+        // $user->email = session()->get('email');
+        // $user->phone = session()->get('phone');
+        // $user->password = Hash::make(session()->get('password'));
+        // $user->save();
         $user = new User;
-        $user->type = session()->get('type');
-        $user->name = session()->get('name');
-        $user->last_name = session()->get('last_name');
-        $user->email = session()->get('email');
-        $user->phone = session()->get('phone');
-        $user->password = Hash::make(session()->get('password'));
+        $user->type = $request->type;
+        $user->name = $request->name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->password = Hash::make($request->password);
+        $user->online = 1;
         $user->save();
+        
+        
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        if($user != null){
+            if(Hash::check($request->password, $user->password)){
+
+                if(Auth::guard('web')->attempt($credentials, $request->remember)){
+                    $notify_message = trans('Registration successfully');
+                    $notify_message = array('message' => $notify_message, 'alert-type' => 'success');
+                    if($user->type == 1){
+                        $user->online = 1;
+                        $user->save();
+                        return redirect()->route('invester.dashboard')->with($notify_message);;
+                        
+                    }else{
+                        return redirect()->route('invester.dashboard')->with($notify_message);;
+                    }
+
+                }
+
+                
+            }
+            return back()->with('error','User not exits');
+        }
 
 
-        session()->forget('type');
-        session()->forget('name');
-        session()->forget('last_name');
-        session()->forget('email');
-        session()->forget('phone');
-        session()->forget('password');
+        // session()->forget('type');
+        // session()->forget('name');
+        // session()->forget('last_name');
+        // session()->forget('email');
+        // session()->forget('phone');
+        // session()->forget('password');
 
-        return back()->with('success','Registration Successfully');
-       }else{
-        return back()->with('send_otp','Please enter correct otp')->with('error_type','danger');
-       }
+        // return back()->with('success','Registration Successfully');
+    //    }else{
+    //     return back()->with('send_otp','Please enter correct otp')->with('error_type','danger');
+    //    }
       
     }
 

@@ -32,7 +32,8 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::get('/about-us', [HomeController::class, 'about_us'])->name('about-us');
-    Route::post('/create-user', [HomeController::class, 'send_otp']);
+    // Route::post('/create-user', [HomeController::class, 'send_otp']);
+    Route::post('/create-user', [HomeController::class, 'verify_otp']);
     Route::get('/resend-otp', [HomeController::class, 'send_otp']);
     Route::post('/verify-otp', [HomeController::class, 'verify_otp']);
     Route::post('/forgot-password', [HomeController::class, 'forgot_password']);
@@ -148,7 +149,11 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
             Route::post('/order-cancel/{id}', [BuyerProfileController::class, 'order_cancel'])->name('order-cancel');
 
             Route::post('/store-review/{order_id}', [BuyerProfileController::class, 'store_review'])->name('store-review');
-
+            
+            Route::get('/page1', [InvestProfileController::class, 'page1']);
+            Route::get('/page2', [InvestProfileController::class, 'page2']);
+            Route::get('/page3', [InvestProfileController::class, 'page3']);
+            Route::get('/page4', [InvestProfileController::class, 'page4']);
         });
 
 

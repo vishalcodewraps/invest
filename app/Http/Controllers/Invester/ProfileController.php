@@ -321,5 +321,24 @@ class ProfileController extends Controller
     }
 
 
+    
+    public function page1(){
+        return view('invester.page1');
+    }
+
+    
+    public function page2(){
+        return view('invester.page2');
+    }
+
+    
+    public function page3(){
+        return view('invester.page3');
+    }
+
+    
+    public function page4(){
+        return view('invester.page4');
+    }
 
 }
