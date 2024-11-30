@@ -31,9 +31,9 @@ class UserController extends Controller
 
     public function user_list(){
 
-        $users = User::where('status', 'enable')->where('is_seller', 0)->latest()->get();
+        $users = User::latest()->get();
 
-        $title = trans('translate.Buyer List');
+        $title = trans('User List');
 
         return view('admin.user.user_list', ['users' => $users, 'title' => $title]);
     }

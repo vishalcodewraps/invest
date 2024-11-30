@@ -36,6 +36,7 @@ use App\Mail\UserForgetPassword;
 use Modules\EmailSetting\App\Models\EmailTemplate;
 use App\Helper\EmailHelper;
 use Mail, Str;
+use Modules\Newsletter\App\Models\Newsletter;
 
 use Auth,Hash;
 class HomeController extends Controller
@@ -200,6 +201,20 @@ class HomeController extends Controller
         $contact->message = $request->message;
         $contact->save();
         return back()->with('success','Enquiry send successfully');
+    }
+    public function send_newsletter(Request $request)
+    {
+        $get = Newsletter::where('email',$request->email)->count();
+        if($get > 0){
+            return back()->with('error','This email already exist');
+        }
+
+        $Newsletter = new Newsletter;
+        $Newsletter->email = $request->email;
+        $Newsletter->verified_token = Str::random(25);
+        $Newsletter->is_verified = 1;
+        $Newsletter->save();
+        return back()->with('success','Subscription added successfully');
     }
     public function our_team(Request $request)
     { 
@@ -697,7 +712,10 @@ class HomeController extends Controller
     }
 
     public function verify_otp(Request $request){
-
+        $get = User::where('email',$request->email)->count();
+        if($get > 0){
+            return back()->with('error','This email already exist');
+        }
     //    $otp = $request->number1.$request->number2.$request->number3.$request->number4.$request->number5.$request->number6;
        
     //    if($otp == session()->get('otp')){

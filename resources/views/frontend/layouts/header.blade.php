@@ -28,14 +28,20 @@
 
                     <div class="col-md-4 d-none d-md-none d-lg-block">
                         <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center text-center justify-content-end">
-                            <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
+                            @if(Auth::check())
+                            <li><a href="{{url('invester/dashboard')}}" class="text-decoration-none text-black"><img src="{{asset('main-frontend/img/login.png')}}"
+                                        class="img-fluid" style="height: 24px;" > <br>
+                                   <strong>Dashboard</strong></a></li>
+                            @else
+                            <li><a href="#" class="text-decoration-none text-black"  data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"><img src="{{asset('main-frontend/img/login.png')}}"
-                                        class="img-fluid" style="height: 30px; font-size:18px;"> <br>
-                                        <strong> Login </strong></a></li>
+                                        class="img-fluid" style="height: 24px;" > <br>
+                                   <strong>Login</strong></a></li>
                             <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"><img src="{{asset('main-frontend/img/register.png')}}"
-                                        class="img-fluid" style="height: 30px; font-size:18px;">
-                             <br> <strong>Register</strong></a></li>
+                                data-bs-target="#staticBackdrop"  ><img src="{{asset('main-frontend/img/register.png')}}"
+                                        class="img-fluid" style="height: 24px;">
+                                    <br> <strong>Register</strong></a></li>
+                            @endif
                         </ul>
                     </div>
 
@@ -76,7 +82,7 @@
                             <a class="nav-link" href="#">Business</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Marketplace Support</a>
+                            <a class="nav-link" href="#">Marketplace</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Price</a>
@@ -99,6 +105,11 @@
 
                     <div class="d-sm-block d-md-none">
                         <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center text-center justify-content-start my-2">
+                            @if(Auth::check())
+                            <li><a href="{{url('invester/dashboard')}}" class="text-decoration-none text-black"><img src="{{asset('main-frontend/img/login.png')}}"
+                                        class="img-fluid" style="height: 24px;" > <br>
+                                   <strong>Dashboard</strong></a></li>
+                            @else
                             <li><a href="#" class="text-decoration-none text-black"  data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"><img src="{{asset('main-frontend/img/login.png')}}"
                                         class="img-fluid" style="height: 24px;" > <br>
@@ -107,6 +118,7 @@
                                 data-bs-target="#staticBackdrop"  ><img src="{{asset('main-frontend/img/register.png')}}"
                                         class="img-fluid" style="height: 24px;">
                                     <br> <strong>Register</strong></a></li>
+                            @endif
                         </ul>
                     </div>
 

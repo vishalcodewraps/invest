@@ -5,7 +5,7 @@
 
 @section('body-header')
     <h3 class="crancy-header__title m-0">{{ $title }}</h3>
-    <p class="crancy-header__text">{{ __('translate.Manage Buyer') }} >> {{ $title }}</p>
+    <p class="crancy-header__text">Manage User >> {{ $title }}</p>
 @endsection
 
 @section('body-content')
@@ -40,6 +40,10 @@
                                                 </th>
 
                                                 <th class="crancy-table__column-2 crancy-table__h2 sorting" >
+                                                    Type
+                                                </th>
+
+                                                <th class="crancy-table__column-2 crancy-table__h2 sorting" >
                                                     {{ __('translate.Name') }}
                                                 </th>
 
@@ -53,9 +57,9 @@
 
 
 
-                                                <th class="crancy-table__column-2 crancy-table__h2 sorting" >
+                                                {{-- <th class="crancy-table__column-2 crancy-table__h2 sorting" >
                                                     {{ __('translate.Status') }}
-                                                </th>
+                                                </th> --}}
 
                                                 <th class="crancy-table__column-3 crancy-table__h3 sorting">
                                                     {{ __('translate.Action') }}
@@ -66,10 +70,25 @@
                                         <!-- crancy Table Body -->
                                         <tbody class="crancy-table__body">
                                             @foreach ($users as $index => $user)
+                                            @php
+                                                if($user->type == 1){
+                                                    $type = 'Investor';
+                                                }elseif($user->type == 2){
+                                                    $type = 'Business Owner';
+                                                }elseif($user->type == 3){
+                                                    $type = 'Service Provider';
+                                                }
+                                                
+                                            @endphp
+
                                                 <tr class="odd">
 
                                                     <td class="crancy-table__column-2 crancy-table__data-2">
                                                         <h4 class="crancy-table__product-title">{{ ++$index }}</h4>
+                                                    </td>
+
+                                                    <td class="crancy-table__column-2 crancy-table__data-2">
+                                                        <h4 class="crancy-table__product-title">{{ html_decode($type) }}</h4>
                                                     </td>
 
                                                     <td class="crancy-table__column-2 crancy-table__data-2">
@@ -84,17 +103,17 @@
                                                         <h4 class="crancy-table__product-title">{{ html_decode($user->phone) }}</h4>
                                                     </td>
 
-                                                    <td class="crancy-table__column-2 crancy-table__data-2">
+                                                    {{-- <td class="crancy-table__column-2 crancy-table__data-2">
                                                         <div class="crancy-ptabs__notify-switch  crancy-ptabs__notify-switch--two">
                                                             <label class="crancy__item-switch">
                                                             <input onClick="manageStatus({{ $user->id }})" name="status" type="checkbox" {{ $user->status == 'enable' ? 'checked' : '' }}>
                                                             <span class="crancy__item-switch--slide crancy__item-switch--round"></span>
                                                             </label>
                                                         </div>
-                                                    </td>
+                                                    </td> --}}
 
                                                     <td class="crancy-table__column-2 crancy-table__data-2">
-                                                        <a href="{{ route('admin.user-show', $user->id ) }}" class="crancy-btn"><i class="fas fa-eye"></i> {{ __('translate.Show') }}</a>
+                                                        {{-- <a href="{{ route('admin.user-show', $user->id ) }}" class="crancy-btn"><i class="fas fa-eye"></i> {{ __('translate.Show') }}</a> --}}
 
                                                         <a onclick="itemDeleteConfrimation({{ $user->id }})" href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal" class="crancy-btn delete_danger_btn"><i class="fas fa-trash"></i> {{ __('translate.Delete') }}</a>
                                                     </td>

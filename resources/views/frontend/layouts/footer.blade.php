@@ -92,8 +92,9 @@
                 All rights reserved © 2024 by <strong class="text-white">INVEST CONNECT Marketplace</strong> 
             </div>
             <div class="col-md-6 text-end">
-                <form class="d-flex justify-content-end">
-                    <input type="email" class="subscribe-input text-white" placeholder="Enter your email Address">
+                <form class="d-flex justify-content-end" action="{{url('send-newsletter')}}" method="post">
+                    @csrf
+                    <input type="email" class="subscribe-input text-white" placeholder="Enter your email Address" name="email">
                     <button type="submit" class="subscribe-button ms-2 text-white">Subscribe</button>
                 </form>
             </div>
