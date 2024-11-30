@@ -141,6 +141,7 @@ class BlogController extends Controller
             $blog_trans->description = $request->description;
             $blog_trans->seo_title = $request->seo_title ? $request->seo_title : $request->title;
             $blog_trans->seo_description = $request->seo_description ? $request->seo_description : $request->title;
+            $blog_trans->seo_keyword = $request->seo_keyword ;
             $blog_trans->save();
 
         }
@@ -218,6 +219,7 @@ class BlogController extends Controller
         $blog_trans->description = $request->description;
         $blog_trans->seo_title = $request->seo_title ? $request->seo_title : $request->title;
         $blog_trans->seo_description = $request->seo_description ? $request->seo_description : $request->title;
+        $blog_trans->seo_keyword = $request->seo_keyword;
         $blog_trans->save();
 
 

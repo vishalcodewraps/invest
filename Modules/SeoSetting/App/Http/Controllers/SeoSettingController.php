@@ -28,6 +28,7 @@ class SeoSettingController extends Controller
         $seo_setting = SeoSetting::findOrFail($id);
         $seo_setting->seo_title = $request->seo_title;
         $seo_setting->seo_description = $request->seo_description;
+        $seo_setting->seo_keyword = $request->seo_keyword;
         $seo_setting->save();
 
         $notify_message = trans('translate.Updated successfully');

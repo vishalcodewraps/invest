@@ -1,4 +1,14 @@
-@include('frontend.layouts.header')
+@extends('frontend.layouts.main-layout')
+
+@section('seo')
+    <title>{{ $seo_setting->seo_title }}</title>
+    <meta name="description" content="{!! strip_tags(clean($seo_setting->seo_description)) !!}">
+    <meta name="keywords" content="{{ $seo_setting->seo_keyword }}">
+@endsection
+
+@section('content')
+    
+
     <!-- <main class="banner bg-img" style="background-image: url('{{asset('main-frontend/img/banner.png')}}'); height: 567px; width: 100%; background-repeat: no-repeat; background-size: contain; background-position: center right;">
         <div class="container">
             <div class="row">
@@ -924,4 +934,5 @@
             </div>
         </div>
     </section>
-   @include('frontend.layouts.footer')
+
+    @endsection

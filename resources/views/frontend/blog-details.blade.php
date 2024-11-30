@@ -1,4 +1,12 @@
-@include('frontend.layouts.header')
+@extends('frontend.layouts.main-layout')
+
+@section('seo')
+    <title>{{ $blog->translate->seo_title }}</title>
+    <meta name="description" content="{!! strip_tags(clean($blog->translate->seo_description)) !!}">
+    <meta name="keywords" content="{{ $blog->translate->seo_keyword }}">
+@endsection
+
+@section('content')
 <!-- section start -->
 
 <section class="">
@@ -27,8 +35,7 @@
                             <div class="col-lg-3 col-md-3 col-sm-12">
                                 <div class="admin-blog">
                                     <img src="{{ asset('main-frontend/img/blog-admin.png') }}" alt="Admin" class="blog-admin-img" style="border-radius: 50%;">
-                                    <p class="mb-0">admin</p>
-                                    <p class="mb-0">Entrepreneurship, Guest Blog</p>
+                                    <p class="mb-0">{{ $blog->translate->author }}</p>
                                 </div>
                             </div>
 
@@ -61,20 +68,11 @@
                 <div style="border:5px solid black;margin: 40px 0;"></div>
                     <h3 class="my-4">Recent Posts</h3>
                     <ul class="list-unstyled" style="line-height: 29px; margin-left: 30px;">
-                        <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
-                        <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
-                        <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
-                        <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
+                        @foreach ($blogs as $res)
+                        <li><a href="{{ url('blog/' . $res->slug) }}" style="text-decoration:none;">{{ $res->translate->title}}</a></li>
+                        @endforeach
                     </ul>
-                    <div style="border:5px solid black;margin: 40px 0;"></div>
-                    <h3 class="my-4">Previous Articles</h3>
-
-                    <select class="form-select" aria-label="Default select example">
-                            <option selected>select Month</option>
-                            <option value="1">January</option>
-                            <option value="2">February</option>
-                            <option value="3">March</option>
-                    </select>
+                  
 
             </div>
             <!-- sidebar  end-->
@@ -84,4 +82,4 @@
     </div>
 </section>
 <!-- section end -->
-@include('frontend.layouts.footer')
+@endsection

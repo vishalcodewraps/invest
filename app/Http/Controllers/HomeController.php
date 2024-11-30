@@ -99,7 +99,7 @@ class HomeController extends Controller
         $selected_theme = Session::get('selected_theme');
 
         if ($selected_theme == 'theme_one'){
-            return view('frontend.index',compact('testimonials'));
+            return view('frontend.index',compact('testimonials','seo_setting'));
             // return view('index', [
             //     'seo_setting' => $seo_setting,
             //     'homepage' => $homepage,
@@ -168,17 +168,18 @@ class HomeController extends Controller
 
     public function blogs(Request $request)
     {
+        $blog_list = Blog::with('author')->where('status', 1)->latest()->limit(5)->get();
         $blogs = Blog::with('author')->where('status', 1);
 
         if($request->category){
             $blogs = $blogs->where('blog_category_id', $request->category);
         }
 
-        $blogs = $blogs->get();
+        $blogs = $blogs->paginate(10);
 
         $seo_setting = SeoSetting::where('id', 2)->first();
 
-        return view('frontend.blog',compact('blogs'));
+        return view('frontend.blog',compact('blogs','blog_list','seo_setting'));
     }
     public function blog_detail(Request $request)
     {
@@ -186,7 +187,8 @@ class HomeController extends Controller
     }
     public function news(Request $request)
     {
-        return view('frontend.news');
+        $seo_setting = SeoSetting::where('id', 6)->first();
+        return view('frontend.news',compact('seo_setting'));
     }
     public function send_contact(Request $request)
     {
@@ -200,13 +202,15 @@ class HomeController extends Controller
         return back()->with('success','Enquiry send successfully');
     }
     public function our_team(Request $request)
-    {
+    { 
+        $seo_setting = SeoSetting::where('id', 5)->first();
         $team = Team::where('status',1)->get();
-        return view('frontend.our-team',compact('team'));
+        return view('frontend.our-team',compact('team','seo_setting'));
     }
     public function contact(Request $request)
     {
-        return view('frontend.contact');
+        $seo_setting = SeoSetting::where('id', 4)->first();
+        return view('frontend.contact',compact('seo_setting'));
     }
 
     public function blog($slug)
@@ -215,7 +219,7 @@ class HomeController extends Controller
 
         $blog_comments = BlogComment::where('blog_id', $blog->id)->where('status', 1)->latest()->get();
 
-        $blogs = Blog::with('author')->where('status', 1)->latest()->limit(3)->get();
+        $blogs = Blog::with('author')->where('status', 1)->latest()->limit(5)->get();
         return view('frontend.blog-details', [
             'blog' => $blog,
             'blogs' => $blogs,
@@ -826,6 +830,7 @@ class HomeController extends Controller
 
      public function custom_reset_password(Request $request){
 
+        $seo_setting = SeoSetting::where('id', 7)->first();
         $user = User::select('id','name','email','forget_password_token')->where('forget_password_token', $request->token)->where('email', $request->email)->first();
 
         if(!$user){
@@ -833,7 +838,7 @@ class HomeController extends Controller
             return redirect()->route('home')->with('error','Invalid token, please try again');
         }
         
-        return view('frontend.reset_password1', compact('user'));
+        return view('frontend.reset_password1', compact('user','seo_setting'));
     }
 
 

@@ -13,7 +13,7 @@ use Modules\Blog\App\Models\BlogCategory;
 use Modules\Currency\App\Models\Currency;
 use Modules\Language\App\Models\Language;
 use Modules\GlobalSetting\App\Models\GlobalSetting;
-
+use Illuminate\Pagination\Paginator;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -46,6 +46,7 @@ class AppServiceProvider extends ServiceProvider
             });
         }catch(Throwable $th){}
 
+        Paginator::useBootstrap();
 
         $timezone_setting = Cache::get('setting');
 
@@ -78,4 +79,5 @@ class AppServiceProvider extends ServiceProvider
 
 
     }
+    
 }

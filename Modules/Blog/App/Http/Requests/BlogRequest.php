@@ -14,6 +14,8 @@ class BlogRequest extends FormRequest
                 'slug'=>'required|unique:blogs',
                 'image'=>'required',
                 'description'=>'required',                
+                'author'=>'required',                
+                'short_description'=>'required',                
             ];
         }
 
@@ -22,12 +24,16 @@ class BlogRequest extends FormRequest
                 $rules = [
                     'title'=>'required',
                     'slug'=>'required|unique:blogs,slug,'.$this->blog.',id',
-                    'description'=>'required',                    
+                    'description'=>'required',      
+                    'author'=>'required',                
+                'short_description'=>'required',                   
                 ];
             }else{
                 $rules = [
                     'title'=>'required',
                     'description'=>'required',
+                    'author'=>'required',                
+                'short_description'=>'required',
                 ];
             }
         }
