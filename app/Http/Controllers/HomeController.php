@@ -697,7 +697,10 @@ class HomeController extends Controller
     }
 
     public function verify_otp(Request $request){
-
+        $get = User::where('email',$request->email)->count();
+        if($get > 0){
+            return back()->with('error','This email already exist');
+        }
     //    $otp = $request->number1.$request->number2.$request->number3.$request->number4.$request->number5.$request->number6;
        
     //    if($otp == session()->get('otp')){
