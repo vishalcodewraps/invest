@@ -18,6 +18,23 @@
 
            
                 
+            <li class="{{ Route::is('admin.user-list') || Route::is('admin.pending-user') || Route::is('admin.user-show') ? 'active' : '' }}"><a href="#!" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menu-item__users"><span class="menu-bar__text">
+                <span class="crancy-menu-icon crancy-svg-icon__v1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="11.7778" cy="18.1111" rx="7.77778" ry="3.88889" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+                        <circle cx="11.7775" cy="6.44444" r="4.44444" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+
+                </span>
+                <span class="menu-bar__name">Manage User</span></span> <span class="crancy__toggle"></span></a></span>
+                <!-- Dropdown Menu -->
+                <div class="collapse crancy__dropdown {{ Route::is('admin.user-list') || Route::is('admin.pending-user')  || Route::is('admin.user-show') ? 'show' : '' }}" id="menu-item__users"  data-bs-parent="#CrancyMenu">
+                    <ul class="menu-bar__one-dropdown">
+
+                        <li><a href="{{ route('admin.user-list') }}"><span class="menu-bar__text"><span class="menu-bar__name">User List</span></span></a></li>
+                    </ul>
+                </div>
+            </li>
 
             <li class="{{ Route::is('admin.contact-message') || Route::is('admin.show-message') ? 'active' : '' }}""><a class="collapsed" href="{{ route('admin.contact-message') }}">
                 <span class="menu-bar__text">
@@ -177,7 +194,6 @@
 
                         <li><a href="{{ route('admin.newsletter-list') }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Subscriber List') }}</span></span></a></li>
 
-                        <li><a href="{{ route('admin.newsletter-email') }}"><span class="menu-bar__text"><span class="menu-bar__name">{{ __('translate.Send Mail') }}</span></span></a></li>
 
                     </ul>
                 </div>
