@@ -725,7 +725,7 @@ background-color: #b30000;
 color: white;
 }
 .blog-card-new{
-    margin-bottom: 30px !important;
+    margin: 70px 0;
 }
 .contact-one__form-input-box input[type="text"],
 .contact-one__form-input-box input[type="email"],
@@ -987,6 +987,7 @@ color: white;
         gap: 13px;
         align-items: center;
         font-size: 13px;
+        flex-direction: column;
     }
     .top-padding {
         padding: 0;
@@ -1124,7 +1125,7 @@ color: white;
         width: 100%;
         text-align: center;
     }
-
+  
   
     .btn-group {
         width: 100%;

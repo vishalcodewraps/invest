@@ -17,7 +17,7 @@
 
     <div class="container">
       
-    <div class="row my-5">
+    <!-- <div class="row my-5">
             @foreach ($blogs as $res)
                 <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
                     <a href="{{ url('blog/' . $res->slug) }}" class="text-decoration-none">
@@ -34,52 +34,55 @@
                     </a>
                 </div>
             @endforeach
-        </div>
+        </div> -->
 
-         <div class="row">
+         <div class="row blog-card-new">
           
             <!-- blog  start-->
             <div class="col-md-8 col-sm-12"> 
 
             @foreach ($blogs as $res)
                 <a href="{{ url('blog/' . $res->slug) }}" class="text-decoration-none text-black">           
-                    <div class="blog-card-new">
-                    <h2 class="heading2 mt-4" style="">{{ Str::words($res->translate->title, 5, '...') }}</h2>
-                    <a href=""><img src="{{ asset($res->image) }}" alt="" class="img-fluid my-3"></a>
+                    <div>
+                        <!-- Blog Title -->
+                        <h2 class="heading2 mt-4">{{ Str::words($res->translate->title, 5, '...') }}</h2>
+                        
+                        <!-- Blog Image -->
+                        <img src="{{ asset($res->image) }}" alt="Blog Image" class="img-fluid my-3">
 
-                    <div class="row blog-content">
-                        <div class="col-lg-3 col-md-3 col-sm-12 ">
-
-                            <div class="admin-blog">
-                            <img src="{{asset('main-frontend/img/blog-admin.png')}}" alt="" class="blog-admin-img" style="border-radius:50%;">
-                            <p class="mb-0">admin</p>
-                            <p class="mb-0">Entrepreneurship, Guest Blog</p>
+                        <!-- Blog Content -->
+                        <div class="row blog-content">
+                            <!-- Admin Section -->
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <div class="admin-blog">
+                                    <img src="{{ asset('main-frontend/img/blog-admin.png') }}" alt="Admin" class="blog-admin-img" style="border-radius: 50%;">
+                                    <p class="mb-0">admin</p>
+                                    <p class="mb-0">Entrepreneurship, Guest Blog</p>
+                                </div>
                             </div>
 
+                            <!-- Blog Description -->
+                            <div class="col-lg-9 col-md-9 col-sm-12">
+                                <p>{!! Str::words($res->translate->short_description, 20, '...') !!}</p>                  
+                            </div>
                         </div>
-
-                        <div class="col-lg-9 col-md-10 col-sm-12">
-                            <p> {!! Str::words($res->translate->short_description, 20, '...') !!}</p>                  
-                        </div>
-                    </div>
                     </div>
                 </a>
-                @endforeach              
+            @endforeach
             </div>  
            
             <!-- sidebar  start-->
             <div class="col-md-4">
                 <div style="border:5px solid black;margin: 40px 0;"></div>
                     <h3 class="my-4">Recent Posts</h3>
-
                     <ul class="list-unstyled" style="line-height: 29px; margin-left: 30px;">
                         <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
                         <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
                         <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
                         <li><a href="#" style="text-decoration:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, id!</a></li>
                     </ul>
-
                     <div style="border:5px solid black;margin: 40px 0;"></div>
+                    <h3 class="my-4">Previous Articles</h3>
 
                     <select class="form-select" aria-label="Default select example">
                             <option selected>select Month</option>
