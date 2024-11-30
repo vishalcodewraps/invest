@@ -449,43 +449,46 @@
         </div>
     </section>
 
-    <section style="background-color:#ecf0f1; margin:50px 0;">
+    <section style="background-color:#ecf0f1; margin-top:50px;">
 
     <div class="container">
         
-<div class="row text-center py-5">
-<div class="row">
-    <div class="col mb-2">
-        <div class="counter">
-            <h2 class="timer count-title count-number" data-to="200" data-speed="1500" style="color:#8e44ad;">0</h2>
-            <p class="count-text m-0" style="color:#8e44ad;">Users</p>
+        <div class="row text-center py-5">
+            <div class="row" id="counters">
+                <div class="col mb-2">
+                    <div class="counter">
+                        <h2 class="timer count-title count-number" data-to="200" data-speed="1500" style="color:#8e44ad;">0</h2>
+                        <p class="count-text m-0" style="color:#8e44ad;">Users</p>
+                    </div>
+                </div>
+                <div class="col mb-2">
+                    <div class="counter">
+                        <h2 class="timer count-title count-number" data-to="25" data-speed="1500" style="color:#e67e22;">0</h2>
+                        <p class="count-text m-0" style="color:#e67e22;">Investors</p>
+                    </div>
+                </div>
+                <div class="col mb-2">
+                    <div class="counter">
+                        <h2 class="timer count-title count-number" data-to="50" data-speed="1500" style="color:#2ecc71;">0</h2>
+                        <p class="count-text m-0" style="color:#2ecc71;">Partners</p>
+                    </div>
+                </div>
+                <div class="col mb-2">
+                    <div class="counter">
+                        <h2 class="timer count-title count-number" data-to="45" data-speed="1500" style="color:#c0392b;">0</h2>
+                        <p class="count-text m-0" style="color:#c0392b;">Pitches</p>
+                    </div>
+                </div>
+                <div class="col mb-2">
+                    <div class="counter">
+                        <h2 class="timer count-title count-number" data-to="30" data-speed="1500" style="color:#3498db;">0</h2>
+                        <p class="count-text m-0" style="color:#3498db;">Service Providers</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col mb-2">
-        <div class="counter">
-            <h2 class="timer count-title count-number" data-to="25" data-speed="1500" style="color:#e67e22;">0</h2>
-            <p class="count-text m-0" style="color:#e67e22;">Investors</p>
-        </div>
-    </div>
-    <div class="col mb-2">
-        <div class="counter">
-            <h2 class="timer count-title count-number" data-to="50" data-speed="1500" style="color:#2ecc71;">0</h2>
-            <p class="count-text m-0" style="color:#2ecc71;">Partners</p>
-        </div>
-    </div>
-    <div class="col mb-2">
-        <div class="counter">
-            <h2 class="timer count-title count-number" data-to="45" data-speed="1500" style="color:#c0392b;">0</h2>
-            <p class="count-text m-0" style="color:#c0392b;">Pitches</p>
-        </div>
-    </div>
-    <div class="col mb-2">
-        <div class="counter">
-            <h2 class="timer count-title count-number" data-to="30" data-speed="1500" style="color:#3498db;">0</h2>
-            <p class="count-text m-0" style="color:#3498db;">Service Providers</p>
-        </div>
-    </div>
-</div>
+        
+        
 
 
     </div>

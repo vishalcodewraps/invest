@@ -471,37 +471,47 @@
 </footer>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function () {
-    function startCounter() {
-        $('.count-number').each(function () {
-            const $this = $(this);
-            const target = parseInt($this.data('to'), 10); // Target value to count to
-            const speed = parseInt($this.data('speed'), 10); // Animation duration
+    // Function to start the counting animation
+    function startCountAnimation() {
+        var counters = document.querySelectorAll('.count-number');
+        
+        counters.forEach(function(counter) {
+            var target = counter.getAttribute('data-to');
+            var speed = counter.getAttribute('data-speed');
+            var current = 0;
 
-            // Reset count to 0 for refresh cases
-            $this.text('+0');
+            // Add the '+' symbol in front of the counter value
+            counter.textContent = '+0';  // Initialize counter with '+0'
 
-            // Animate from 0 to target
-            $({ countNum: 0 }).animate(
-                { countNum: target },
-                {
-                    duration: speed,
-                    easing: 'swing', // Smooth animation
-                    step: function () {
-                        $this.text(`+${Math.floor(this.countNum)}`); // Update text during animation with "+"
-                    },
-                    complete: function () {
-                        $this.text(`+${target}`); // Ensure exact target is shown at the end
-                    }
+            // Increase the number gradually
+            var interval = setInterval(function() {
+                if (current < target) {
+                    current++;
+                    counter.textContent = '+' + current; // Update text with the '+' symbol
+                } else {
+                    clearInterval(interval);
                 }
-            );
+            }, speed / target); // Adjust the speed to create a smooth animation
         });
     }
 
-    // Trigger the counter animation on page load or refresh
-    startCounter();
-});
+    // Intersection Observer to detect when the section comes into view
+    document.addEventListener("DOMContentLoaded", function() {
+        var countersSection = document.getElementById('counters'); // The section with counters
+        var observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    startCountAnimation(); // Start the animation
+                    observer.unobserve(entry.target); // Stop observing once it's in view
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the section is visible
+        });
 
-
+        // Observe the counters section
+        observer.observe(countersSection);
+    });
 </script>
+
 
