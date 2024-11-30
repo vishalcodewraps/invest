@@ -468,4 +468,39 @@
     </div>
 
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    function startCounter() {
+        $('.count-number').each(function () {
+            const $this = $(this);
+            const target = parseInt($this.data('to'), 10); // Target value to count to
+            const speed = parseInt($this.data('speed'), 10); // Animation duration
+
+            // Reset count to 0 for refresh cases
+            $this.text('+0');
+
+            // Animate from 0 to target
+            $({ countNum: 0 }).animate(
+                { countNum: target },
+                {
+                    duration: speed,
+                    easing: 'swing', // Smooth animation
+                    step: function () {
+                        $this.text(`+${Math.floor(this.countNum)}`); // Update text during animation with "+"
+                    },
+                    complete: function () {
+                        $this.text(`+${target}`); // Ensure exact target is shown at the end
+                    }
+                }
+            );
+        });
+    }
+
+    // Trigger the counter animation on page load or refresh
+    startCounter();
+});
+
+
+</script>
 
