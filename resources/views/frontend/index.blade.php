@@ -96,6 +96,42 @@
                 
             </div>
         </div>
+        
+             <div class="carousel-item">
+            <img src="{{asset('main-frontend/img/Frame%20405.png')}}" class="d-block w-100 banner-img" alt="...">
+            <div class="carousel-caption container">
+               
+
+                <div class="banner-heading">
+                <h1 class="h1-heading">
+                We bring together people fostering meaningful connections and collaboration.
+                </h1>
+               </div>
+
+                <div class="d-flex gap-2 Investor-button" style="align-items: center;">
+                        
+                <div class="p-2" style="background:white;">
+                        <h4  class="m-0 text-white looking-h4" style="color:#B91C1C !important;">I am looking to connect with</h4>
+                        </div>
+
+                        
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Investor
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Investor</a></li>
+                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
+                                <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
+                            </ul>
+                        </div>
+
+                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 50px;">
+                    </div>
+
+            </div>
+        </div>
 
         <div class="carousel-item">
             <img src="{{asset('main-frontend/img/Homepage-new.png')}}" class="d-block w-100 banner-img" alt="...">
@@ -134,41 +170,7 @@
         </div>
 
         
-        <div class="carousel-item">
-            <img src="{{asset('main-frontend/img/Frame%20405.png')}}" class="d-block w-100 banner-img" alt="...">
-            <div class="carousel-caption container">
-               
-
-                <div class="banner-heading">
-                <h1 class="h1-heading">
-                We bring together people fostering meaningful connections and collaboration.
-                </h1>
-               </div>
-
-                <div class="d-flex gap-2 Investor-button" style="align-items: center;">
-                        
-                <div class="p-2" style="background:white;">
-                        <h4  class="m-0 text-white looking-h4" style="color:#B91C1C !important;">I am looking to connect with</h4>
-                        </div>
-
-                        
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Investor
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Investor</a></li>
-                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
-                                <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
-                            </ul>
-                        </div>
-
-                        <img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 50px;">
-                    </div>
-
-            </div>
-        </div>
+   
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -192,7 +194,7 @@
                             Converge. Discover the Future of Angel Investing</strong></p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="{{asset('main-frontend/img/usp.jpg')}}" alt="" class="img-fluid section2-img" style="border-radius: 10px;">
+                    <img src="{{asset('main-frontend/img/new-usp.jpg')}}" alt="" class="img-fluid section2-img" style="border-radius: 10px;">
                 </div>
             </div>
         </div>
@@ -336,7 +338,6 @@
                 <div class="col-lg-12">
                 <h2 class="heading2 mt-4 text-center">Featured In</h2>
                 <hr>
-          
                         <div class="slider-container">
                             <div class="three-row-slider slider-2">
                                 <div><img src="{{asset('main-frontend/img/bbc.svg')}}" alt="Slide 1"></div>
@@ -366,7 +367,7 @@
         <div class="container">
             <div class="row">
                 <h2 class="heading2 mt-4 text-center">Our Trusted Partners</h2>
-                <p class="mt-4 section2p text-center">We are proud to collaborate with some of the most prestigious organizations worldwide. Our trusted partners span industries including media, technology, finance, and entrepreneurship, showcasing our commitment to quality and innovation. By working together, we aim to provide our audience with the latest insights, opportunities, and services that drive success.</p>
+                <p class="mt-4 section2p text-center">Our investors represent diverse industries, including technology, finance, healthcare, and sustainability, reflecting a shared commitment to driving meaningful change. Beyond financial backing, they offer mentorship, guidance, and connections, helping us navigate challenges and seize opportunities in a rapidly evolving marketplace.</p>
 
                 <div class="col-md-4">
                     <div class="bg-light shadow border border-2 my-3 text-center p-4 Partner-box">
@@ -429,7 +430,7 @@
                 
                 <div class="col-md-12 text-center">
                     
-                    <p>Build the perfect team and organize seamlessly to boost productivity, save time, and spark innovation—explore more to unlock your potential!</p>
+                    <p class="heading4 mt-5 text-dark text-center">Build the perfect team and organize seamlessly to boost productivity, save time, and spark innovation—explore more to unlock your potential</p>
                     
                     <button class="btn btn-light py-3 px-4  Investment-btn" style="background: #b91c1c; color:white;">Become Part of Our Marketplace</button>
                 </div>
@@ -598,9 +599,9 @@
                 </div>
                 
                 
-                <p class="heading4 mt-5 text-dark text-center">“Connect with thousands of investors ready to shape
+                <p class="heading4 mt-5 text-dark text-center">Connect with thousands of investors ready to shape
                     your
-                    idea and fuel your growth.”</p>
+                    idea and fuel your growth.</p>
 
                 <div class="my-2">
                     
@@ -720,11 +721,11 @@
     </section>
 
 
-    <section>
+    <section style="background-color:#ecf0f1;">
         <div class="container">
             <div class="row my-4">
                 <!-- HTML Structure for Owl Carousel -->
-                <div class="col-md-12 p-4" style="border-radius: 10px; background-color:#ecf0f1;">
+                <div class="col-md-12 p-4" style="border-radius: 10px;">
                 <h2 class="heading3 text-dark my-4  text-center">Testimonials</h2>
                 <div class="owl-carousel carousel-two">
                     @foreach($testimonials as $res)

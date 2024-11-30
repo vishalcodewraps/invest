@@ -288,7 +288,7 @@
 }
 
 .heading4 {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -724,7 +724,9 @@ input.border-bottom-input:focus {
 background-color: #b30000;
 color: white;
 }
-
+.blog-card-new{
+    margin-bottom: 30px !important;
+}
 .contact-one__form-input-box input[type="text"],
 .contact-one__form-input-box input[type="email"],
 .contact-one__form-input-box input[type="date"] {
@@ -906,6 +908,27 @@ color: white;
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+.custom-select {
+    appearance: none; /* Remove the default dropdown arrow */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    padding: 10px;
+    font-size: 16px;
+    color: #333; /* Text color */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23333" viewBox="0 0 24 24" width="24px" height="24px"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: #007bff; /* Change border color on focus */
+}
+
 
 @media only screen and (max-width: 1200px) {
     .nav-link {

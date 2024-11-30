@@ -18,12 +18,11 @@
             </div>
             <div class="col-md-3 align-items-center">
                 <ul class="list-unstyled d-flex gap-2 my-3">
-                    <li><img src="{{ asset('main-frontend/img/instagram.png') }}" alt="" class="img-fluid"></li>
-                    <li><img src="{{ asset('main-frontend/img/facebook.png') }}" alt="" class="img-fluid"></li>
-                    <li><img src="{{ asset('main-frontend/img/twitter.png') }}" alt="" class="img-fluid"></li>
-                    <li><img src="{{ asset('main-frontend/img/blog.png') }}" alt="" class="img-fluid"></li>
-
-                    <li><img src="{{ asset('main-frontend/img/linkden.png') }}" alt="" class="img-fluid"></li>
+                    <li><a href="https://www.instagram.com/investconnectmarketplace/" target="_blank"><img src="{{ asset('main-frontend/img/instagram.png') }}" alt="" class="img-fluid"></a></li>
+                    <li><a href="https://www.facebook.com/Investconnectmarketplace" target="_blank"><img src="{{ asset('main-frontend/img/facebook.png') }}" alt="" class="img-fluid"></a></li>
+                    <li><a href="https://x.com/InvestConnect24" target="_blank"><img src="{{ asset('main-frontend/img/twitter.png') }}" alt="" class="img-fluid"></a></li>
+                    <li><a href="#" target="_blank"><img src="{{ asset('main-frontend/img/blog.png') }}" alt="" class="img-fluid"></a></li>
+                    <li><a href="https://www.linkedin.com/company/investconnectmarketplace/" target="_blank"><img src="{{ asset('main-frontend/img/linkden.png') }}" alt="" class="img-fluid"></a></li>
                 </ul>
             </div>
 
@@ -90,8 +89,7 @@
         <!-- Bottom Section with Copyright and Subscribe -->
         <div class="row mt-4 pt-3 border-top border-secondary">
             <div class="col-md-6 text-white bottom-text">
-                All rights reserved © 2024 by <strong class="text-white">INVEST CONNECT Marketplace</strong> |
-                Designed by Codewraps
+                All rights reserved © 2024 by <strong class="text-white">INVEST CONNECT Marketplace</strong> 
             </div>
             <div class="col-md-6 text-end">
                 <form class="d-flex justify-content-end">
@@ -173,14 +171,14 @@
                                 </div>
                             </form>
                                 <!-- Social Login Buttons -->
-                                <div class="col-6 mb-4 social-link-login">
-                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
-                                    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>
-                                </div>
-                                <div class="col-6 mb-4 social-link-login">
-                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
-                                    class="fa-brands fa-google"></i></span> Google </button>
-                                </div>
+                                <!--<div class="col-6 mb-4 social-link-login">-->
+                                <!--    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i-->
+                                <!--    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>-->
+                                <!--</div>-->
+                                <!--<div class="col-6 mb-4 social-link-login">-->
+                                <!--    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i-->
+                                <!--    class="fa-brands fa-google"></i></span> Google </button>-->
+                                <!--</div>-->
 
                             </div>
                         </div>
@@ -246,14 +244,14 @@
                             </div>
 
                             <!-- Social Login Buttons -->
-                            <div class="col-6 mb-2">
-                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
-                                    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
-                                    class="fa-brands fa-google"></i></span> Google </button>
-                                </div>
+                            <!--<div class="col-6 mb-2">-->
+                            <!--        <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i-->
+                            <!--        class="fa-brands fa-facebook-f"></i> Facebook</span> </button>-->
+                            <!--    </div>-->
+                            <!--    <div class="col-6 mb-2">-->
+                            <!--        <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i-->
+                            <!--        class="fa-brands fa-google"></i></span> Google </button>-->
+                            <!--    </div>-->
                         </div>
                     </form>
                     </div>
@@ -320,14 +318,14 @@
                                 </div>
 
                                 <!-- Social Login Buttons -->
-                                <div class="col-6 mb-3">
-                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
-                                    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>
-                                </div>
-                                <div class="col-6 mb-3">
-                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
-                                    class="fa-brands fa-google"></i></span> Google </button>
-                                </div>
+                                <!--<div class="col-6 mb-3">-->
+                                <!--    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i-->
+                                <!--    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>-->
+                                <!--</div>-->
+                                <!--<div class="col-6 mb-3">-->
+                                <!--    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i-->
+                                <!--    class="fa-brands fa-google"></i></span> Google </button>-->
+                                <!--</div>-->
                             </div>
                         </div>
                     </div>
@@ -439,23 +437,23 @@
 
                                 <!-- Submit Button -->
                                 <div class="col-12 mb-2">
-                                    <button type="submit" class="btn btn-red w-100">Create Account</button>
+                                    <button type="submit" class="btn btn-red w-100 nt-3">Create Account</button>
                                 </div>
-                                <div class="col-12 text-center mb-3">
+                                <div class="col-12 text-center mb-3 mt-2">
                                     Already have an account? <span><a href="#" class="text-decoration-none"
                                             style="color: #b30000;" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal">Login</a></span>
                                 </div>
 
                                 <!-- Social Login Buttons -->
-                                <div class="col-6 mb-2">
-                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
-                                    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>
-                                </div>
-                                <div class="col-6 mb-2">
-                                    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i
-                                    class="fa-brands fa-google"></i></span> Google </button>
-                                </div>
+                                <!--<div class="col-6 mb-2">-->
+                                <!--    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i-->
+                                <!--    class="fa-brands fa-facebook-f"></i> Facebook</span> </button>-->
+                                <!--</div>-->
+                                <!--<div class="col-6 mb-2">-->
+                                <!--    <button class="btn btn-outline w-100" style="border:1px solid #dee2e6;"> <span><i-->
+                                <!--    class="fa-brands fa-google"></i></span> Google </button>-->
+                                <!--</div>-->
                             </div>
                         </form>
                         </div>

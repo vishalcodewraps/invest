@@ -100,7 +100,7 @@
                             <a class="nav-link" href="#">Investor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Business Owner</a>
+                            <a class="nav-link" href="#">Business</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Marketplace Support</a>
