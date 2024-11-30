@@ -22,7 +22,6 @@
         <div class="row my-5">
             <div class="col-md-8 ">
                 <div class="blog-details rounded">
-                <h2 class="fw-bold my-3">{{ $blog->translate->title }}</h2>
                     <img src="{{ asset($blog->image) }}" alt="" class="img-fluid rounded">                  
                     <p class="text-white">{!! $blog->translate->short_description !!}</p>
                   
