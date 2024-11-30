@@ -76,7 +76,7 @@
                             <a class="nav-link" href="#">Business</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Marketplace Support</a>
+                            <a class="nav-link" href="#">Marketplace</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Price</a>
