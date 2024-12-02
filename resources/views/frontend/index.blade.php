@@ -487,37 +487,13 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+        
+        
+
+
     </div>
-    <div class="col mb-2">
-        <div class="counter">
-            <h2 class="timer count-title count-number" data-to="25" data-speed="1500" style="color:#e67e22;">0</h2>
-            <p class="count-text m-0" style="color:#e67e22;">Investors</p>
-        </div>
-    </div>
-    <div class="col mb-2">
-        <div class="counter">
-            <h2 class="timer count-title count-number" data-to="50" data-speed="1500" style="color:#2ecc71;">0</h2>
-            <p class="count-text m-0" style="color:#2ecc71;">Partners</p>
-        </div>
-    </div>
-    <div class="col mb-2">
-        <div class="counter">
-            <h2 class="timer count-title count-number" data-to="45" data-speed="1500" style="color:#c0392b;">0</h2>
-            <p class="count-text m-0" style="color:#c0392b;">Pitches</p>
-        </div>
-    </div>
-    <div class="col mb-2">
-        <div class="counter">
-            <h2 class="timer count-title count-number " data-to="30" data-speed="1500" style="color:#3498db;">0</h2>
-            <p class="count-text m-0" style="color:#3498db;">Service Providers</p>
-        </div>
-    </div>
+
 </div>
-=======
-        
-        
->>>>>>> 7f47db501cea129c20c02adadb17daf382ce9e0a
 
 
     </div>
