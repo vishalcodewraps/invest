@@ -45,7 +45,7 @@
 
 <!-- Initialize Owl Carousel -->
 <script>
- $(document).ready(function() {
+$(document).ready(function() {
     // Initialize Carousel 1
     $('.carousel-one').owlCarousel({
         loop: true,
@@ -70,7 +70,21 @@
             1000: { items: 3 }
         }
     });
+
+    // Initialize Carousel 3
+    $('.carousel-third').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        responsive: {
+            0: { items: 1 },
+            600: { items: 3 },
+            1000: { items: 5 }
+        }
+    });
 });
+
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>

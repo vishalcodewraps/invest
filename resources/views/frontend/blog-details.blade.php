@@ -35,12 +35,13 @@
                                 <div class="admin-blog">
                                     <img src="{{ asset('main-frontend/img/blog-admin.png') }}" alt="Admin" class="blog-admin-img" style="border-radius: 50%;">
                                     <p class="mb-0">{{ $blog->translate->author }}</p>
+                                  
                                 </div>
                             </div>
 
                             <!-- Blog Description -->
                             <div class="col-lg-9 col-md-9 col-sm-12">
-                            <p> {!! $blog->translate->description !!} </p>                  
+                            <p> {!! $blog->translate->description !!} </p>            
                             </div>
                         </div>
 
@@ -75,6 +76,8 @@
 
             </div>
             <!-- sidebar  end-->
+
+
             </div>
 
         </div>

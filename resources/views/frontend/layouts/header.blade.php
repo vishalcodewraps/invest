@@ -103,7 +103,7 @@
                     </div>
 
 
-                    <div class="d-sm-block d-md-none">
+                    <div class="d-sm-block d-md-block d-lg-none">
                         <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center text-center justify-content-start my-2">
                             @if(Auth::check())
                             <li><a href="{{url('invester/dashboard')}}" class="text-decoration-none text-black"><img src="{{asset('main-frontend/img/login.png')}}"
@@ -115,7 +115,7 @@
                                         class="img-fluid" style="height: 24px;" > <br>
                                    <strong>Login</strong></a></li>
                             <li><a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"  ><img src="{{asset('main-frontend/img/register.png')}}"
+                                data-bs-target="#staticBackdrop"><img src="{{asset('main-frontend/img/register.png')}}"
                                         class="img-fluid" style="height: 24px;">
                                     <br> <strong>Register</strong></a></li>
                             @endif

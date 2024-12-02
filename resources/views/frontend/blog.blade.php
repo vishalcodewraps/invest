@@ -70,7 +70,8 @@
 
                             <!-- Blog Description -->
                             <div class="col-lg-9 col-md-9 col-sm-12">
-                                <p>{!! Str::words($res->translate->short_description, 20, '...') !!}</p>                  
+                                <p>{!! Str::words($res->translate->short_description, 20, '...') !!}</p> 
+                                <button class="btn btn-danger">Read more</button>                 
                             </div>
                         </div>
                     </div>
