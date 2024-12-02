@@ -59,6 +59,9 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
     Route::get('/contact-us', [HomeController::class, 'contact_us'])->name('contact-us');
 
 
+    Route::get('/maintenance-mode', [HomeController::class, 'maintenance']);
+
+
 
 
 

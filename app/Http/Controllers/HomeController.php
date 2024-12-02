@@ -227,6 +227,10 @@ class HomeController extends Controller
         $seo_setting = SeoSetting::where('id', 4)->first();
         return view('frontend.contact',compact('seo_setting'));
     }
+    public function maintenance(Request $request)
+    {
+        return view('frontend.maintenance');
+    }
 
     public function blog($slug)
     {
