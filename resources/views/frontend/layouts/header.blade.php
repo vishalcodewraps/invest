@@ -5,7 +5,7 @@
                 <div class="row top-padding">
 
                     <div class="col-md-4">
-                        <a class="navbar-brand d-none d-md-none d-lg-block" href="#">
+                        <a class="navbar-brand d-none d-md-none d-lg-block" href="{{url('/')}}">
                             <div class="d-flex align-items-center gap-2">
                                 <img src="{{asset('main-frontend/img/logo.png')}}" alt="logo" class="img-fluid" style="height: 68px;">
                                 <div>
@@ -76,16 +76,16 @@
                             <a class="nav-link" aria-current="page" href="{{url('/')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Investor</a>
+                            <a class="nav-link" href="{{url('maintenance-mode')}}">Investor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Business</a>
+                            <a class="nav-link" href="{{url('maintenance-mode')}}">Business</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Marketplace</a>
+                            <a class="nav-link" href="{{url('maintenance-mode')}}">Marketplace</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Price</a>
+                            <a class="nav-link" href="{{url('maintenance-mode')}}">Price</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('our-team')}}">Our Team</a>

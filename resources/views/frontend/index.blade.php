@@ -57,18 +57,23 @@
                         </div>
                         
                         <div class="btn-group">
-                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
+                            {{-- <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Investor
-                            </button>
-                            <ul class="dropdown-menu">
+                            </button> --}}
+                            {{-- <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Investor</a></li>
                                 <li><a class="dropdown-item" href="#">Business Owner</a></li>
                                 <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
-                            </ul>
+                            </ul> --}}
+                            <select class="form-control form-select" style="background: white;color: black; height: 55px; height: 55px;">
+                                <option value="">Investor</option>
+                                <option value="">Business Owner</option>
+                                <option value="">Marketplace Support</option>
+                            </select>
                         </div>
 
-                      <a href=""><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
+                      <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
                     </div>
             </div>
         </div>
@@ -90,18 +95,23 @@
                         </div>
                         
                         <div class="btn-group">
-                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
+                            {{-- <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Investor
-                            </button>
-                            <ul class="dropdown-menu">
+                            </button> --}}
+                            {{-- <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Investor</a></li>
                                 <li><a class="dropdown-item" href="#">Business Owner</a></li>
                                 <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
-                            </ul>
+                            </ul> --}}
+                            <select class="form-control form-select" style="background: white;color: black; height: 55px;">
+                                <option value="">Investor</option>
+                                <option value="">Business Owner</option>
+                                <option value="">Marketplace Support</option>
+                            </select>
                         </div>
 
-                        <a href=""><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
+                        <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
                     </div>
                 
             </div>
@@ -126,18 +136,23 @@
 
                         
                         <div class="btn-group">
-                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
+                            {{-- <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Investor
-                            </button>
-                            <ul class="dropdown-menu">
+                            </button> --}}
+                            {{-- <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Investor</a></li>
                                 <li><a class="dropdown-item" href="#">Business Owner</a></li>
                                 <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
-                            </ul>
+                            </ul> --}}
+                            <select class="form-control form-select" style="background: white;color: black; height: 55px;">
+                                <option value="">Investor</option>
+                                <option value="">Business Owner</option>
+                                <option value="">Marketplace Support</option>
+                            </select>
                         </div>
 
-                        <a href=""><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
+                        <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
                     </div>
 
             </div>
@@ -162,18 +177,24 @@
 
                         
                         <div class="btn-group">
-                            <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
+                            {{-- <button type="button" class="btn btn-light dropdown-toggle dropdown-btn " data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Investor
-                            </button>
-                            <ul class="dropdown-menu">
+                            </button> --}}
+                            {{-- <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Investor</a></li>
                                 <li><a class="dropdown-item" href="#">Business Owner</a></li>
                                 <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
-                            </ul>
+                            </ul> --}}
+
+                            <select class="form-control form-select" style="background: white;color: black; height: 55px;">
+                                <option value="">Investor</option>
+                                <option value="">Business Owner</option>
+                                <option value="">Marketplace Support</option>
+                            </select>
                         </div>
 
-                        <a href=""><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
+                        <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
                     </div>
 
             </div>
