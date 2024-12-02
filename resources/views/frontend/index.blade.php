@@ -481,7 +481,7 @@
     </div>
     <div class="col mb-2">
         <div class="counter">
-            <h2 class="timer count-title count-number" data-to="30" data-speed="1500" style="color:#3498db;">0</h2>
+            <h2 class="timer count-title count-number " data-to="30" data-speed="1500" style="color:#3498db;">0</h2>
             <p class="count-text m-0" style="color:#3498db;">Service Providers</p>
         </div>
     </div>

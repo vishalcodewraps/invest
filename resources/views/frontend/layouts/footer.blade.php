@@ -472,34 +472,50 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function () {
-    function startCounter() {
-        $('.count-number').each(function () {
-            const $this = $(this);
-            const target = parseInt($this.data('to'), 10); // Target value to count to
-            const speed = parseInt($this.data('speed'), 10); // Animation duration
+    // Function to start the count-up animation
+    function startCounter($this) {
+        const target = parseInt($this.data('to'), 10); // Target value to count to
+        const speed = parseInt($this.data('speed'), 10); // Animation duration
 
-            // Reset count to 0 for refresh cases
-            $this.text('+0');
+        // Reset counter text to +0 when re-triggering
+        $this.text('+0');
 
-            // Animate from 0 to target
-            $({ countNum: 0 }).animate(
-                { countNum: target },
-                {
-                    duration: speed,
-                    easing: 'swing', // Smooth animation
-                    step: function () {
-                        $this.text(`+${Math.floor(this.countNum)}`); // Update text during animation with "+"
-                    },
-                    complete: function () {
-                        $this.text(`+${target}`); // Ensure exact target is shown at the end
-                    }
+        // Animate from 0 to target
+        $({ countNum: 0 }).animate(
+            { countNum: target },
+            {
+                duration: speed,
+                easing: 'swing', // Smooth animation
+                step: function () {
+                    $this.text(`+${Math.floor(this.countNum)}`); // Update text during animation with "+"
+                },
+                complete: function () {
+                    $this.text(`+${target}`); // Ensure exact target is shown at the end
                 }
-            );
-        });
+            }
+        );
     }
 
-    // Trigger the counter animation on page load or refresh
-    startCounter();
+    // Function to observe when the counter element is in view
+    function observeCounters() {
+        const counters = document.querySelectorAll('.count-number');
+        
+        // Set up an IntersectionObserver to trigger animation when the counter comes into view
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const $counter = $(entry.target);
+                    startCounter($counter);
+                    observer.unobserve(entry.target); // Stop observing after the animation starts
+                }
+            });
+        }, { threshold: 0.5 }); // Adjust threshold to trigger when 50% of the element is in view
+
+        counters.forEach(counter => observer.observe(counter));
+    }
+
+    // Trigger the observer when the document is ready
+    observeCounters();
 });
 
 
