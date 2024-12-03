@@ -32,8 +32,8 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::get('/about-us', [HomeController::class, 'about_us'])->name('about-us');
-    // Route::post('/create-user', [HomeController::class, 'send_otp']);
-    Route::post('/create-user', [HomeController::class, 'verify_otp']);
+    Route::post('/create-user', [HomeController::class, 'send_otp']);
+    // Route::post('/create-user', [HomeController::class, 'verify_otp']);
     Route::get('/resend-otp', [HomeController::class, 'send_otp']);
     Route::post('/verify-otp', [HomeController::class, 'verify_otp']);
     Route::post('/forgot-password', [HomeController::class, 'forgot_password']);
