@@ -241,7 +241,7 @@
                 <h2 class="heading3 mt-5 text-dark text-center">Explore Investment Opportunities</h2>
                 <p class="para3 text-center mt-3 mb-5 text-dark">At the heart of Invest Connect Marketplace lies a clear vision: to create a world where access to capital and innovation knows no boundaries. By connecting ambitious entrepreneurs with investors seeking to make a difference, we build an ecosystem that transforms ideas into reality. Whether you’re a startup founder with a revolutionary vision or an investor passionate about driving change, our platform connects dreams with possibilities.</p>
 
-                
+
                 <div class="col-md-6 col-sm-12 col-lg-4 mb-3">
 
                     <a href="#" class="text-decoration-none">
