@@ -89,7 +89,7 @@
         <!-- Bottom Section with Copyright and Subscribe -->
         <div class="row mt-4 pt-3 border-top border-secondary">
             <div class="col-md-6 text-white bottom-text">
-                All rights reserved © 2024 by <strong class="text-white">INVEST CONNECT Marketplace</strong> 
+                All rights reserved © 2024 by <strong class="text-white">Invest Connect Marketplace</strong> 
             </div>
             <div class="col-md-6 text-end my-2">
                 <form class="d-flex justify-content-end" action="{{url('send-newsletter')}}" method="post">
@@ -119,7 +119,7 @@
                         <!-- Form Column -->
                         <div class="col-12 col-md-12 col-lg-6 pt-4 px-3">
                             <h5>Welcome to</h5>
-                            <p class="login-text">INVEST CONNECT Marketplace</p>
+                            <p class="login-text text-capitalize">Invest Connect Marketplace</p>
 
                             <!-- Form Fields -->
                             <form action="{{url('user-login')}}" method="post">

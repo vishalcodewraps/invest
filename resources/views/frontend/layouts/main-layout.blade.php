@@ -254,13 +254,6 @@ $(document).ready(function () {
 
 </script>
 
-<script>
-   $(document).ready(function() {
-    setInterval(function() {
-        $("#exampleModal").modal('show');
-    }, 10000);
-});
-</script>
 
 
 </body>
