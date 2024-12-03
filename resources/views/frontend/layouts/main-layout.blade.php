@@ -237,7 +237,13 @@ otpInputs.forEach((input, index) => {
     });
 
 
-$(document).ready(function () {
+
+
+</script>
+
+@if(!Auth::check())
+<script>
+    $(document).ready(function () {
     let modalClosed = false; // Flag to track modal state
 
     setInterval(function () {
@@ -251,11 +257,8 @@ $(document).ready(function () {
         modalClosed = true;
     });
 });
-
 </script>
-
-
-
+@endif
 </body>
 
 </html>
