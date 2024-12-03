@@ -67,17 +67,37 @@
                                 <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
                             </ul> --}}
                             
-                            <div class="filters">
-                            	 	<select id="main_select_services" class="select-club-services" name="club-services">
-                                		<option value=".abrikosovaya" selected>Investor</option>
-                                		<option value=".bratskaya">Business Owner</option>
-                                		<option value=".lesi-ukrainki">Our Marketplace</option>
-                                	</select>
+                            <div class="d-sm-none d-md-none d-lg-block">
+                                <div class="filters">
+                                    <select id="main_select_services" class="select-club-services" name="club-services">
+                                       <option value=".abrikosovaya" selected>Investor</option>
+                                       <option value=".bratskaya">Business Owner</option>
+                                       <option value=".lesi-ukrainki">Our Marketplace</option>
+                                   </select>
+                                 </div>
                             </div>
+
+                           
                             
                         </div>
 
+                        {{-- mobile dropdown start--}}
+                            <div class="mobile d-sm-block d-md-none  d-lg-none">
+                                <div class="filters">
+                                    <select id="main_select_services" class="select-club-services" name="club-services">
+                                    <option value=".abrikosovaya" selected>Investor mobile</option>
+                                    <option value=".bratskaya">Business Owner</option>
+                                    <option value=".lesi-ukrainki">Our Marketplace</option>
+                                </select>
+                                </div>
+
+                                <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
+                            </div>
+                        {{-- mobile dropdown end --}}
+
                       <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
+                   
+                   
                     </div>
             </div>
         </div>
@@ -109,15 +129,32 @@
                                 <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
                             </ul> --}}
                             
-                              <div class="filters">
-                             	<select id="main_select_services" class="select-club-services" name="club-services">
-                                		<option value=".abrikosovaya" selected>Investor</option>
-                                		<option value=".bratskaya">Business Owner</option>
-                                		<option value=".lesi-ukrainki">Our Marketplace</option>
-                                	</select>
-                             </div>
+                            <div class="d-sm-none d-md-none d-lg-block">
+                                <div class="filters">
+                                    <select id="main_select_services" class="select-club-services" name="club-services">
+                                       <option value=".abrikosovaya" selected>Investor</option>
+                                       <option value=".bratskaya">Business Owner</option>
+                                       <option value=".lesi-ukrainki">Our Marketplace</option>
+                                   </select>
+                                 </div>
+                            </div>
                              
                         </div>
+
+                           {{-- mobile dropdown start--}}
+                           <div class="mobile d-sm-block d-md-none  d-lg-none">
+                                <div class="filters">
+                                    <select id="main_select_services" class="select-club-services" name="club-services">
+                                    <option value=".abrikosovaya" selected>Investor mobile</option>
+                                    <option value=".bratskaya">Business Owner</option>
+                                    <option value=".lesi-ukrainki">Our Marketplace</option>
+                                    </select>
+                                </div>
+
+                                <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
+
+                          </div>
+                    {{-- mobile dropdown end --}}
 
                         <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
                     </div>
@@ -157,6 +194,22 @@
                                 	</select>
                              </div>
                         </div>
+
+
+                           {{-- mobile dropdown start--}}
+                           <div class="mobile d-sm-block d-md-none  d-lg-none">
+                                <div class="filters">
+                                    <select id="main_select_services" class="select-club-services" name="club-services">
+                                    <option value=".abrikosovaya" selected>Investor mobile</option>
+                                    <option value=".bratskaya">Business Owner</option>
+                                    <option value=".lesi-ukrainki">Our Marketplace</option>
+                                </select>
+                                </div>
+
+                                <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
+                                
+                            </div>
+                    {{-- mobile dropdown end --}}
 
                         <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
                     </div>
