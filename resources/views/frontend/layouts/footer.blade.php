@@ -89,9 +89,9 @@
         <!-- Bottom Section with Copyright and Subscribe -->
         <div class="row mt-4 pt-3 border-top border-secondary">
             <div class="col-md-6 text-white bottom-text">
-                All rights reserved © 2024 by <strong class="text-white">INVEST CONNECT Marketplace</strong> 
+                All rights reserved © 2024 by <strong class="text-white">Invest Connect Marketplace</strong> 
             </div>
-            <div class="col-md-6 text-end">
+            <div class="col-md-6 text-end my-2">
                 <form class="d-flex justify-content-end" action="{{url('send-newsletter')}}" method="post">
                     @csrf
                     <input type="email" class="subscribe-input text-white" placeholder="Enter your email Address" name="email">
@@ -111,22 +111,22 @@
                         aria-label="Close"></button>
                     <div class="row">
                         <!-- Image Column -->
-                        <div class="col-12 col-md-6 p-0 d-none d-md-block">
+                        <div class="col-12 col-md-12 col-lg-6 p-0 d-none d-md-none d-lg-block">
                             <img src="{{ asset('main-frontend/img/login-image.png')}}" alt="Register" class="img-fluid"
                             style="height: 597px; width:100%; border-radius: 21px 0 0 21px">
                         </div>
 
                         <!-- Form Column -->
-                        <div class="col-12 col-md-6 pt-4 px-3">
+                        <div class="col-12 col-md-12 col-lg-6 pt-4 px-3">
                             <h5>Welcome to</h5>
-                            <p class="login-text">INVEST CONNECT Marketplace</p>
+                            <p class="login-text text-capitalize">Invest Connect Marketplace</p>
 
                             <!-- Form Fields -->
                             <form action="{{url('user-login')}}" method="post">
                                 @csrf
                             <div class="row">
 
-                                <div class="col-12 col-md-12">
+                                <div class="col-12">
                                     <div class="contact-one__form-input-box input-design rounded">
                                         <span class="name-span">Email</span>
                                         <input type="email" placeholder="john.doe@gmail.com" name="email" class="form-control"
@@ -204,7 +204,7 @@
                 <button type="button" class="btn-close float-end pe-2" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="row">
                     <!-- Image Column -->
-                    <div class="col-12 col-md-6 p-0 d-none d-md-block">
+                    <div class="col-12 col-md-12 col-lg-6 p-0 d-none d-md-none d-lg-block">
                         <img src="{{ asset('main-frontend/img/register-image.png') }}" alt="Register" class="img-fluid" style="height: 597px; width: 100%; object-fit: cover; border-radius: 21px 0 0 21px">
                     </div>
 
@@ -278,7 +278,7 @@
                         aria-label="Close"></button>
                     <div class="row">
                         <!-- Image Column -->
-                        <div class="col-12 col-md-6 p-0 d-none d-md-block">
+                        <div class="col-12 col-md-12 col-lg-6 p-0 d-none d-md-none d-lg-block">
                             <img src="{{ asset('main-frontend/img/register-image.png')}}" alt="Register" class="img-fluid"
                             style=" height: 597px; width: 100%; object-fit: cover; border-radius: 21px 0 0 21px;">
                         </div>
@@ -345,13 +345,13 @@
                         aria-label="Close"></button>
                     <div class="row">
                         <!-- Image Column -->
-                        <div class="col-12 col-md-6 p-0 d-none d-md-block">
+                        <div class="col-12 col-md-12 col-lg-6 p-0 d-none d-md-none d-lg-block">
                             <img src="{{ asset('main-frontend/img/register-image.png')}}" alt="Register" class="img-fluid"
                                 style="height: 605px; width: 100%; object-fit: cover; border-radius: 21px 0 0 21px;">
                         </div>
 
                         <!-- Form Column -->
-                        <div class="col-12 col-md-6 pt-4 px-3">
+                        <div class="col-12 col-md-12 col-lg-6 pt-4 px-3">
                             <h5>Register</h5>
                             <p style="margin-bottom:0.5rem;">Let’s get you all set up so you can access your personal account.</p>
                             <form action="{{url('create-user')}}" method="post" onsubmit="return submit_registration()">
@@ -370,28 +370,28 @@
                             <!-- Form Fields -->
                           
                             <div class="row">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-12 col-lg-6">
                                     <div class="contact-one__form-input-box input-design rounded">
                                         <span class="name-span">First Name</span>
                                         <input type="text" placeholder="Enter first name" name="name" class="form-control"
                                             required>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-12 col-lg-6">
                                     <div class="contact-one__form-input-box input-design rounded">
                                         <span class="name-span">Last Name</span>
                                         <input type="text" placeholder="Enter last name" name="last_name" class="form-control"
                                             required>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-12 col-lg-6">
                                     <div class="contact-one__form-input-box input-design rounded">
                                         <span class="name-span">Email</span>
                                         <input type="email" placeholder="john.doe@gmail.com" name="email" class="form-control"
                                             required>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-12 col-lg-6">
                                     <div class="contact-one__form-input-box input-design rounded">
                                         <span class="name-span">Phone</span>
                                         <input type="text" placeholder="0235556555" name="phone" class="form-control" required>
@@ -437,7 +437,7 @@
                                 <div class="col-12 mb-2">
                                     <button type="submit" class="btn btn-red w-100 nt-3">Create Account</button>
                                 </div>
-                                <div class="col-12 text-center mb-3 mt-2">
+                                <div class="col-12 text-center  mt-2">
                                     Already have an account? <span><a href="#" class="text-decoration-none"
                                             style="color: #b30000;" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal">Login</a></span>

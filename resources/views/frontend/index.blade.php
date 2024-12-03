@@ -66,11 +66,15 @@
                                 <li><a class="dropdown-item" href="#">Business Owner</a></li>
                                 <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
                             </ul> --}}
-                            <select class="form-control form-select" style="background: white;color: black; height: 55px; height: 55px;">
-                                <option value="">Investor</option>
-                                <option value="">Business Owner</option>
-                                <option value="">Marketplace Support</option>
-                            </select>
+                            
+                            <div class="filters">
+                            	 	<select id="main_select_services" class="select-club-services" name="club-services">
+                                		<option value=".abrikosovaya" selected>Investor</option>
+                                		<option value=".bratskaya">Business Owner</option>
+                                		<option value=".lesi-ukrainki">Our Marketplace</option>
+                                	</select>
+                            </div>
+                            
                         </div>
 
                       <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
@@ -104,11 +108,15 @@
                                 <li><a class="dropdown-item" href="#">Business Owner</a></li>
                                 <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
                             </ul> --}}
-                            <select class="form-control form-select" style="background: white;color: black; height: 55px;">
-                                <option value="">Investor</option>
-                                <option value="">Business Owner</option>
-                                <option value="">Marketplace Support</option>
-                            </select>
+                            
+                              <div class="filters">
+                             	<select id="main_select_services" class="select-club-services" name="club-services">
+                                		<option value=".abrikosovaya" selected>Investor</option>
+                                		<option value=".bratskaya">Business Owner</option>
+                                		<option value=".lesi-ukrainki">Our Marketplace</option>
+                                	</select>
+                             </div>
+                             
                         </div>
 
                         <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
@@ -117,7 +125,7 @@
             </div>
         </div>
         
-             <div class="carousel-item">
+        <div class="carousel-item">
             <img src="{{asset('main-frontend/img/Frame%20405.png')}}" class="d-block w-100 banner-img" alt="...">
             <div class="carousel-caption container">
                
@@ -140,16 +148,14 @@
                                 aria-expanded="false">
                                 Investor
                             </button> --}}
-                            {{-- <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Investor</a></li>
-                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
-                                <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
-                            </ul> --}}
-                            <select class="form-control form-select" style="background: white;color: black; height: 55px;">
-                                <option value="">Investor</option>
-                                <option value="">Business Owner</option>
-                                <option value="">Marketplace Support</option>
-                            </select>
+                          
+                            <div class="filters">
+                            	 	<select id="main_select_services" class="select-club-services" name="club-services">
+                                		<option value=".abrikosovaya" selected>Investor</option>
+                                		<option value=".bratskaya">Business Owner</option>
+                                		<option value=".lesi-ukrainki">Our Marketplace</option>
+                                	</select>
+                             </div>
                         </div>
 
                         <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
@@ -181,17 +187,14 @@
                                 aria-expanded="false">
                                 Investor
                             </button> --}}
-                            {{-- <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Investor</a></li>
-                                <li><a class="dropdown-item" href="#">Business Owner</a></li>
-                                <li><a class="dropdown-item" href="#">Marketplace Support</a></li>
-                            </ul> --}}
-
-                            <select class="form-control form-select" style="background: white;color: black; height: 55px;">
-                                <option value="">Investor</option>
-                                <option value="">Business Owner</option>
-                                <option value="">Marketplace Support</option>
-                            </select>
+                           
+                               <div class="filters">
+                                	<select id="main_select_services" class="select-club-services" name="club-services">
+                                		<option value=".abrikosovaya" selected>Investor</option>
+                                		<option value=".bratskaya">Business Owner</option>
+                                		<option value=".lesi-ukrainki">Our Marketplace</option>
+                                	</select>
+                                </div>
                         </div>
 
                         <a href="{{url('maintenance-mode')}}"><img src="{{asset('main-frontend/img/arrow.png')}}" alt="" class="img-fluid d-none d-md-none d-lg-block" style="height: 60px;"></a>
@@ -238,6 +241,7 @@
                 <h2 class="heading3 mt-5 text-dark text-center">Explore Investment Opportunities</h2>
                 <p class="para3 text-center mt-3 mb-5 text-dark">At the heart of Invest Connect Marketplace lies a clear vision: to create a world where access to capital and innovation knows no boundaries. By connecting ambitious entrepreneurs with investors seeking to make a difference, we build an ecosystem that transforms ideas into reality. Whether you’re a startup founder with a revolutionary vision or an investor passionate about driving change, our platform connects dreams with possibilities.</p>
 
+
                 <div class="col-md-6 col-sm-12 col-lg-4 mb-3">
 
                     <a href="#" class="text-decoration-none">
@@ -258,28 +262,20 @@
                                 <div class="content mt-2">
                                     <h5>Start Strong with Invest Connect Marketplace</h5>
                                     <p>Take the first steps toward success with streamlined solutions tailored.</p>
-                                    
-                                    
-
                                     <hr>
-
                                     <!-- flag -->
-
                                     <div class="campaign-card__Tags-bYQpFr enyfbv my-2">
                                         <div type="tax" class="campaign-card__Tag-iISrAg iXxwmR">EIS</div>
                                         <div class="country-flag__RoundalFlagPill-cIoBGi fyIiND ms-2">
                                             <img src="{{asset('main-frontend/img/germany.png')}}" class="country-flag__RoundalFlag-dGZWFv fDeDgj">
                                             <span> &nbsp; GE</span>
                                         </div>
-                                    </div>
-
-                                    
+                                    </div>                                   
                                     <!-- Progress Bar -->
                                     <div class="progress" style="height: 8px;">
                                         <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <p class="small text-muted">98% - 30 days left</p>
-
                                     <!-- Stats Section -->
                                     <div class="stats">
                                         <div>
@@ -297,11 +293,12 @@
                                     </div>
                                 </div>
                             </div>
-
                         </a>
 
 
                 </div>
+
+
 
                 <div class="col-md-6 col-sm-12 col-lg-4 mb-3">
 
@@ -527,9 +524,7 @@
                                 <div><img src="{{asset('main-frontend/img/the-guardian.png')}}" alt="Slide 12"></div>
                                 <div><img src="{{asset('main-frontend/img/the-times.png')}}" alt="Slide 13"></div>
                                 <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 8"></div>
-                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 9"></div>
-                              
-                              
+                                <div><img src="{{asset('main-frontend/img/em1.png')}}" alt="Slide 9"></div>  
                             </div>
                         </div>
                 </div>
@@ -879,15 +874,15 @@
                     @foreach($testimonials as $res)
                     <div class="item">
                     <div class="review-card">
-                    <p class="review-content">{{$res->translate->comment}}</p>
-                    <div class="review-footer">
-                        <img src="{{ asset($res->image) }}" alt="User Image" class="review-image">
-                        <div class="review-user-info">
-                            <h3>{{$res->translate->name}}</h3>
-                            <p>{{$res->translate->designation}}</p>
+                    <p class="review-content">{{ Str::limit($res->translate->comment, 250) }}</p>
+                        <div class="review-footer">
+                            <img src="{{ asset($res->image) }}" alt="User Image" class="review-image">
+                            <div class="review-user-info">
+                                <h3>{{$res->translate->name}}</h3>
+                                <p>{{$res->translate->designation}}</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                      </div>
                     </div>
                     @endforeach
                 </div>
@@ -909,145 +904,152 @@
                  
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/444.png')}}" alt="Technology Icon">
+                            <img src="{{asset('main-frontend/img/software.png')}}" alt="Technology Icon">
+                            <strong>Software</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Technology.png')}}" alt="Real Estate Icon">
                             <strong>Technology</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/555.png')}}" alt="Real Estate Icon">
-                            <strong>Real Estate & Property Management</strong>
+                            <img src="{{asset('main-frontend/img/RealEstate&PropertyManagement.png')}}" alt="Education Icon">
+                            <strong>Real Estate &  Property Management</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/111.png')}}" alt="Education Icon">
-                            <strong>Education & Edtech</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/222.png')}}" alt="Media Icon">
-                            <strong>Media & Entertainment</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Fashion & Beauty</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Media</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Business Services</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Products & Inventions</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Manufacturing & Engineering</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Energy & Natural Resources</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Sales & Marketing</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Transportation</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Food & Beverage</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <img src="{{asset('main-frontend/img/retail.png')}}" alt="Media Icon">
                             <strong>Retail</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <img src="{{asset('main-frontend/img/Fashion&Beauty.png')}}" alt="Agriculture Icon">
+                            <strong>Fashion & Beauty</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Media.png')}}" alt="Agriculture Icon">
+                            <strong>Media</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/BusinessServices.png')}}" alt="Agriculture Icon">
+                            <strong>Business Services</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Products&Inventions.png')}}" alt="Agriculture Icon">
+                            <strong>Products & Inventions</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Manufacturing&Engineering.png')}}" alt="Agriculture Icon">
+                            <strong>Manufacturing & Engineering</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Energy&NaturalResources.png')}}" alt="Agriculture Icon">
+                            <strong>Energy & Natural Resources</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Sales&Marketing.png')}}" alt="Agriculture Icon">
+                            <strong>Sales & Marketing</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Transportation.png')}}" alt="Agriculture Icon">
+                            <strong>Transportation</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Food.png')}}" alt="Agriculture Icon">
+                            <strong>Food & Beverage</strong>
+                        </div>
+                    </div>
+
+                     <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Medical&Sciences.png')}}" alt="Agriculture Icon">
                             <strong>Medical & Sciences</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <img src="{{asset('main-frontend/img/Hospitality,Restaurants&Bar.png')}}" alt="Agriculture Icon">
                             <strong>Hospitality, Restaurants & Bars</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Software</strong>
+                            <img src="{{asset('main-frontend/img/Agriculture.png')}}" alt="Agriculture Icon">
+                            <strong>Agriculture</strong>
                         </div>
                     </div>
 
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Technology</strong>
+                            <img src="{{asset('main-frontend/img/Transportation.png')}}" alt="Agriculture Icon">
+                            <strong>Transportation</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Property</strong>
+                            <img src="{{asset('main-frontend/img/Energy&NaturalResources.png')}}" alt="Agriculture Icon">
+                            <strong>Energy & Natural Resources</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Agriculture & Agtech</strong>
+                            <img src="{{asset('main-frontend/img/Education&Training.png')}}" alt="Agriculture Icon">
+                            <strong>Education & Training</strong>
                         </div>
                     </div>
-                  
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/777.png')}}" alt="Agriculture Icon">
+                            <strong>Healthcare & Medtech</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Industries-icon.png')}}" alt="Agriculture Icon">
+                            <strong>Fintech</strong>
+                        </div>
+                    </div>
+
                 </div>
 
 

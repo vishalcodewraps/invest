@@ -235,15 +235,25 @@ otpInputs.forEach((input, index) => {
         }
       });
     });
+
+
+$(document).ready(function () {
+    let modalClosed = false; // Flag to track modal state
+
+    setInterval(function () {
+        if (!modalClosed) { // Only show the modal if it hasn't been closed
+            $("#staticBackdrop").modal('show');
+        }
+    }, 12000);
+
+    // Update the flag when the modal is closed
+    $("#staticBackdrop").on('hidden.bs.modal', function () {
+        modalClosed = true;
+    });
+});
+
 </script>
 
-<script>
-   $(document).ready(function() {
-    setInterval(function() {
-        $("#exampleModal").modal('show');
-    }, 10000);
-});
-</script>
 
 
 </body>
