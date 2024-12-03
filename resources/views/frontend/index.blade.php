@@ -269,7 +269,7 @@
                                         <div type="tax" class="campaign-card__Tag-iISrAg iXxwmR">EIS</div>
                                         <div class="country-flag__RoundalFlagPill-cIoBGi fyIiND ms-2">
                                             <img src="{{asset('main-frontend/img/germany.png')}}" class="country-flag__RoundalFlag-dGZWFv fDeDgj">
-                                            <span>GE</span>
+                                            <span> &nbsp; GE</span>
                                         </div>
                                     </div>
 
@@ -322,7 +322,7 @@
                         <!-- Content Section -->
                         <div class="content mt-2">
                             <h5>Unlock Your Growth Potential with Invest Connect Marketplace</h5>
-                            <p>Take your journey to the next level with tools and resources tailored to optimise every</p>
+                            <p>Take your journey to the next level with tools and resources.</p>
                             
                             
 
@@ -334,16 +334,16 @@
                                 <div type="tax" class="campaign-card__Tag-iISrAg iXxwmR">EIS</div>
                                 <div class="country-flag__RoundalFlagPill-cIoBGi fyIiND ms-2">
                                     <img src="{{asset('main-frontend/img/united-states.png')}}" class="country-flag__RoundalFlag-dGZWFv fDeDgj">
-                                    <span>USA</span>
+                                    <span> &nbsp; USA</span>
                                 </div>
                             </div>
 
                             
                             <!-- Progress Bar -->
                             <div class="progress" style="height: 8px;">
-                                <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" style="width: 58%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <p class="small text-muted">98% - 30 days left</p>
+                            <p class="small text-muted">58% - 60 days left</p>
 
                             <!-- Stats Section -->
                             <div class="stats">
@@ -353,7 +353,7 @@
                                 </div>
                                 <div>
                                     <p>Target</p>
-                                    <p>£500,000</p>
+                                    <p>£150,000</p>
                                 </div>
                                 <div>
                                     <p>Investors</p>
@@ -400,26 +400,26 @@
                                     <div type="tax" class="campaign-card__Tag-iISrAg iXxwmR">EIS</div>
                                     <div class="country-flag__RoundalFlagPill-cIoBGi fyIiND ms-2">
                                         <img src="{{asset('main-frontend/img/flag.png')}}" class="country-flag__RoundalFlag-dGZWFv fDeDgj">
-                                        <span>IND</span>
+                                        <span> &nbsp; IND</span>
                                     </div>
                                 </div>
 
                                 
                                 <!-- Progress Bar -->
                                 <div class="progress" style="height: 8px;">
-                                    <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" style="width: 28%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <p class="small text-muted">98% - 30 days left</p>
+                                <p class="small text-muted">28% - 10 days left</p>
 
                                 <!-- Stats Section -->
                                 <div class="stats">
                                     <div>
                                         <p>Valuation</p>
-                                        <p>£5.3M</p>
+                                        <p>£1.3M</p>
                                     </div>
                                     <div>
                                         <p>Target</p>
-                                        <p>£500,000</p>
+                                        <p>£50,000</p>
                                     </div>
                                     <div>
                                         <p>Investors</p>
