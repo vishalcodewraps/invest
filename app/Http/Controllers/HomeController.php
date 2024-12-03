@@ -729,6 +729,8 @@ class HomeController extends Controller
         $user->last_name = session()->get('last_name');
         $user->email = session()->get('email');
         $user->phone = session()->get('phone');
+        $user->email_verified_at = date('Y-m-d H:i:s');
+        $user->remember_token = Str::random(100);
         $user->password = Hash::make(session()->get('password'));
         $user->save();
         // $user = new User;
@@ -743,8 +745,8 @@ class HomeController extends Controller
         
         
         $credentials = [
-            'email' => $request->email,
-            'password' => $request->password,
+            'email' => session()->get('email'),
+            'password' => session()->get('password'),
         ];
         if($user != null){
             if(Hash::check($request->password, $user->password)){

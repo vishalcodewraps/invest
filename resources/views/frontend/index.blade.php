@@ -909,7 +909,14 @@
                  
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/444.png')}}" alt="Technology Icon">
+                            <img src="{{asset('main-frontend/img/Software.png')}}" alt="Technology Icon">
+                            <strong>Software</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Technology.png')}}" alt="Technology Icon">
                             <strong>Technology</strong>
                         </div>
                     </div>
@@ -917,137 +924,129 @@
                     <div class="col-md-4">
                         <div class="industry-item">
                             <img src="{{asset('main-frontend/img/555.png')}}" alt="Real Estate Icon">
-                            <strong>Real Estate & Property Management</strong>
+                            <strong>Real Estate</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/111.png')}}" alt="Education Icon">
-                            <strong>Education & Edtech</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/222.png')}}" alt="Media Icon">
-                            <strong>Media & Entertainment</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Fashion & Beauty</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Media</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Business Services</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Products & Inventions</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Manufacturing & Engineering</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Energy & Natural Resources</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Sales & Marketing</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Transportation</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Food & Beverage</strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <img src="{{asset('main-frontend/img/Retail.png')}}" alt="Education Icon">
                             <strong>Retail</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Medical & Sciences</strong>
+                            <img src="{{asset('main-frontend/img/Fashion&Beauty.png')}}" alt="Education Icon">
+                            <strong>Fashion & Beauty</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <img src="{{asset('main-frontend/img/Media.png')}}" alt="Media Icon">
+                            <strong>Media</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/BusinessServices.png')}}" alt="Agriculture Icon">
+                            <strong>Busniess Services</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Products&Inventions.png')}}" alt="Agriculture Icon">
+                            <strong>Product & Inventions</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Manufacturing&Engineering.png')}}" alt="Agriculture Icon">
+                            <strong>Manufacturing & Engineering</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Energy&NaturalResources.png')}}" alt="Agriculture Icon">
+                            <strong>Energy & Natural Resources</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Sales&Marketing.png')}}" alt="Agriculture Icon">
+                            <strong>Sales & Marketing</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Transportation.png')}}" alt="Agriculture Icon">
+                            <strong>Transportation</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/food.png')}}" alt="Agriculture Icon">
+                            <strong>food & Beverage</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Medical&Sciences.png')}}" alt="Agriculture Icon">
+                            <strong>Medical & services</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Hospitality,Restaurants&Bar.png')}}" alt="Agriculture Icon">
                             <strong>Hospitality, Restaurants & Bars</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Software</strong>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Technology</strong>
+                            <img src="{{asset('main-frontend/img/Agriculture.png')}}" alt="Agriculture Icon">
+                            <strong>Agriculture</strong>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
+                            <img src="{{asset('main-frontend/img/Education&Training.png')}}" alt="Agriculture Icon">
+                            <strong>Education & Training</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/HealthcareMedtech.png')}}" alt="Agriculture Icon">
+                            <strong>Healthcare Medtech</strong>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/Industries-icon.png')}}" alt="Agriculture Icon">
+                            <strong>Fintech</strong>
+                        </div>
+                    </div>
+              
+                    <div class="col-md-4">
+                        <div class="industry-item">
+                            <img src="{{asset('main-frontend/img/444.png')}}" alt="Agriculture Icon">
                             <strong>Property</strong>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
-                        <div class="industry-item">
-                            <img src="{{asset('main-frontend/img/333.png')}}" alt="Agriculture Icon">
-                            <strong>Agriculture & Agtech</strong>
-                        </div>
-                    </div>
-                  
                 </div>
 
 

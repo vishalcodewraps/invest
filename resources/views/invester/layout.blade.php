@@ -122,7 +122,7 @@
             </a>
           </li>
           <li class="sidebar-nav-item">
-            <a href="#" class="sidebar-nav-link {{ Route::is('buyer.account-delete') ? 'active' : '' }}"
+            <a href="#  " class="sidebar-nav-link {{ Route::is('buyer.account-delete') ? 'active' : '' }}"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"

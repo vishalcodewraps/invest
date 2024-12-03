@@ -241,7 +241,9 @@ otpInputs.forEach((input, index) => {
 
 </script>
 
-@if(!Auth::check())
+@if(Auth::check() || session('success') || session('error') || session('send_otp'))
+
+@else
 <script>
     $(document).ready(function () {
     let modalClosed = false; // Flag to track modal state

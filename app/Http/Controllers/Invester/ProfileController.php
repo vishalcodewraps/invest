@@ -341,4 +341,9 @@ class ProfileController extends Controller
         return view('invester.page4');
     }
 
+    public function logout(){
+        Auth::logout();
+        return redirect('/');
+    }
+
 }

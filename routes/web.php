@@ -130,7 +130,7 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
 
        
        
-        Route::get('/logout', [InvestProfileController::class, 'buyer_logout'])->name('logout');
+        // Route::get('/logout', [InvestProfileController::class, 'buyer_logout'])->name('logout');
 
 
         Route::group(['middleware' => 'auth:web'],function () {
@@ -158,6 +158,7 @@ Route::group(['middleware' => [ 'HtmlSpecialchars', 'MaintenanceMode']], functio
             Route::get('/page2', [InvestProfileController::class, 'page2']);
             Route::get('/page3', [InvestProfileController::class, 'page3']);
             Route::get('/page4', [InvestProfileController::class, 'page4']);
+            Route::get('/logout', [InvestProfileController::class, 'logout'])->name('logout');
         });
 
 
